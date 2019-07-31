@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-31T10:21:21+09:00</updated><id>http://localhost:4000/</id><title type="html">AweSome Blog</title><subtitle>Aru's Daily Page</subtitle><author><name>Aru</name></author><entry><title type="html">Jekyll 블로그를 시작해 봅시다</title><link href="http://localhost:4000/jekyll/2019/06/11/jekyll-make.html" rel="alternate" type="text/html" title="Jekyll 블로그를 시작해 봅시다" /><published>2019-06-11T15:37:56+09:00</published><updated>2019-06-11T15:37:56+09:00</updated><id>http://localhost:4000/jekyll/2019/06/11/jekyll-make</id><content type="html" xml:base="http://localhost:4000/jekyll/2019/06/11/jekyll-make.html">&lt;h1 id=&quot;jekyll-블로그&quot;&gt;Jekyll 블로그?&lt;/h1&gt;
+
+&lt;p&gt;요새 아이티에 종사하는 분들 보면
+대부분 블로그 주소가 github.io 가 많은데
+관심없던 시절엔 그냥 깃허브에서 제공하는 도메인 서비스인가 했었는데
+블로그를 만들라고 제작해준거 일줄은…&lt;/p&gt;
+
+&lt;p&gt;사실 인터넷을 뒤져보면 쉽게만들기 쉽게만들기 이러지만
+당연하게도 네이버나 이런 플랫폼처럼 친절하진 않아요…
+IT 한정으로 쉽다 그러는 느낌?
+안그래도 정리못하기로 유명해서 정리하는 감각좀 익힐겸 해서 
+만들면서 첫번째 포스트를 만들어 보려합니다&lt;/p&gt;
+
+&lt;p&gt;어짜피 누굴 보여주기라기보단 나중에 찾기 편하게 기록용도로 쓰는거라
+매우 불친절하니 이해좀…
+Jekyll 이 뭔지 아직도 정확힌 모르겠지만 일단 설치부터 해볼게요&lt;/p&gt;
+
+&lt;p&gt;원래 새로운프로그램은 다 이해하려면 끝도없어서 
+일단 설치부터 하고 보는겁니다&lt;/p&gt;
+
+&lt;p&gt;사실 그냥 서버에서 바로 해볼까했는데
+푸쉬 하고 난뒤에 새로고침을 수백번은 눌러야 적용이….
+실수하면 답이없겠다 싶어서 로컬에서 작업하고 올리려고요…&lt;/p&gt;
+
+&lt;h2 id=&quot;1-루비-및-jekyll-설치&quot;&gt;1. 루비 및 Jekyll 설치&lt;/h2&gt;
+
+&lt;p&gt;일단 루비기반으로 작성된 것이라 루비를 설치해야하는데
+윈도에선 이게좀… 윈도버전으로 받아봅시다&lt;/p&gt;
+
+&lt;p&gt;https://rubyinstaller.org/downloads/&lt;/p&gt;
+
+&lt;p&gt;요기 가셔서 그냥 WITH DEVKIT 으로 자신에 맞는걸로 받으시면 됩니다&lt;/p&gt;
+
+&lt;p&gt;그후 시작메뉴에서 
+Start Command Prompt with Ruby 를 실행&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll
+gem install minima
+gem install bundler
+gem install jekyll-feed
+gem install tzinfo-data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;하나씩 하실거 없이 다섯줄 다 복사해서 붙이면 알아서 한줄씩 실행 굿&lt;/p&gt;
+
+&lt;p&gt;#2. 블로그 연동&lt;/p&gt;
+
+&lt;p&gt;보니 미리 만들어 놔야했네요 지금 가서 만듭시다…&lt;/p&gt;
+
+&lt;p&gt;github.com 에 들어가서 새 repository를 만듭시다&lt;/p&gt;
+
+&lt;p&gt;이름은 &lt;이름&gt;.github.io 로 꼭 해주셔야 합니다&lt;/이름&gt;&lt;/p&gt;
+
+&lt;p&gt;그냥하면 허전하니 README.md 생성 체크…&lt;/p&gt;
+
+&lt;p&gt;해도 되지만! 우린 남에껄 가져와야…하는건 아닌데 그래야 이쁘죠&lt;/p&gt;
+
+&lt;p&gt;전 미적감각이 제로라…&lt;/p&gt;
+
+&lt;p&gt;github에서 jekyll theme로 검색하시고 원하시는걸 찾은후 Fork를 해주시면 내 저장소로 바로 오게됩니다
+그후 Setting에 들어가서 Template repository 를 클릭
+이후 새로 repository를 생성하면 템플릿으로 사용 가능합니다
+이후 터미널 혹은 git bash 에서&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/&amp;lt;아이디&amp;gt;/&amp;lt;이름&amp;gt;.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;를 해주시면 됩니다&lt;/p&gt;
+
+&lt;p&gt;그리고는&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;를 실행하면 서버가 돌아간다는데 에러…&lt;/p&gt;
+
+&lt;p&gt;이후 뭔짓을해도 에러가 해결이안됨…&lt;/p&gt;
+
+&lt;p&gt;빈 폴더에서 새로 서버를 열면되는데&lt;/p&gt;
+
+&lt;p&gt;기존 템플릿을 가져오면 에러가 나네요 ㅠㅠ&lt;/p&gt;
+
+&lt;p&gt;스택오버플로 찾아보니 개발자 킷 설치하라는데&lt;/p&gt;
+
+&lt;p&gt;분명 합쳐진걸로 설치했….&lt;/p&gt;
+
+&lt;p&gt;내일 다시도전 ㅠ&lt;/p&gt;
+
+&lt;p&gt;sudo gem update –system&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">Jekyll 블로그? 요새 아이티에 종사하는 분들 보면 대부분 블로그 주소가 github.io 가 많은데 관심없던 시절엔 그냥 깃허브에서 제공하는 도메인 서비스인가 했었는데 블로그를 만들라고 제작해준거 일줄은… 사실 인터넷을 뒤져보면 쉽게만들기 쉽게만들기 이러지만 당연하게도 네이버나 이런 플랫폼처럼 친절하진 않아요… IT 한정으로 쉽다 그러는 느낌? 안그래도 정리못하기로 유명해서 정리하는 감각좀 익힐겸 해서 만들면서 첫번째 포스트를 만들어 보려합니다 어짜피 누굴 보여주기라기보단 나중에 찾기 편하게 기록용도로 쓰는거라 매우 불친절하니 이해좀… Jekyll 이 뭔지 아직도 정확힌 모르겠지만 일단 설치부터 해볼게요 원래 새로운프로그램은 다 이해하려면 끝도없어서 일단 설치부터 하고 보는겁니다 사실 그냥 서버에서 바로 해볼까했는데 푸쉬 하고 난뒤에 새로고침을 수백번은 눌러야 적용이…. 실수하면 답이없겠다 싶어서 로컬에서 작업하고 올리려고요… 1. 루비 및 Jekyll 설치 일단 루비기반으로 작성된 것이라 루비를 설치해야하는데 윈도에선 이게좀… 윈도버전으로 받아봅시다 https://rubyinstaller.org/downloads/ 요기 가셔서 그냥 WITH DEVKIT 으로 자신에 맞는걸로 받으시면 됩니다 그후 시작메뉴에서 Start Command Prompt with Ruby 를 실행 gem install jekyll gem install minima gem install bundler gem install jekyll-feed gem install tzinfo-data 하나씩 하실거 없이 다섯줄 다 복사해서 붙이면 알아서 한줄씩 실행 굿 #2. 블로그 연동 보니 미리 만들어 놔야했네요 지금 가서 만듭시다… github.com 에 들어가서 새 repository를 만듭시다 이름은 .github.io 로 꼭 해주셔야 합니다 그냥하면 허전하니 README.md 생성 체크… 해도 되지만! 우린 남에껄 가져와야…하는건 아닌데 그래야 이쁘죠 전 미적감각이 제로라… github에서 jekyll theme로 검색하시고 원하시는걸 찾은후 Fork를 해주시면 내 저장소로 바로 오게됩니다 그후 Setting에 들어가서 Template repository 를 클릭 이후 새로 repository를 생성하면 템플릿으로 사용 가능합니다 이후 터미널 혹은 git bash 에서 git clone https://github.com/&amp;lt;아이디&amp;gt;/&amp;lt;이름&amp;gt;.github.io 를 해주시면 됩니다 그리고는 jekyll serve 를 실행하면 서버가 돌아간다는데 에러… 이후 뭔짓을해도 에러가 해결이안됨… 빈 폴더에서 새로 서버를 열면되는데 기존 템플릿을 가져오면 에러가 나네요 ㅠㅠ 스택오버플로 찾아보니 개발자 킷 설치하라는데 분명 합쳐진걸로 설치했…. 내일 다시도전 ㅠ sudo gem update –system</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2018/05/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-05-17T15:05:21+09:00</published><updated>2018-05-17T15:05:21+09:00</updated><id>http://localhost:4000/2018/05/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2018/05/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Aru</name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Hello Jekyll</title><link href="http://localhost:4000/2017/04/18/hello-jekyll.html" rel="alternate" type="text/html" title="Hello Jekyll" /><published>2017-04-18T00:00:00+09:00</published><updated>2017-04-18T00:00:00+09:00</updated><id>http://localhost:4000/2017/04/18/hello-jekyll</id><content type="html" xml:base="http://localhost:4000/2017/04/18/hello-jekyll.html">&lt;blockquote&gt;
+  &lt;p&gt;Transform your plain text into static websites and blogs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;welcome&quot;&gt;Welcome&lt;/h1&gt;
+
+&lt;h2 id=&quot;welcome-1&quot;&gt;Welcome&lt;/h2&gt;
+
+&lt;h3 id=&quot;welcome-2&quot;&gt;Welcome&lt;/h3&gt;
+
+&lt;p&gt;This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-is-jekyll-exactlypermalink&quot;&gt;So what is Jekyll, exactly?Permalink&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;) and our &lt;a href=&quot;https://github.com/Shopify/liquid/wiki&quot;&gt;Liquid&lt;/a&gt; renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.&lt;/p&gt;
+
+&lt;h3 id=&quot;helpful-hintspermalink&quot;&gt;Helpful HintsPermalink&lt;/h3&gt;
+
+&lt;p&gt;Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.&lt;/p&gt;
+
+&lt;h3 id=&quot;video-test&quot;&gt;Video Test&lt;/h3&gt;
+
+&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</content><author><name>Jekyll</name></author><category term="jekyll" /><summary type="html">Transform your plain text into static websites and blogs. Welcome Welcome Welcome This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself. So what is Jekyll, exactly?Permalink Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free. Helpful HintsPermalink Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for. Video Test</summary></entry></feed>
