@@ -1,0 +1,294 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Aru's Daily Page" />
+<meta name="keywords" content="DeepLearning, NeuralNetwork" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Numpy 복습</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+</head>
+<body>
+
+<!-- Tex 문법 -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Aru's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Numpy 복습</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/deeplearning/2019/06/20/aaaaa.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">TensorfLow 기본노드 정리</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Numpy 복습</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/reinforcedlearning/2019/06/18/rein-1.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">강화학습 기초정리</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/deeplearning/2019/06/20/aaaaa.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>TensorfLow 기본노드 정리</span></a>
+    
+    
+      <a href="/reinforcedlearning/2019/06/18/rein-1.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>강화학습 기초정리</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <h1 id="numpy-란">Numpy 란</h1>
+
+<p>다들 아시다시피 파이썬에서 행렬관련 계산을 빠르게 해주는 패키지죠
+모르던 시절에 넘피라고 읽었었는데 넘파이였… 아직도 습관적으로 튀어나오는
+항상 쓰던 패키지지만 교육과정에서 하길래 복습겸 한번 남겨봐요</p>
+
+<h1 id="시작">시작</h1>
+
+<p>일단 불러옵시다</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+</code></pre></div></div>
+
+<p>이제 리스트를 생성해봐야죠</p>
+
+<p>ndarray 라는 넘파이 전용 리스트를 사용하는데
+한가지 타입의 정보만 저장이 가능합니다
+장점이라면 연산속도!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>li = [1,2,3,4,5,6]
+arr = np.array(li)     # ndarray로 변환
+display(arr)
+# array([1, 2, 3, 4, 5, 6])
+</code></pre></div></div>
+<p>array 라고 써있지만 ndarray 라고 보면된다
+앞의 nd 는 n 차원을 의미</p>
+
+<h1 id="자주쓸-함수">자주쓸 함수</h1>
+
+<h3 id="nparange">np.arange()</h3>
+<p>파이썬 range 함수와 같지만 ndarray 객체를 생성</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>np.arange(1,7)
+# array([1, 2, 3, 4, 5, 6])
+</code></pre></div></div>
+
+<h3 id="ndarrayshape">ndarray.shape</h3>
+<p>ndarray의 차원을 반환
+함수가 아니니 ()를 안써도된다
+자료를 볼때 항상 가장 먼저 쓰게되는 함수로 
+딥러닝떄 형상맞추기 노가다를 하다보면
+자연스레 손에 익게됨</p>
+
+<h3 id="npreshape">np.reshape()</h3>
+<p>차원 바꾸기
+행렬을 쭉피거나 형태를 바꾸는데 사용</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data = np.arange(1,7)
+np.reshape(data, (2,3))   # 2,3 행렬로 변경
+# array([[1, 2, 3],
+#       [4, 5, 6]])
+
+np.reshape(-1)      # 쭉 필때
+# array([1, 2, 3, 4, 5, 6])
+
+np.reshape((3,-1))      # 2행으로(열은 알아서)
+#array([[1, 2],
+#       [3, 4],
+#       [5, 6]])
+
+</code></pre></div></div>
+
+<h3 id="npzeros">np.zeros()</h3>
+<p>0의 값으로 채워진 행렬을생성 <br />
+행렬 생성시 매우 자주 사용 한다</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>np.zeros((2,3))
+#array([[0., 0., 0.],
+       [0., 0., 0.]])
+
+np.full((2,3), 55)  # 자매품 0대신 다른값 넣는 함수
+#array([[55, 55, 55],
+#       [55, 55, 55]])
+
+np.eye(2)   # 단위행렬(주대각성분이 1이고 나머진 0) 생성 함수
+
+</code></pre></div></div>
+
+<h4 id="nptranspose">np.transpose()</h4>
+<p>기본적으로는 행렬의 전치인데
+조금 다른기능이라면 3차원 이상의 행렬에서 우선순위를 정해줄 수 있다</p>
+
+<h1 id="broadcasting">Broadcasting</h1>
+
+<p>기본적으로 Numpy는 다른 차원의 ndarray에 대하여
+자동으로 차원의 수를 맞춰서 연산하는 기능이 있다</p>
+
+<p>이를 브로드캐스팅이라 하는데 편리한 기능이지만 이로인한 실수도 상당히 발생 할 수 있으니 주의가 필요</p>
+
+<h1 id="앞으로-쭉-업데이트">앞으로 쭉 업데이트</h1>
+<p>생각나는데로 종종 업데이트 예정
+일기 포스트가 아니니까</p>
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>AweSome Blog ©
+  
+  
+    2018
+    -
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

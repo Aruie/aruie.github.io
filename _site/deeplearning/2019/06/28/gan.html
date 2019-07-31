@@ -1,0 +1,262 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Aru's Daily Page" />
+<meta name="keywords" content="DeepLearning, NeuralNetwork" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>GAN 시작</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+</head>
+<body>
+
+<!-- Tex 문법 -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Aru's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">GAN 시작</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/paper/2019/07/04/EffecientNet.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">EfficientNet : Rethinking Model scaling for Convolutional Neural Networks</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">GAN 시작</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/environment/2019/06/28/vscode-cpp.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">VScode에서 C++ 적용 With Ubuntu</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/paper/2019/07/04/EffecientNet.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>EfficientNet : Rethinking Model scaling for Convolutional Neural Networks</span></a>
+    
+    
+      <a href="/environment/2019/06/28/vscode-cpp.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>VScode에서 C++ 적용 With Ubuntu</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <h1 id="gan">GAN?</h1>
+
+<p>Generative Adversarial Network</p>
+
+<p>적대적 생성 네트워크?<br />
+한마디로 생성기 Generator 와 판별기 Discriminator 가 서로 배틀을 하며 서로의 능력을키워가는….? 
+뭐 이런 네트워크다.
+들어보면 이게 뭔가 하겠지만 막상 내부구조를보면 아 이런거구나 하는 느낌이 오는?</p>
+
+<p>일단 봅시다</p>
+
+<p>Generator 는 1차원벡터인 Noise(균등분포로 랜덤생성)를 입력받아 해당 이미지를 출력하고 Discriminator는 이미지를 입력받아 그것이 진짜인지 가짜인지 여부를 Sigmoid로 출력한다</p>
+
+<p>간단히하자면 Generator에 노이즈를 입력해서 만든 Fake Image 를 Discriminator에 넣고 이것의 결과가 0이되도록 , 그리고 실제 이미지를 Discriminator 에 넣고 이것의 결과는 1이 되도록 학습시키는것이다.</p>
+
+<p>이 학습이 반복되면 Generator는 점점 실제에 가까운 이미지를 생성해내게 되고 Discriminator는 두 그림의 차이를 점점더 세밀하게 찾아내게 된다. 하지만 점점 가짜 이미지는 실제 이미지와 유사해지고 결국은 판별을 못하게 되는것이다.</p>
+
+<p>궁극적 목표는 바로 이 Discriminator 가 가짜 이미지와 진짜 이미지를 판별할 능력이 0.5 (찍는것과 동일)로 수렴하게 만드는것!</p>
+
+<p>실제 이 방식이 위와같은 수렴을 하게 만든다는것도 증명을 해놨는데 수식이 어렵다. 나중에 시간나면 봐야지…
+생각보다 구조는 간단하다
+문제는 엄청난수의 하이퍼파라미터들에 정확한 값을 넣지않으면 학습이 잘 되지않는다……</p>
+
+<h1 id="dcgan">DCGAN</h1>
+<p>Deep Convolution GAN <br />
+이름만 봐선 뭔지…</p>
+
+<p>위에 GAN의경우 불안정함을 많이 보였다고 한다.
+실제로 해봐도 진짜 학습하기 어렵…
+이것의 안정화를 위해 나온 방식이라 보면되는데
+현재 대부분 모델은 대부분 다 이것을 기반으로 한다고 한다.</p>
+
+<p>자 그럼 살펴보자.</p>
+
+<p>일단 특징?<br />
+어떤 상황에서도 정말 안정적으로 학습이됨.<br />
+생성된 벡터가 산술연산이 가능
+필터 시각화 가능
+이미지 분류 성능이 매우 높음</p>
+
+<p>외워서 만든 이미지가 아님을 보여줘야함
+latent space 에서 움직일때 변화가 부드러워야함</p>
+
+<p>아키텍쳐 가이드라인</p>
+<ul>
+  <li>Discriminator에서 모든 풀링 레이어는 스트라이드된 컨볼루션으로 교체</li>
+  <li>Generator에선 Fractinal 스트라이드 컨볼루션으로 교체</li>
+  <li>양쪽에 전부 배치노말 사용, Generator의 output과 discriminator의 인풋은 제외</li>
+  <li>FCL 제거</li>
+  <li>Generator에선 Relu 사용</li>
+  <li>Discriminator에 모든 레이어에 LeakyRelu 사용</li>
+</ul>
+
+<p>Maxpooling 을 제거하여 모두 미분가능하게 변화</p>
+
+<h1 id="reference">Reference</h1>
+<p>[http://jaejunyoo.blogspot.com/]</p>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>AweSome Blog ©
+  
+  
+    2018
+    -
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

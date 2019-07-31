@@ -15,22 +15,6 @@ about: true
 aboutyou: 'your introduction'
 portraits: '/assets/profile.jpeg' # your portraits image file path
 
-# SNS
-SNS: true
-SNS-icon: #['Facebook', 'github', 'Dribbble', 'Twitter', 'instagram', 'Codepen']
-  mail: 'mailto:abc@gmail.com'
-  github: ''
-  Codepen: ''
-  instagram: ''
-  Twitter: ''
-  Dribbble: ''
-  Facebook: ''
-  Google: ''
-  zhihu: ''
-  juejin: ''
-  twitch: ''
-
-
 # paginate
 paginate: 2
 paginatepath: ['page:num']
@@ -41,8 +25,8 @@ footer:
 
 # Markdown
 markdown: kramdown
-kramdown:
-  input: GFM
+# kramdown:
+#   input: GFM
 ################# rouge????
 highlighter: rouge
 #################
@@ -60,8 +44,8 @@ client_id: ''
 client_secret: '' 
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
-social-share: true
-social-share-items: ['twitter', 'facebook']
+#social-share: true
+#social-share-items: ['twitter', 'facebook']
 
 google: false
 google-ID: ''

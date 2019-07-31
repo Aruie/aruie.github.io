@@ -1,0 +1,407 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Aru's Daily Page" />
+<meta name="keywords" content="DeepLearning, NeuralNetwork" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Few-Shot Adversarial Learning of Realistic Neural Talking Head Models</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+</head>
+<body>
+
+<!-- Tex 문법 -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Aru's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Few-Shot Adversarial Learning of Realistic Neural Talking Head Models</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/opencv/2019/07/12/opencv-python.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">파이썬에서 OpenCV 사용</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Few-Shot Adversarial Learning of Realistic Neural Talking Head Models</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/paper/2019/07/04/EffecientNet.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">EfficientNet : Rethinking Model scaling for Convolutional Neural Networks</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/opencv/2019/07/12/opencv-python.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>파이썬에서 OpenCV 사용</span></a>
+    
+    
+      <a href="/paper/2019/07/04/EffecientNet.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>EfficientNet : Rethinking Model scaling for Convolutional Neural Networks</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <h1 id="abstract">Abstract</h1>
+
+<p>Several recent works have shown how highly realistic human head images can be obtained by training convolutional neural netrworks to generate them.<br />
+몇몇 요새 작업은 컨볼넷을 학습시켜 만든 높은 현실감을 가진 사람의 머리 이미지를 얻었다</p>
+
+<p>In order to crteate a personalized talking head model, these works require training on a large dataset of images of a single person<br />
+개인이 말하는 머리모델을 만들기 위해서는 한사람의 많은 데이터를 학습할 필요가 있었다</p>
+
+<p>However, in many practical scenarios, such personalized talking head models need to be learned from a few image views of a person, potentially even a single image.<br />
+그러나 많은 상황에서 이 말하는 머리모델은 몇장의 이미지만으로 학습을 해야했고, 심지어 한장의 이미지로도 해야했다.</p>
+
+<p>Here, we present a system with such few-shot capability. <br />
+우리는 퓨샷 능력을 가진 시스템을 소개한다</p>
+
+<p>It performs lengthy meta-learning on a large dataset of videos, and after that is able to frame few- and one-shot learning of neural talking head models of previously unseen people as adversarial training problems with high capacity generators and discriminators.<br />
+큰 비디오 데이터셋에 대한 장기 학습을 수행하면 이후 큰 규모의 generator와 discriminator 의 적대적 훈련으로 몇장 혹은 한장으로 이전까지 할 수 없던 말하는 머리모델이 가능해진다</p>
+
+<p>Crucially the system is able to initialize the parameters of both the generator and the discriminator in a person-specific way, so that training can be based on just a few images and done quickly, despite the need to tune tens of millions of parameters.<br />
+결정적으로 이 시스템은 generator 와 discriminator 사람 마다 특유의 방법으로 매개변수를 초기화할수 있고 몇장의 이미지를 기반으로 빠른속도로 학습이 가능하다
+천만개의 파라미터만 사용하는데도 불구하고</p>
+
+<p>We show that such an approach is able to learn highly realistic and personalized talking head models of new people and even portrait paintings.<br />
+이 접근법은 높은 현실성과 개인성을 가진 말하는 모델을 학습하는것을 가능하게한다. 새로운 사람이나 심지어 초상화를 가지고</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>In this work, we consider the task of creating personalized photorealistic talking head models, i.e. systems that can synthesize plausible video-sequences of speech expressions and mimics of a particular individual.<br />
+이 작업에서 개인적인 사실주의적인 말하는 모델을 만드는것을 고려했다, 예를들면 특정인의 흉내와 연설 비디오를 그럴듯하게 합성해 낼수 있다.</p>
+
+<p>More specifically, we consider the problem of synthesizing photorealistic personalized head images given a set of face landmarks, which drive the animation of the model.<br />
+더 구체적으로 모델의 애니메이션을 구동하는 얼굴의 랜드마크세트를 주어 사실적인 이미지의 합성 문제를 고려했다.</p>
+
+<p>Such ability has practical applications for telepresence, including video conferencing and multi-playergames, as well as special effects industry. 이 능력은  telepresence의 실용적인 어플을 위한 능력을 가지고 있다. 화상채팅이나 멀티게임, 특수효과산업까지 포함해서</p>
+
+<p>Synthesizing realistic talking head sequences is known to be hard for two reasons.<br />
+사실적 말하는 머리 시퀸스를 만들기는 두가지 이유때문에 어려운것으로 알려져있다.</p>
+
+<p>First, human heads have high photometric, geometric and kinematic complexity.<br />
+첫번째로 휴먼의 머리는 광도, 기하, 운동학적 복합성을 가지고 있다</p>
+
+<p>This complexty stems not only from modeling faces(for which a large number of modeling approaches exist) but also from modeling mouth cavity, hair, and garments.<br />
+이 복잡도는 얼굴 모델링 뿐만 아니라 입 구멍, 머리 , 그리고 옷까지 해야한다</p>
+
+<p>The second complicating factor is the acuteness of the human visual system towards even minor mistakes in the appearance modeling of human heads (the so-called uncanny vally effect).<br />
+두번째로 복잡하게 하는 요인은 휴먼헤드모델링에서 생기는 작은 실수에 대한 인간 시각시스템의 날카로움이다(언캐니 밸리 이펙트라 불린다)</p>
+
+<p>Such low tolerance to modeling mistakes explains the current prevalence of non-photorealistic cartoon-like avatars in man practically-deployed teleconferencing systems.<br />
+이 모델링 실수들에 대한 적은 내성 때문에 
+실제 사용되는 원격회의에서 만화같은 비현실적 아바타가 유행하는것이 설명된다</p>
+
+<p>To overcome the challenges, several works have proposed to synthesize articulated head sequences by warping a single or multiple static frames.<br />
+이 문제를 극복하기 위해, 몇몇 작업은 단일 혹은 복수의 정적 프레임을 휘는 방식으로 관절이 있는 머리에 합성하는것을 제안했다.</p>
+
+<p>Both classical warping algorithms and warping fields synthesized using machine learning(include deep learning) can be used for such purposes.<br />
+기계학습을 사용하여 합성된 기존의 워핑 알고리즘과 워핑공간 모두 이 목적으로 사용될 수 있다</p>
+
+<p>While warping-based systems can create talking head sequences from as little as a single image, the amount of motion, head rotation, and disocclusion that they can handle without noticeable artifact is limited.<br />
+워핑 기반 시스템은 단일 이미지에서 말하는 머리 영상을 만들수 있으나, 구체적인 인공조작 없이 처리할수 있는 전체 움직임이나 머리의 회전의 해제에 있어서는 제한적이다</p>
+
+<p>Direct(warping-free) Synthesis of video frames using adversarially-trained deep convolutional networks(ConvNets) presents the new hope for photorealistic talking heads.</p>
+
+<p>적대적 컨볼넷을 사용한 비디오 프레임의 직접 합성은 사실적 말하는 머리의 새로운 희망을 제시했다.</p>
+
+<p>Very recently, some remarkably realistic results have been demonstrated by such system [16,20,37]. However, to succeed, such methods have to train large networks, where both generator and discriminator have tens of millions of parameters for each talking head.<br />
+아주 최근에 매우 현실적인 결과가 위 시스템에 의해 증명되었다. 그러나 성공을 위해서는 위 메소드들은 많은 학습시간을 필요로 했고 생성기와 판별기 는 천만개의 파라미터가 필요하다 각각 머리에 대하여</p>
+
+<p>These systems, therefore, require a several-minutes-long video [20,37] or a large dataset of photographs [16] as well as hours of GPU training in order to create a new personalized talking head model.<br />
+이 시스템들은 게다가 새로운 사람의 머리모델을 만들러면 몇분의 긴 비디오를필요로 하거나 많은 사진 데이터셋과 시간단위의 GPU 트레이닝이 필요하다</p>
+
+<p>While this effort is lower than the one required by systems that construct photo-realistic head models using sophisticated physical and optical modeling [1], it is still excessive for most practical telepresence scenarios, where we want to enable users to create their personalized head models with as little effort as possible.<br />
+이 과정은 정교한 물리 및 광학 모델링을 사용해 구축하는거보다 낮음지만 여전히 
+사용자가 가능한 적은 노력으로 그들 개인의 머리모델을 만들어 사용하고자 하는 대부분에 실제 화상회의에는 너무 과한 학습이 요구된다</p>
+
+<p>In this work, we present a system for creating talking head models from a handful of photographs(so-called few shot learning) and with limited training time. In fact, our system can generate a reasonable result based on a single photograph(one-shot learning), while adding a few more photographs increases the fidelity of personalization.<br />
+이 작업에서 제한된 시간에서 몇장의 사진을 가지고 말하는 머리모델을 만드는 시스템을 제시한다
+사실 이 시스템은 한장의 사진을 기반으로 해도 합리적인 결과가 나오고 사진의 추가는 개인화를 더 추가해주는 것이다</p>
+
+<p>Similarly to [16,20,37], the talking heads created by our model are deep ConvNets that synthesize video frames in a direct manner by a sequence of convolutinal operations rather than by warping.<br />
+위 논문들과 비슷하게 말하는 머리는 워핑에 의하기보단 컨볼루션 시퀸스를 직접 합성하는 방식의 컨볼넷으로 만들어 진다.</p>
+
+<p>The talking heads created by our system can, therefore, handle a large vairety of poses that goes beyond the abilities of warping-based systems.<br />
+말하는 머리는 우리의 시스템에 의해 생성되고, 워핑베이스 시스템의 능력을 뛰어넘는 다양한 포즈를 할수 있다.</p>
+
+<p>The few-shot learning ability is obtained through extensive pre-training (meta-learning) on a large corpus of talking head videos corresponding to different speakers with diverse appearance.<br />
+퓨샷러닝 능력은 큰 뭉치의 다양한외모의 사람들에 말하는 머리 비디오를 이용해 광범위한 사전 훈련을 통해 얻는다.</p>
+
+<p>In the course of meta-learning, our system simulates few-shot learning tasks and learns to transform landmark positions into realistically-looking personalized photographs, given a small training set of images with this person.<br />
+이 사전훈련 과정에 우리 시스템은 퓨샷러닝 작업을 시뮬레이트하고 어떤 사람과의 이미지셋을 통한 작은 훈련으로 랜드마크 포지션을 실제처럼 보이는 개인사진으로 바꾸는 방법을 배운다.</p>
+
+<p>After that, a handful of photographs of a new person sets up a new adversarial learning probelm with high-capacity generator and discriminator pre-trained via meta-laerning.<br />
+이후 적은 수의 새로운 사람의 사진으로 
+메타 러닝을 통해 사전학습된 고용량의 생성기와 판별기로 새로운 적대적 학습을 한다</p>
+
+<p>The new adversarial problem converges to the state that generates realistic and personalized images after a few training steps.<br />
+새로운 적대적문제는 몇 훈련 스텝 이후 현실적이고 개인화된 이미지를 만드는 상태로 수렴한다</p>
+
+<p>In the experiments, we provide comparisons of talking heads created by our system with alternative neural talking head models [16,40] via quantitative measurements and a user study, where our approach generates images of sufficient realism and personalization fidelity to deceive the study participants.<br />
+이 실험에서 우리의 시스템과 대립되는 뉴럴 말하는 모델의 비교를 정량적 측정과 사용자 연구를 통해 제공하고, 우리의 접근방식은 연구 참가자들을 속이기 위해 사실적이고 개인의 특성이 충분히 들어간 이미지를 생성하였다</p>
+
+<p>We demonstrate several uses of our talking head models, including video synthesis using landmark tracks extracted from video sequences of the same person, as well as puppeteering (video snthesis of a certain person based on the face landmark tracks of a different person)<br />
+예제 뿐만 아니라 동일인의 비디오에서 추출한 랜드마크 트랙을 사용하여 합성한 비디오를 포함하여 
+모델을 몇 차례 사용해보는것으로 증명하였다.
+(특정인의 비디오 합성은 다른사람의 랜드마크 트랙을 기반으로 하였다)</p>
+
+<h1 id="2-related-work">2. Related work</h1>
+
+<p>A huge body of works is devoted to statistical modeling of the apperance of human faces [6], with remarkably good results obtained both with classical techniques [35] and, more recently, with deep learning <a href="to name just a few">22,25</a>.<br />
+거대한 작품들이 인간얼굴의 외관을 통계적으로 모델링하는데 기여하고 있다. 고전적인 기법과 좀더 최근의 딥러인을 이용한 기법 모두 현저히 좋은 결과.</p>
+
+<p>While modeling faces is a highly related task to talking head modeling, the two tasks are not identical, as the latter also involves modeling non-face pats such as hair, neck, mouth cavity and often shoulders/upper garment.<br />
+얼굴 모델링은 말머리모델과 높은 관계를 가지지만 두 작업은 동일하지 않다, 후자는 머리, 목, 입속이나 종종 어깨나 상의처럼 얼굴이 아닌 부분도 포함한다</p>
+
+<p>These non-face parts cannot be handled by some trivial extension of the face modeling methods since they are much less amenable for registration and often have higher variability and higher complexity than the face part.<br />
+이 비얼굴 부분은 얼굴 모델링 메소드의 사소한 확장정도로 다뤄지며 안되는데, 그것들은 등록하기 쉽지않고 종종 얼굴파트보다 훨신 더 변화가 많고 높은 복잡성을 가지기 때문이다</p>
+
+<p>In principle, the results of face modeling [35]or lips modeling [31] can be stitched into an existing head video.<br />
+원칙적으로 얼굴이나 입술모델의 결과는 기존 얼굴헤드 모형에 삽입할수있다.</p>
+
+<p>Such design, however, does not allow full control over the head rotation in the resulting video and therefore does not result in a fullyfledged talking head system.<br />
+하지만 이 디자인은 결과비디오에서 머리 회전에 대한 완전한 조작을 통제룰 허락하지 못하고 그 결과 완전한 말머리 시스템이 만들어지지 않는다</p>
+
+<p>The design of our system borrows a lot from the recent progress in generative modeling of images. <br />
+우리의 시스템 디자인은 일반적인 이미지 모델의 최근의 동향을 많이 빌려온다</p>
+
+<p>Thus, our architecture uses adversarial training [12] and, more specifically, the ideas behind conditional discriminators [23], including projection discriminators [32]. <br />
+구조는 적대적 학습이고 조금 구체적으로는 프로젝션 판별기를 포함한 조건부 판별기 기법이다</p>
+
+<p>Our meta-learning stage uses the adaptive instance normalization mechanism [14], which was shown to be useful in large-scale conditional generation tasks [2,34].<br />
+메타러닝 부분은 노말라이제이션 대신 adaptive 방식을 사용했고 그것은 큰규모의 조건부 생성작업에서 유용한것을 보여준다.</p>
+
+<p>The model-agnostic meta-learner(MAML) [10] uses meta-learning to obtain the initial state of an image clasifier, from which it can quickly converge to image classifiers of unseen classes, given few training samples.<br />
+이미지분류기의 초기값을 얻기 위해 메타러닝을 사용한다, 이것은 MAML 는 훈련샘플이 별로 없는 경우 미지의 클래스로의 이미지 분류를 위한 빠른 수렴이 가능하게 한다</p>
+
+<p>This high-level idea is also utilized by our method, though our implementation of it is rather different. 
+이 고수준 아이디어도 우리의 메소드에 의해 활용되었다. 조금 다르긴 하지만.</p>
+
+<p>Several works have further proposed to combine adversarial training with meta-learning. 
+몇몇의 작업은 메타러닝과 적대적학습의 조합으로 제안되었다</p>
+
+<p>Thus, data-augmentation GAN [3] , Meta-GAN[43], adversarial meta-learning [41] use adversarially-trained networks to generate additinal examples for classes unseen at the meta-learning stage. <br />
+따라서 위 세 연구에서 선행학습 단계에서 미지의 클래스 분류를 위한 추가적인 샘플 생성에서 적대적 학습 네트워크가 사용되었다</p>
+
+<p>While these methods are focused on boosting the few-shot classification performance, our method deals with the training of image generation models using similar adversarial objectives. <br />
+그 방법들은 몇장을써서 분류하는것의 성능을 높이는것에 집중하지만, 우리방법은 similar adversarial objectives 를 사용하여이미지를 생성 모델을 학습 하는 것을 다루었다.</p>
+
+<p>To summarize, we bring the adversarial fine-tuning into the meta-learning framework. <br />
+요약하면 우리는 적대적 fine-tuning 을 메타러닝 프레임워크에 집어 넣었다.</p>
+
+<p>The former is applied after we obtain initial state of the generator and the discriminator networks via the mta-learning stage.<br />
+전자는 메타러닝 스테이지를 통해 생성기와 판별기를 초기상태를 얻은 후에 적용된다.</p>
+
+<p>Finally, very related to ours are the two recent works on text-to-speech generation [4,18].<br />
+마지막으로 매우 밀접한 것으로는 텍스트로 음성을 생성하는 두가지 작업이 있다.</p>
+
+<p>Their setting (few-shot learning of generative model) and some of the components (standalone embedder network, generator fine-tunning) are also used in our case.<br />
+그들의 세팅과 몇몇 구성요소는 우리 케이스에도 쓰인다.</p>
+
+<p>Our work differs in the application domain, the use of adversarial learning, its specific adaptation to the meta-learning process and numerous implementation details.<br />
+우리의 작업은 어플리케이션 영역, 적대적학습의 사용, 메타러닝 과정의 특정 적용방식과 수많은 세부사항에서 다르다.</p>
+
+<h1 id="3-methods">3. Methods</h1>
+
+<h2 id="31-architecture-and-notation">3.1 Architecture and notation</h2>
+
+<p>The meta-learning stage of our approach assumes the availability of M video sequences, contaning talking heads of different people.<br />
+우리의 접근방식은 메타러닝 단계에서 다른 사람들의 말머리가 들어있는 M 영상의 유용성을 가정한다</p>
+
+<p>We denote with $\mathrm{x}_i$ the $i$-th video sequence and with $\mathrm{x}_i(t)$ ist $t$-th frame.<br />
+$x_i$는 i번째 비디오를, $\mathrm{x}_i(t)$는 그것의 t 번째 스텝을 나타낸다</p>
+
+<p>During the learning process, as well as during test time, we assume the availability of the face landmarks’ locations for all frames (we use an off-the-shelf face alignment code [[7] to obtain them).<br />
+테스트타임 뿐만아니라, 학습단계에서 모든 프레임에 대한 페이스 랜드마크 위치의 유용성을 가정했다</p>
+
+<p>The landmarks are rasterized into three-channel images using a predefined set of colors to connect certain landmarks with line segments. We denote with $\mathrm{y}_i(t)$ the resulting landmark image computed for $\mathrm{x}_i(t)$</p>
+
+<p>랜드마크는 사전정의된 색상 세트를 사용하여 3차원 이미지로 변환되고 특정 랜드마크와 선 세그먼트가 연결된다. $\mathrm{y}_i(t)$ 는 $\mathrm{x}_i(t)$ 의 이미지 계산 결과임을 나타낸다</p>
+
+<p>In the meta-learning stage of our approach, the following three networks are trained (Figura 2) :<br />
+우리 방법의 메타러닝 단계에서 아래 3가지 네트워크가 학습된다</p>
+
+<ul>
+  <li>
+    <p>The $embedder$ $E(\mathrm{x}_i(s),\mathrm{y}_i(s); \phi)$ takes a video frame $\mathrm{x}_i(s)$, an associated landmark image $\mathrm{y}_i(s)$ and maps these inputs into an $N$-dimentional vector $\hat{\mathrm{e}}_i(s)$. Here, $\phi$ denotes network parameters that are learned in the meta-learning stage. In general, during meta-learning we aim to learn $\phi$ such that the vector $\hat{\mathrm{e}}_i(s)$ contains video-specific information (such as the person’s identity) that is invariant to the pose and mimics in a particular frame s. We denote embedding vectors computed by the embedder as $\hat{\mathrm{e}}_i$<br />
+임베더 는 비디오 프레임 $\mathrm{x}_i(s)$를 가져오고 연관된 랜드마크 이미지 $\mathrm{y}_i(s)$ 와 N차원 벡터에 맵핑시킨다. 여기서 $\phi$ 는 메타러닝 스테이지에서 학습된 네트워크 파라미터를 나타낸다.
+일반적으로 메타러닝동안 벡터 $\hat{\mathrm{e}}_i(s)$ 가 비디오정보(개인의 특성)같은 것을 포함하도록 $\phi$를 배우는것을 목표로 한다. 특정 프레임의 포즈와 표정에 영향을 미치지 않도록. 우리는 임베더에 의해 계산된 임베딩 벡터를 $\hat{\mathrm{e}}_i$ 라고 부른다</p>
+  </li>
+  <li>
+    <p>The $generator$ $G(\mathrm{y}_i(t), \hat{\mathrm{e}}_i; \psi, P)$ takes the landmark image $\mathrm{y}_i(s)$ for the video frame not seen by the embedder, the predicted video embedding $\hat{\mathrm{e}}_i$, and outputs a synthesized video frame $\hat{\mathrm{x}}_i(t)$. The generator is trained to maximize the similarity between its output and the ground truth frames. All parameters of the generator are split into two sets: the person-generic parameters $\psi$. During meta-learning only $\psi_i$ are trained directly, while $\psi_i$ are predicted from the embedding vector $\hat{\mathrm{e}}_i$ using a trainable projection matrix $\mathrm{P}:\hat\psi_i=\mathrm{P}\hat\mathrm{e}_i$<br />
+제네레이터 G는 임베더가 보지못한 랜드마크 이미지 y 를 가져오고, 예측된 임베딩 e 와  합성된 비디오프레임 X 를 출력한다. G는 출력과 기존 이미지의 유사도가 최대화 되도록 학습된다. G의 모든 파라미터는 두가지로 나뉜다. 인간의 전체적 파라미터 $\psi$. 메타러닝은 오직 프사이만 직접 학습시킨다, 프사이는 임베딩 벡터 E 를 학습가능한 투영 행렬 P를 사용하여 학습된다</p>
+  </li>
+  <li>The $discriminator$ $D(\mathrm{x}_i(t), \mathrm{y}_i(t), i; \theta, \mathrm{W, w}_0, b)$ take a video frame $\mathrm{x}_i(t)$, an associated landmark image $\mathrm{y}_i(t)$ and the index of the training sequence $i$. Here, $\theta, \mathrm{W,w0}$ and $b$ denote the learnable parameters associated with the discriminator. Thr discriminator contains a ConvNet part $V(\mathrm{x}_i(t),\mathrm{y}_i(t);\theta)$ that maps the input frame and the landmark image into an $N$-dimensional vector. The discriminator predicts a single scalar (realism score) $r$, that indicates, whether the input frame $\mathrm{x}_i(t)$ is a real frame of the $i$-th video sequence and whether it matches the input pose $\mathrm{y}_i(t)$, based on the output of its ConvNet part and the parameters $\mathrm{W,w_0}, b$.</li>
+  <li>D 는 비디오프레임 x와 연관된 랜드마크 이미지 y 와 시퀸스인덱스 i 를 입력받는다.
+여기서 뒤에 4개는 D 와 관련된 학습가능한 파라미터이다. D 는 컨브넷파트 V를 포함하는데 이것은 입력프레임과 랜드마크이미지를 N차원 벡터에 맵핑한다. D 는 스칼라값 r 을 예측하는데 이것은 실제 입력 프레임x 와 인풋포즈 y 가 얼마나 매치하는지 여부를 나타낸다. V 파트와 D의 파라미터들에 기반하여</li>
+</ul>
+
+<h2 id="32-meta-learning-stage">3.2 Meta-learning stage</h2>
+
+<p>During the meta-learning stage of our approach, the parameters of all three networks are trained in an adversarial fashion. It is done by simulation episodes of K-shot learning (K=8 in our experiments). In each episode, we randomly draw a training video sequence $i$ and a single frame t from that sequence. In addition to t, we randomly draw additional K frames $s_1,s_2,\cdots,s_K$ from the same sequence.<br />
+우리의 메타러닝 과정에서 3가지 네트워크의 모든 파라미터는 적대적 방식으로 학습된다. 이것은 K샷 학습의 시뮬레이션에피소드로 이루어진다 (K는 8로 실험하였다). 각 에피소드에서 무작위로 i번째 비디오와 그 비디오의 t번째 프레임을 그려낸다
+추가로 같은 시퀸스에서 추가로 K개의 프레임을 더 그린다.</p>
+
+<p>We then compute the estimate $\mathrm{e}$ of the i-th video embedding by simply averaging the embeddings $\hat\mathrm{e}_i(s_k)$ predicted for these additional frames :</p>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>AweSome Blog ©
+  
+  
+    2018
+    -
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

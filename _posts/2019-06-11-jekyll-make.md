@@ -97,4 +97,3 @@ jekyll serve
 내일 다시도전 ㅠ
 
 
-sudo gem update --system

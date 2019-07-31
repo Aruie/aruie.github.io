@@ -21,6 +21,8 @@
 <link rel="stylesheet" href="/assets/css/font.css">
 <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
 
+
+
 <!-- Favicon -->
 <link href="/assets/profile.jpeg" rel="shortcut icon" />
 <link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
@@ -36,6 +38,11 @@
 <meta name="theme-color" content=" #9A85FF ">
 </head>
 <body>
+
+<!-- Tex 문법 -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 
 <!-- 顶部锚点 -->
 <a id="htmlup" name="htmlup"></a>
@@ -82,8 +89,8 @@
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">没有上一页咯</sapn></span></div>
+      <a href="/post/2019/06/12/tensor20.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">Tensorflow 2.0 정리</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
@@ -102,7 +109,7 @@
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="javascript:;" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span><br>没有上一篇咯</span></a>
+      <a href="/post/2019/06/12/tensor20.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>Tensorflow 2.0 정리</span></a>
     
     
       <a href="/2018/05/17/welcome-to-jekyll.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>Welcome to Jekyll!</span></a>
@@ -202,27 +209,15 @@ gem install tzinfo-data
 
 <p>내일 다시도전 ㅠ</p>
 
-<p>sudo gem update –system</p>
 
   <!-- 引入share模块 -->
   
-  <div class="social-share-wrapper">
-    <div class="social-share"></div>
-  </div>
-
 
 <!-- share.js -->
 <script src="/assets/js/social-share.min.js"></script>
 <script>
   socialShare('.social-share', {
     sites: [
-      
-        'twitter'
-        ,
-        
-      
-        'facebook'
-        
       
     ],
     wechatQrcodeTitle: "分享到微信朋友圈",
