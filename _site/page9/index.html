@@ -1,4 +1,3 @@
-<!-- 首页及其他页面的布局-Layout -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +32,30 @@
 
 <!-- 谷歌分析 -->
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 </head>
 <body>
@@ -69,36 +92,19 @@
 
     <ul class="post-list">
       
-  <a href="/reinforcedlearning/2019/06/18/rein-1.html">
+  <a href="/jekyll/daily/2019/06/11/jekyll-make.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">강화학습 기초정리</h2>
+              <h2 class="post-title">Jekyll 블로그를 시작해 봅시다</h2>
               
               
-              <p class="post-excerpt">MDP ( Marcov Decision Process )  현재의 정보가 충분히 주어진다면 과거는 미래와 독립이라는 가정을 둔 상태  현재 정보만으로 미래의 행동을 결정한다구성요소1. State ( $S$ )  관찰 가능...</p>
+              <p class="post-excerpt">Jekyll 블로그?요새 아이티에 종사하는 분들 보면대부분 블로그 주소가 github.io 가 많은데관심없던 시절엔 그냥 깃허브에서 제공하는 도메인 서비스인가 했었는데블로그를 만들라고 제작해준거 일줄은…사실 인터넷을 뒤져...</p>
               
           </section>
           <footer class="post-tags">
                 
-                <time class="post-date" datetime="19-06-18">18 Jun 2019</time>
-          </footer>
-      </li>
-  </a>
-
-  <a href="/paper/2019/06/13/selfie.html">
-      <li class="fadeInUp animated">
-          
-          <section class="post-preview">
-              <h2 class="post-title">Selfie : Self-supervised Pretraining for Image Embedding</h2>
-              
-              
-              <p class="post-excerpt">Selfie : Self-supervised Pretraining for Image Embedding번역하자면 이미지 임베딩을 위한 자기지도 전처리? 정도겠네요얼마전부터 구상했던 모델이 있는데 왠지 비슷한 느낌이…한번 봐...</p>
-              
-          </section>
-          <footer class="post-tags">
-                
-                <time class="post-date" datetime="19-06-13">13 Jun 2019</time>
+                <time class="post-date" datetime="19-06-11">11 Jun 2019</time>
           </footer>
       </li>
   </a>
@@ -115,11 +121,10 @@
         
     
     
-        <!-- 
-            <a href="/page10/" class="page-link" title="Next Page">&raquo;</a>
-         -->
-        <a href="/page10/" class="page-link" title="Next Page">&raquo;</a>
     
+      
+        <a href="/page9" class="page-link" title="Final Page">9</a>
+      
     
   </div>
 
@@ -155,7 +160,6 @@
 <!-- 页面刷新回到顶部 -->
 <script>
     window.onbeforeunload = function(){
-        //刷新后页面自动回到顶部
         document.documentElement.scrollTop = 0;  //ie下
         document.body.scrollTop = 0;  //非ie
     }

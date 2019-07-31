@@ -1,0 +1,309 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Aru's Daily Page" />
+<meta name="keywords" content="DeepLearning, NeuralNetwork" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>Jekyll 블로그를 시작해 봅시다</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">Aru's Blog</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Jekyll 블로그를 시작해 봅시다</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/jekyll/daily/2019/06/13/jekyll_2.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">WSL 에서 Jekyll 설치 재도</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">Jekyll 블로그를 시작해 봅시다</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;Aru</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="javascript:;" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">没有下一页咯</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/jekyll/daily/2019/06/13/jekyll_2.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>WSL 에서 Jekyll 설치 재도</span></a>
+    
+    
+      <a href="javascript:;" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span><br>没有下一篇咯</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <h1 id="jekyll-블로그">Jekyll 블로그?</h1>
+
+<p>요새 아이티에 종사하는 분들 보면
+대부분 블로그 주소가 github.io 가 많은데
+관심없던 시절엔 그냥 깃허브에서 제공하는 도메인 서비스인가 했었는데
+블로그를 만들라고 제작해준거 일줄은…</p>
+
+<p>사실 인터넷을 뒤져보면 쉽게만들기 쉽게만들기 이러지만
+당연하게도 네이버나 이런 플랫폼처럼 친절하진 않아요…
+IT 한정으로 쉽다 그러는 느낌?
+안그래도 정리못하기로 유명해서 정리하는 감각좀 익힐겸 해서 
+만들면서 첫번째 포스트를 만들어 보려합니다</p>
+
+<p>어짜피 누굴 보여주기라기보단 나중에 찾기 편하게 기록용도로 쓰는거라
+매우 불친절하니 이해좀…
+Jekyll 이 뭔지 아직도 정확힌 모르겠지만 일단 설치부터 해볼게요</p>
+
+<p>원래 새로운프로그램은 다 이해하려면 끝도없어서 
+일단 설치부터 하고 보는겁니다</p>
+
+<p>사실 그냥 서버에서 바로 해볼까했는데
+푸쉬 하고 난뒤에 새로고침을 수백번은 눌러야 적용이….
+실수하면 답이없겠다 싶어서 로컬에서 작업하고 올리려고요…</p>
+
+<h2 id="1-루비-및-jekyll-설치">1. 루비 및 Jekyll 설치</h2>
+
+<p>일단 루비기반으로 작성된 것이라 루비를 설치해야하는데
+윈도에선 이게좀… 윈도버전으로 받아봅시다</p>
+
+<p>https://rubyinstaller.org/downloads/</p>
+
+<p>요기 가셔서 그냥 WITH DEVKIT 으로 자신에 맞는걸로 받으시면 됩니다</p>
+
+<p>그후 시작메뉴에서 
+Start Command Prompt with Ruby 를 실행</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
+gem install minima
+gem install bundler
+gem install jekyll-feed
+gem install tzinfo-data
+</code></pre></div></div>
+<p>하나씩 하실거 없이 다섯줄 다 복사해서 붙이면 알아서 한줄씩 실행 굿</p>
+
+<p>#2. 블로그 연동</p>
+
+<p>보니 미리 만들어 놔야했네요 지금 가서 만듭시다…</p>
+
+<p>github.com 에 들어가서 새 repository를 만듭시다</p>
+
+<p>이름은 <이름>.github.io 로 꼭 해주셔야 합니다</이름></p>
+
+<p>그냥하면 허전하니 README.md 생성 체크…</p>
+
+<p>해도 되지만! 우린 남에껄 가져와야…하는건 아닌데 그래야 이쁘죠</p>
+
+<p>전 미적감각이 제로라…</p>
+
+<p>github에서 jekyll theme로 검색하시고 원하시는걸 찾은후 Fork를 해주시면 내 저장소로 바로 오게됩니다
+그후 Setting에 들어가서 Template repository 를 클릭
+이후 새로 repository를 생성하면 템플릿으로 사용 가능합니다
+이후 터미널 혹은 git bash 에서</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;아이디&gt;/&lt;이름&gt;.github.io
+</code></pre></div></div>
+
+<p>를 해주시면 됩니다</p>
+
+<p>그리고는</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve 
+</code></pre></div></div>
+
+<p>를 실행하면 서버가 돌아간다는데 에러…</p>
+
+<p>이후 뭔짓을해도 에러가 해결이안됨…</p>
+
+<p>빈 폴더에서 새로 서버를 열면되는데</p>
+
+<p>기존 템플릿을 가져오면 에러가 나네요 ㅠㅠ</p>
+
+<p>스택오버플로 찾아보니 개발자 킷 설치하라는데</p>
+
+<p>분명 합쳐진걸로 설치했….</p>
+
+<p>내일 다시도전 ㅠ</p>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>AweSome Blog ©
+  
+  
+    2018
+    -
+  
+  2019
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

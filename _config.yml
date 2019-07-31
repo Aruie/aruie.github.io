@@ -25,10 +25,10 @@ footer:
 
 # Markdown
 markdown: kramdown
-# kramdown:
-#   input: GFM
-################# rouge????
 highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+
 #################
 pygmentsTheme: 'default'
 

@@ -36,12 +36,31 @@
 
 <!-- Android Lolipop Theme Color -->
 <meta name="theme-color" content=" #9A85FF ">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
 <body>
-
-<!-- Tex 문법 -->
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 <!-- 顶部锚点 -->
@@ -101,8 +120,8 @@
   </div>
   <div class="right-area">
     
-      <a href="/environment/2019/06/28/vscode-cpp.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
-      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">VScode에서 C++ 적용 With Ubuntu</sapn></span></div>
+      <a href="/kaggle/2019/06/28/kaggle-new-kernel.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">새 커널 처음부터 해보기</sapn></span></div>
     
   </div>
 
@@ -112,7 +131,7 @@
       <a href="/paper/2019/07/04/EffecientNet.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>EfficientNet : Rethinking Model scaling for Convolutional Neural Networks</span></a>
     
     
-      <a href="/environment/2019/06/28/vscode-cpp.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>VScode에서 C++ 적용 With Ubuntu</span></a>
+      <a href="/kaggle/2019/06/28/kaggle-new-kernel.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>새 커널 처음부터 해보기</span></a>
     
   </div>
 </div>

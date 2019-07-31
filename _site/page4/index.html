@@ -1,4 +1,3 @@
-<!-- 首页及其他页面的布局-Layout -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +32,30 @@
 
 <!-- 谷歌分析 -->
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 </head>
 <body>
@@ -86,14 +109,14 @@
       </li>
   </a>
 
-  <a href="/environment/2019/06/28/vscode-cpp.html">
+  <a href="/kaggle/2019/06/28/kaggle-new-kernel.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">VScode에서 C++ 적용 With Ubuntu</h2>
+              <h2 class="post-title">새 커널 처음부터 해보기</h2>
               
               
-              <p class="post-excerpt">C++ in Vscode</p>
+              <p class="post-excerpt">#</p>
               
           </section>
           <footer class="post-tags">
@@ -155,7 +178,6 @@
 <!-- 页面刷新回到顶部 -->
 <script>
     window.onbeforeunload = function(){
-        //刷新后页面自动回到顶部
         document.documentElement.scrollTop = 0;  //ie下
         document.body.scrollTop = 0;  //非ie
     }

@@ -36,12 +36,31 @@
 
 <!-- Android Lolipop Theme Color -->
 <meta name="theme-color" content=" #9A85FF ">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
 <body>
-
-<!-- Tex 문법 -->
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 <!-- 顶部锚点 -->
@@ -89,8 +108,8 @@
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="/environment/2019/06/28/vscode-cpp.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">VScode에서 C++ 적용 With Ubuntu</sapn></span></div>
+      <a href="/deeplearning/2019/06/28/gan.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">GAN 시작</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
@@ -109,7 +128,7 @@
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="/environment/2019/06/28/vscode-cpp.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>VScode에서 C++ 적용 With Ubuntu</span></a>
+      <a href="/deeplearning/2019/06/28/gan.html" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>GAN 시작</span></a>
     
     
       <a href="/keras/2019/06/28/keras-generator.html" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>제네레이터를 써보자</span></a>

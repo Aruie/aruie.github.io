@@ -1,4 +1,3 @@
-<!-- 首页及其他页面的布局-Layout -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +32,30 @@
 
 <!-- 谷歌分析 -->
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 </head>
 <body>
@@ -69,36 +92,36 @@
 
     <ul class="post-list">
       
-  <a href="/reference/2019/06/24/reference.html">
+  <a href="/paper/2019/06/20/selfie.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">need to read</h2>
+              <h2 class="post-title">Selfie : Self-supervised Pretraining for Image Embedding</h2>
               
               
-              <p class="post-excerpt">참조 사이트라츠고님 블로그https://ratsgo.github.io/황준식님 블로그https://jsideas.net/한국가스공사 공모전 https://www.onoffmix.com/event/183814Transfom...</p>
+              <p class="post-excerpt">Selfie : Self-supervised Pretraining for Image Embedding번역하자면 이미지 임베딩을 위한 자기지도 전처리? 정도겠네요얼마전부터 구상했던 모델이 있는데 왠지 비슷한 느낌이…한번 봐...</p>
               
           </section>
           <footer class="post-tags">
                 
-                <time class="post-date" datetime="19-06-24">24 Jun 2019</time>
+                <time class="post-date" datetime="19-06-20">20 Jun 2019</time>
           </footer>
       </li>
   </a>
 
-  <a href="/paper/2019/06/24/need-to-read.html">
+  <a href="/python/2019/06/19/numpy.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">need to read</h2>
+              <h2 class="post-title">Numpy 많이쓰는 함수 정리</h2>
               
               
-              <p class="post-excerpt">BERT : Bidirectinal Encoder Representations from Transformer이분 블로그를 참조 감사합니다 ㅠhttps://mino-park7.github.io/nlp/2018/12/12/b...</p>
+              <p class="post-excerpt">Numpy 란다들 아시다시피 파이썬에서 행렬관련 계산을 빠르게 해주는 패키지죠모르던 시절에 넘피라고 읽었었는데 넘파이였… 아직도 습관적으로 튀어나오는항상 쓰던 패키지지만 정리겸 복습겸 한번 남겨봐요Numpy는 ndarra...</p>
               
           </section>
           <footer class="post-tags">
                 
-                <time class="post-date" datetime="19-06-24">24 Jun 2019</time>
+                <time class="post-date" datetime="19-06-19">19 Jun 2019</time>
           </footer>
       </li>
   </a>
@@ -155,7 +178,6 @@
 <!-- 页面刷新回到顶部 -->
 <script>
     window.onbeforeunload = function(){
-        //刷新后页面自动回到顶部
         document.documentElement.scrollTop = 0;  //ie下
         document.body.scrollTop = 0;  //非ie
     }

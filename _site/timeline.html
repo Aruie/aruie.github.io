@@ -1,4 +1,3 @@
-<!-- 首页及其他页面的布局-Layout -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +32,30 @@
 
 <!-- 谷歌分析 -->
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 </head>
 <body>
@@ -204,24 +227,6 @@
               </a>
             </div>
             <div class="right-name">
-              <a href="/environment/2019/06/28/vscode-cpp.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    VScode에서 C++ 적용 With Ubuntu
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-28">2019-06-28</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
               <a href="/kaggle/2019/06/28/kaggle-new-kernel.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
@@ -253,16 +258,16 @@
             <div class="left-time">
               <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
                 <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-28">2019-06-28</time>
+                    <time class="post-date timefont" datetime="19-06-27">2019-06-27</time>
                 </sapn></span>
               </a>
             </div>
             <div class="right-name">
-              <a href="/tips/2019/06/28/Tips.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
+              <a href="/tips/2019/06/27/Tips.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
-                    Tip
+                    Tips
                   </sapn>
                 </span>
               </a>
@@ -280,43 +285,7 @@
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
-                    윈도우에서 WSL을 이용한 딥러닝 개발환경 세팅
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-24">2019-06-24</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/reference/2019/06/24/reference.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    need to read
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-24">2019-06-24</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/paper/2019/06/24/need-to-read.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    need to read
+                    윈도우에서 WSL을 이용한 VSCode 개발환경 세팅
                   </sapn>
                 </span>
               </a>
@@ -330,11 +299,29 @@
               </a>
             </div>
             <div class="right-name">
-              <a href="/deeplearning/2019/06/20/aaaaa.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
+              <a href="/post/2019/06/20/tensor20.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
-                    TensorfLow 기본노드 정리
+                    Tensorflow 2.0 정리
+                  </sapn>
+                </span>
+              </a>
+            </div>
+          
+            <div class="left-time">
+              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
+                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
+                    <time class="post-date timefont" datetime="19-06-20">2019-06-20</time>
+                </sapn></span>
+              </a>
+            </div>
+            <div class="right-name">
+              <a href="/paper/2019/06/20/selfie.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
+                <span class="lefttime-san"></span>
+                <span class="lefttime-main">
+                  <sapn class="timemain">
+                    Selfie : Self-supervised Pretraining for Image Embedding
                   </sapn>
                 </span>
               </a>
@@ -352,7 +339,7 @@
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
-                    Numpy 복습
+                    Numpy 많이쓰는 함수 정리
                   </sapn>
                 </span>
               </a>
@@ -384,101 +371,11 @@
               </a>
             </div>
             <div class="right-name">
-              <a href="/paper/2019/06/13/selfie.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
+              <a href="/jekyll/daily/2019/06/13/jekyll_2.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
-                    Selfie : Self-supervised Pretraining for Image Embedding
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-13">2019-06-13</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/jekyll/2019/06/13/jekyll_2.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    WSL 에서 Jekyll 설치
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-13">2019-06-13</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/googlecloudtraining/2019/06/13/google1-2.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    1-2weeks
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-13">2019-06-13</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/googlecloudtraining/2019/06/13/google1-1.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    1-1weeks
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-12">2019-06-12</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/jekyll/2019/06/12/WSL-jekyll.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    WSL 에서 Jekyll 설치
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="19-06-12">2019-06-12</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/post/2019/06/12/tensor20.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    Tensorflow 2.0 정리
+                    WSL 에서 Jekyll 설치 재도
                   </sapn>
                 </span>
               </a>
@@ -492,47 +389,11 @@
               </a>
             </div>
             <div class="right-name">
-              <a href="/jekyll/2019/06/11/jekyll-make.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
+              <a href="/jekyll/daily/2019/06/11/jekyll-make.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
                 <span class="lefttime-san"></span>
                 <span class="lefttime-main">
                   <sapn class="timemain">
                     Jekyll 블로그를 시작해 봅시다
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="18-05-17">2018-05-17</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/2018/05/17/welcome-to-jekyll.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    Welcome to Jekyll!
-                  </sapn>
-                </span>
-              </a>
-            </div>
-          
-            <div class="left-time">
-              <a href="javascript:;" onmouseover="this.children[0].style.borderLeft='8px solid rgb(255,90,90)'; this.children[1].style.backgroundColor='rgb(255,90,90)';this.children[1].children[0].children[0].style.color='white';" onmouseout="this.children[0].style.borderLeft='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].children[0].style.color='#555';">
-                <span class="righttime-san"></span><span class="righttime-main"><sapn class="timemain">
-                    <time class="post-date timefont" datetime="17-04-18">2017-04-18</time>
-                </sapn></span>
-              </a>
-            </div>
-            <div class="right-name">
-              <a href="/2017/04/18/hello-jekyll.html" onmouseover="this.children[0].style.borderRight='8px solid rgb(154,133,255)'; this.children[1].style.backgroundColor='rgb(154,133,255)';this.children[1].children[0].style.color='white';this.children[1].children[0].style.fontWeight='bold';" onmouseout="this.children[0].style.borderRight='8px solid #f4f4f4'; this.children[1].style.backgroundColor='#f4f4f4';this.children[1].children[0].style.color='#555';this.children[1].children[0].style.fontWeight='normal';">
-                <span class="lefttime-san"></span>
-                <span class="lefttime-main">
-                  <sapn class="timemain">
-                    Hello Jekyll
                   </sapn>
                 </span>
               </a>
@@ -592,13 +453,6 @@
             </div>
           
             <div class="timeANDname">
-              <a href="/environment/2019/06/28/vscode-cpp.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  VScode에서 C++ 적용 With Ubuntu
-                  <time class="timeline-data" datetime="19-06-28">2019-06-28</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
               <a href="/kaggle/2019/06/28/kaggle-new-kernel.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
                   새 커널 처음부터 해보기
                   <time class="timeline-data" datetime="19-06-28">2019-06-28</time>
@@ -613,43 +467,36 @@
             </div>
           
             <div class="timeANDname">
-              <a href="/tips/2019/06/28/Tips.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Tip
-                  <time class="timeline-data" datetime="19-06-28">2019-06-28</time>
+              <a href="/tips/2019/06/27/Tips.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
+                  Tips
+                  <time class="timeline-data" datetime="19-06-27">2019-06-27</time>
               </sapn></span></a>
             </div>
           
             <div class="timeANDname">
               <a href="/environment/2019/06/24/wsl-vscode.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  윈도우에서 WSL을 이용한 딥러닝 개발환경 세팅
+                  윈도우에서 WSL을 이용한 VSCode 개발환경 세팅
                   <time class="timeline-data" datetime="19-06-24">2019-06-24</time>
               </sapn></span></a>
             </div>
           
             <div class="timeANDname">
-              <a href="/reference/2019/06/24/reference.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  need to read
-                  <time class="timeline-data" datetime="19-06-24">2019-06-24</time>
+              <a href="/post/2019/06/20/tensor20.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
+                  Tensorflow 2.0 정리
+                  <time class="timeline-data" datetime="19-06-20">2019-06-20</time>
               </sapn></span></a>
             </div>
           
             <div class="timeANDname">
-              <a href="/paper/2019/06/24/need-to-read.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  need to read
-                  <time class="timeline-data" datetime="19-06-24">2019-06-24</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/deeplearning/2019/06/20/aaaaa.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  TensorfLow 기본노드 정리
+              <a href="/paper/2019/06/20/selfie.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
+                  Selfie : Self-supervised Pretraining for Image Embedding
                   <time class="timeline-data" datetime="19-06-20">2019-06-20</time>
               </sapn></span></a>
             </div>
           
             <div class="timeANDname">
               <a href="/python/2019/06/19/numpy.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Numpy 복습
+                  Numpy 많이쓰는 함수 정리
                   <time class="timeline-data" datetime="19-06-19">2019-06-19</time>
               </sapn></span></a>
             </div>
@@ -662,65 +509,16 @@
             </div>
           
             <div class="timeANDname">
-              <a href="/paper/2019/06/13/selfie.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Selfie : Self-supervised Pretraining for Image Embedding
+              <a href="/jekyll/daily/2019/06/13/jekyll_2.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
+                  WSL 에서 Jekyll 설치 재도
                   <time class="timeline-data" datetime="19-06-13">2019-06-13</time>
               </sapn></span></a>
             </div>
           
             <div class="timeANDname">
-              <a href="/jekyll/2019/06/13/jekyll_2.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  WSL 에서 Jekyll 설치
-                  <time class="timeline-data" datetime="19-06-13">2019-06-13</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/googlecloudtraining/2019/06/13/google1-2.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  1-2weeks
-                  <time class="timeline-data" datetime="19-06-13">2019-06-13</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/googlecloudtraining/2019/06/13/google1-1.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  1-1weeks
-                  <time class="timeline-data" datetime="19-06-13">2019-06-13</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/jekyll/2019/06/12/WSL-jekyll.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  WSL 에서 Jekyll 설치
-                  <time class="timeline-data" datetime="19-06-12">2019-06-12</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/post/2019/06/12/tensor20.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Tensorflow 2.0 정리
-                  <time class="timeline-data" datetime="19-06-12">2019-06-12</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/jekyll/2019/06/11/jekyll-make.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
+              <a href="/jekyll/daily/2019/06/11/jekyll-make.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
                   Jekyll 블로그를 시작해 봅시다
                   <time class="timeline-data" datetime="19-06-11">2019-06-11</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/2018/05/17/welcome-to-jekyll.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Welcome to Jekyll!
-                  <time class="timeline-data" datetime="18-05-17">2018-05-17</time>
-              </sapn></span></a>
-            </div>
-          
-            <div class="timeANDname">
-              <a href="/2017/04/18/hello-jekyll.html"><span class="timeANDname-san"></span><span class="timeANDname-main"><sapn class="timeANDnamemain">
-                  Hello Jekyll
-                  <time class="timeline-data" datetime="17-04-18">2017-04-18</time>
               </sapn></span></a>
             </div>
           
@@ -759,7 +557,6 @@
 <!-- 页面刷新回到顶部 -->
 <script>
     window.onbeforeunload = function(){
-        //刷新后页面自动回到顶部
         document.documentElement.scrollTop = 0;  //ie下
         document.body.scrollTop = 0;  //非ie
     }

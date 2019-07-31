@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-31T11:07:18+09:00</updated><id>http://localhost:4000/</id><title type="html">AweSome Blog</title><subtitle>Aru's Daily Page</subtitle><author><name>Aru</name></author><entry><title type="html"></title><link href="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html" rel="alternate" type="text/html" title="" /><published>2019-07-31T11:07:18+09:00</published><updated>2019-07-31T11:07:18+09:00</updated><id>http://localhost:4000/2019/07/31/2019-07-05-GNN-google</id><content type="html" xml:base="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html">&lt;h1 id=&quot;relational-inductive-biases-deep-learning-and-graph&quot;&gt;Relational inductive biases, deep learning, and graph&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-31T18:34:27+09:00</updated><id>http://localhost:4000/</id><title type="html">AweSome Blog</title><subtitle>Aru's Daily Page</subtitle><author><name>Aru</name></author><entry><title type="html"></title><link href="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html" rel="alternate" type="text/html" title="" /><published>2019-07-31T18:34:27+09:00</published><updated>2019-07-31T18:34:27+09:00</updated><id>http://localhost:4000/2019/07/31/2019-07-05-GNN-google</id><content type="html" xml:base="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html">&lt;h1 id=&quot;relational-inductive-biases-deep-learning-and-graph&quot;&gt;Relational inductive biases, deep learning, and graph&lt;/h1&gt;
 &lt;p&gt;arXiv:1806.01261v3 , 17 oct 2018&lt;/p&gt;
 
 &lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
@@ -640,49 +640,90 @@ latent space 에서 움직일때 변화가 부드러워야함&lt;/p&gt;
 &lt;p&gt;Maxpooling 을 제거하여 모두 미분가능하게 변화&lt;/p&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;[http://jaejunyoo.blogspot.com/]&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">GAN?</summary></entry><entry><title type="html">VScode에서 C++ 적용 With Ubuntu</title><link href="http://localhost:4000/environment/2019/06/28/vscode-cpp.html" rel="alternate" type="text/html" title="VScode에서 C++ 적용 With Ubuntu" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/environment/2019/06/28/vscode-cpp</id><content type="html" xml:base="http://localhost:4000/environment/2019/06/28/vscode-cpp.html">&lt;h1 id=&quot;c-in-vscode&quot;&gt;C++ in Vscode&lt;/h1&gt;
+&lt;p&gt;[http://jaejunyoo.blogspot.com/]&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">GAN?</summary></entry><entry><title type="html">새 커널 처음부터 해보기</title><link href="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html" rel="alternate" type="text/html" title="새 커널 처음부터 해보기" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel</id><content type="html" xml:base="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html">&lt;p&gt;#&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">#</summary></entry><entry><title type="html">제네레이터를 써보자</title><link href="http://localhost:4000/keras/2019/06/28/keras-generator.html" rel="alternate" type="text/html" title="제네레이터를 써보자" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/keras/2019/06/28/keras-generator</id><content type="html" xml:base="http://localhost:4000/keras/2019/06/28/keras-generator.html">&lt;h1 id=&quot;제네레이터가-뭘까&quot;&gt;제네레이터가 뭘까&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install build-essential
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;데이터가 필요한데 데이터가 부족하다? 흔한 현상이죠&lt;br /&gt;
+하지만 이미지에선 그 틀을 조금 부술수 있는 기법이 존재하죠&lt;br /&gt;
+바로 이미지 증식!&lt;br /&gt;
+고양이사진을 3픽셀 옆으로 민다고 강아지 사진이 되진 않는다는거죠&lt;br /&gt;
+회전 확대 이동 반전등 여러가지를 사용해도 우리 눈엔 고양이로 보인다는것.&lt;br /&gt;
+하지만 픽셀 데이터 상으로는 완전히 다른 데이터가 나오므로 이것을 이용해 데이터도 늘릴 겸 위치이동이나 회전에 대한 학습도 하게 되는거죠&lt;/p&gt;
 
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://webnautes.tistory.com/1158&quot;&gt;https://webnautes.tistory.com/1158&lt;/a&gt;&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">C++ in Vscode</summary></entry><entry><title type="html">새 커널 처음부터 해보기</title><link href="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html" rel="alternate" type="text/html" title="새 커널 처음부터 해보기" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel</id><content type="html" xml:base="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html">&lt;p&gt;#&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">#</summary></entry><entry><title type="html">제네레이터를 써보자</title><link href="http://localhost:4000/keras/2019/06/28/keras-generator.html" rel="alternate" type="text/html" title="제네레이터를 써보자" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/keras/2019/06/28/keras-generator</id><content type="html" xml:base="http://localhost:4000/keras/2019/06/28/keras-generator.html">&lt;h1 id=&quot;제네레이터가-뭘까&quot;&gt;제네레이터가 뭘까&lt;/h1&gt;
+&lt;p&gt;하지만 안그래도 용량 많이먹는 이미지를 전부 다 돌리고 늘리고 한것들을 전부 저장한다면 하드든 메모리든 펑 하고 터져버리겟죠?&lt;br /&gt;
+그래서 메모리상엔 기본 이미지만 올려놓고 학습시 배치단위로 입력될 때 살짝 변조해서 데이터를 입력해주는 방식으로 큰 메모리 손실없이 많은 데이터를 학습하게 하는 생성기입니다.&lt;/p&gt;
 
-&lt;p&gt;나중에해야지&lt;br /&gt;
-이게더 어려워&lt;/p&gt;
+&lt;p&gt;는 사실 그냥 쓰면됩니다&lt;br /&gt;
+그럼 써봅시다&lt;/p&gt;
 
 &lt;h2 id=&quot;keraspreprocessingimageimagedatagenerator&quot;&gt;keras.preprocessing.image.ImageDataGenerator&lt;/h2&gt;
 
-&lt;p&gt;케라스에서 제공하는 이미지 제네레이터이다&lt;/p&gt;
+&lt;p&gt;케라스에서 제공하는 이미지 제네레이터인데요&lt;br /&gt;
+이래서 케라스를 쓴다 할정도로 편합니다.. 이거 직접 구현하러면 세상귀찬…&lt;/p&gt;
+
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ImageDataGenerator(featurewise_center=False, samplewise_center=False, featurewise_std_normalization=False, samplewise_std_normalization=False, zca_whitening=False, zca_epsilon=1e-06, rotation_range=0, width_shift_range=0.0, height_shift_range=0.0, brightness_range=None, shear_range=0.0, zoom_range=0.0, channel_shift_range=0.0, fill_mode='nearest', cval=0.0, horizontal_flip=False, vertical_flip=False, rescale=None, preprocessing_function=None, data_format=None, validation_split=0.0, dtype=None)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;길다……………………….&lt;br /&gt;
+&lt;p&gt;길죠……………………….&lt;br /&gt;
 하나씩 다 파보는건 레퍼런스가서 보시고&lt;/p&gt;
 
-&lt;p&gt;rotation_range : 회전 제한 각도  (0~180) 
+&lt;p&gt;rotation_range : 회전 제한 각도  (0~180)&lt;br /&gt;
 width_shift_range, height_shift_range : 상하좌우 이동가능비율&lt;br /&gt;
-horizontal_flip : 좌우반전여부 &lt;br /&gt;
-vertical_flip = 상하반전여부 
+horizontal_flip, vertical_flip : 좌우상하반전여부&lt;br /&gt;
 zoom_range : 확대축소비율 (0~1)&lt;/p&gt;
 
 &lt;p&gt;이정도면 되겠네요 적당한 숫자를 넣어 줍시다&lt;/p&gt;
 
-&lt;h2 id=&quot;주로-같이-사용하는-함수&quot;&gt;주로 같이 사용하는 함수&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;datagen = ImageDataGenerator(rescale =  1./255,          # 0과 1사이로 변경
+                             zoom_range = 0.2,           # 확대축소 20%
+                             width_shift_range = 0.2,    # 좌우이동 20%
+                             height_shift_range = 0.2,   # 상하이동 20%
+                             rotation_range = 30,        # 회전각도 30도 이내
+                             horizental_flip = True)     # 좌우반전 True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이런식으로 제네레이터를 생성해 주시면 됩니다&lt;br /&gt;
+끗 이면 좋겟지만 아직 좀남았어요&lt;br /&gt;
+이제 생성규칙 하나 만들어줬을 뿐이죠&lt;/p&gt;
+
+&lt;p&gt;진짜 제네레이터를 만드는건 3가지 함수가 있습니다&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 먼저 데이터프레임에서 불러오는 함수입니다
+
+generator = datagen.flow_from_dataframe(X_train,                # 데이터프레임
+                                        directory = './image',  # 데이터 위치
+                                        x_col = 'img_file',     # 파일위치 열이름
+                                        y_col = 'class',        # 클래스 열이름
+                                        target_size = (224,224),    # 이미지 사이즈
+                                        color_mode= 'rgb',          # 이미지 채널수
+                                        class_mode= 'categorical',  # Y값 변화방법
+                                        batch_size= 32,         # 배치사이즈
+                                        Shuffle = True,         # 랜덤 여부
+                                        seed = 42,              # 랜덤엔 시드
+                                        interpolation= 'nearest')   # 이미지변경시 보완방법
+
+generator = datagen.flow_from_directory('./image'       # 파일위치
+                                        classes = []    # 리스트
+                            )
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;참고용-주로-같이-사용하는-함수&quot;&gt;참고용 주로 같이 사용하는 함수&lt;/h2&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plt.imshow()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이미지 프린트&lt;/p&gt;
+&lt;p&gt;이미지 프린트&lt;br /&gt;
+잘잘렸는지 확인은 해봐야겟죠?&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PIL.Image.open
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PIL.Image.open()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이미지를 연다. jpg도 가능 &lt;br /&gt;
-불러오는 파일에 따라 다른타입으로 저장되는데 그냥 img로 퉁침&lt;/p&gt;
+&lt;p&gt;이미지를 여는 함수에요 뒤엔 주소가 들어가야겠죠. jpg도 가능합니다. 사실 불러오는 파일에 따라 다른타입으로 저장되는데 그냥 img로 퉁침&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;img.crop((x1,y1,x2,y2))
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Image.crop((x1,y1,x2,y2))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;대망의 자르기&lt;/p&gt;
+&lt;p&gt;대망의 자르기 &lt;br /&gt;
+원하는 크기만큼의 박스로 사진을 잘라줍니다&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;img.resize(size=(x,y), box =(x1, y, x2, y2) )
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Image.resize(size=(x,y), box =(x1, y, x2, y2) )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;대망의 사이즈 바꾸기인데 box 에 위에 crop에 해당하는 좌표를 넣어주면 두작업을 한번에 할 수 있다&lt;br /&gt;
 한마디로 크롭 무쓸모? 속도차이가 나려나&lt;/p&gt;
@@ -691,4 +732,49 @@ zoom_range : 확대축소비율 (0~1)&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;os.path.join(path, image_name)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;이미지 이름과 패스를 합치는 함수&lt;br /&gt;
-그냥 약간의 편의성 증진&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">제네레이터가 뭘까</summary></entry></feed>
+그냥 약간의 편의성 증진을 위한건데&lt;br /&gt;
+소스마다 안보이는곳이없….&lt;br /&gt;
+역시 사소한게 중요한것인듯&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">제네레이터가 뭘까</summary></entry><entry><title type="html">Tips</title><link href="http://localhost:4000/tips/2019/06/27/Tips.html" rel="alternate" type="text/html" title="Tips" /><published>2019-06-27T00:00:00+09:00</published><updated>2019-06-27T00:00:00+09:00</updated><id>http://localhost:4000/tips/2019/06/27/Tips</id><content type="html" xml:base="http://localhost:4000/tips/2019/06/27/Tips.html">&lt;p&gt;팁을 모아 봅시다&lt;/p&gt;
+
+&lt;h2 id=&quot;유니코드로-일반-텍스트에서-제곱-표시방법&quot;&gt;유니코드로 일반 텍스트에서 제곱 표시방법&lt;/h2&gt;
+
+&lt;p&gt;supscripts = {&lt;br /&gt;
+        0:u’\u2070’,&lt;br /&gt;
+        1:u’\xb9’,&lt;br /&gt;
+        2:u’\u00B2’,&lt;br /&gt;
+        3:u’\u00B3’,&lt;br /&gt;
+        4:u’\u2074’,&lt;br /&gt;
+        5:u’\u2075’,&lt;br /&gt;
+        6:u’\u2076’,&lt;br /&gt;
+        7:u’\u2077’,&lt;br /&gt;
+        8:u’\u2078’,&lt;br /&gt;
+        9:u’\u2079’,&lt;br /&gt;
+        ‘i’:u’\u2071’,&lt;br /&gt;
+        ‘+’:u’\u207A’,&lt;br /&gt;
+        ‘-‘:u’\u207B’,&lt;br /&gt;
+        ‘=’:u’\u207C’,&lt;br /&gt;
+        ‘(‘:u’\u207D’,&lt;br /&gt;
+        ‘)’:u’\u207E’,&lt;br /&gt;
+        ‘n’:u’\u207F’, }&lt;/p&gt;
+
+&lt;p&gt;subscripts = {
+        0:u’\u2080’,&lt;br /&gt;
+        1:u’\u2081’,&lt;br /&gt;
+        2:u’\u2082’,&lt;br /&gt;
+        3:u’\u2083’,&lt;br /&gt;
+        4:u’\u2084’,
+        5:u’\u2085’,&lt;br /&gt;
+        6:u’\u2086’,&lt;br /&gt;
+        7:u’\u2087’,&lt;br /&gt;
+        8:u’\u2088’,&lt;br /&gt;
+        9:u’\u2089’,
+      ‘+’:u’\u208A’,&lt;br /&gt;
+      ‘-‘:u’\u208B’,&lt;br /&gt;
+      ‘=’:u’\u208C’,&lt;br /&gt;
+      ‘(‘:u’\u208D’,&lt;br /&gt;
+      ‘)’:u’\u208E’, 
+      ‘a’:u’\u2090’,&lt;br /&gt;
+      ‘e’:u’\u2091’,&lt;br /&gt;
+      ‘o’:u’\u2092’,&lt;br /&gt;
+      ‘x’:u’\u2093’,&lt;br /&gt;
+      ‘e-‘:u’\u2094’, }&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">팁을 모아 봅시다 유니코드로 일반 텍스트에서 제곱 표시방법 supscripts = { 0:u’\u2070’, 1:u’\xb9’, 2:u’\u00B2’, 3:u’\u00B3’, 4:u’\u2074’, 5:u’\u2075’, 6:u’\u2076’, 7:u’\u2077’, 8:u’\u2078’, 9:u’\u2079’, ‘i’:u’\u2071’, ‘+’:u’\u207A’, ‘-‘:u’\u207B’, ‘=’:u’\u207C’, ‘(‘:u’\u207D’, ‘)’:u’\u207E’, ‘n’:u’\u207F’, } subscripts = { 0:u’\u2080’, 1:u’\u2081’, 2:u’\u2082’, 3:u’\u2083’, 4:u’\u2084’, 5:u’\u2085’, 6:u’\u2086’, 7:u’\u2087’, 8:u’\u2088’, 9:u’\u2089’, ‘+’:u’\u208A’, ‘-‘:u’\u208B’, ‘=’:u’\u208C’, ‘(‘:u’\u208D’, ‘)’:u’\u208E’, ‘a’:u’\u2090’, ‘e’:u’\u2091’, ‘o’:u’\u2092’, ‘x’:u’\u2093’, ‘e-‘:u’\u2094’, }</summary></entry></feed>

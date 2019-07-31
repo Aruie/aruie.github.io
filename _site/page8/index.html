@@ -1,4 +1,3 @@
-<!-- 首页及其他页面的布局-Layout -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +32,30 @@
 
 <!-- 谷歌分析 -->
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+  });
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 </head>
 <body>
@@ -69,36 +92,36 @@
 
     <ul class="post-list">
       
-  <a href="/deeplearning/2019/06/20/aaaaa.html">
+  <a href="/reinforcedlearning/2019/06/18/rein-1.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">TensorfLow 기본노드 정리</h2>
+              <h2 class="post-title">강화학습 기초정리</h2>
               
               
-              <p class="post-excerpt">Tensorflow 기본노드넘파이를 정리하다보니 텐서플로우를 사용할떄비슷하게 사용하던 함수도 정리를 해볼까 한다일단 불러와야죠import tensorflow as tf상수 및 변수일단 텐서정보를 보는 함수.op.node_...</p>
+              <p class="post-excerpt">강화학습을 공부하기 앞서 간단한 개념들에 대한 정리를 해보려 한다하면서 느낀거지만 어렵다 ㅠㅠMDP ( Marcov Decision Process )  현재의 정보가 충분히 주어진다면 과거는 미래와 독립이라는 가정을 둔 ...</p>
               
           </section>
           <footer class="post-tags">
                 
-                <time class="post-date" datetime="19-06-20">20 Jun 2019</time>
+                <time class="post-date" datetime="19-06-18">18 Jun 2019</time>
           </footer>
       </li>
   </a>
 
-  <a href="/python/2019/06/19/numpy.html">
+  <a href="/jekyll/daily/2019/06/13/jekyll_2.html">
       <li class="fadeInUp animated">
           
           <section class="post-preview">
-              <h2 class="post-title">Numpy 복습</h2>
+              <h2 class="post-title">WSL 에서 Jekyll 설치 재도</h2>
               
               
-              <p class="post-excerpt">Numpy 란다들 아시다시피 파이썬에서 행렬관련 계산을 빠르게 해주는 패키지죠모르던 시절에 넘피라고 읽었었는데 넘파이였… 아직도 습관적으로 튀어나오는항상 쓰던 패키지지만 교육과정에서 하길래 복습겸 한번 남겨봐요시작일단 불...</p>
+              <p class="post-excerpt">WSL 에서 jekyll 설치어제 하던 뻘짓은 날려버리고… 기존 윈도우용 루비를 삭제했습니다이제 편하게 리눅스에서 지킬을 설치해볼게요일단 루비를 설치해야겠죠$ sudo apt-get update -y &amp;&amp; ...</p>
               
           </section>
           <footer class="post-tags">
                 
-                <time class="post-date" datetime="19-06-19">19 Jun 2019</time>
+                <time class="post-date" datetime="19-06-13">13 Jun 2019</time>
           </footer>
       </li>
   </a>
@@ -155,7 +178,6 @@
 <!-- 页面刷新回到顶部 -->
 <script>
     window.onbeforeunload = function(){
-        //刷新后页面自动回到顶部
         document.documentElement.scrollTop = 0;  //ie下
         document.body.scrollTop = 0;  //非ie
     }
