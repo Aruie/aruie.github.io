@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-31T18:34:27+09:00</updated><id>http://localhost:4000/</id><title type="html">AweSome Blog</title><subtitle>Aru's Daily Page</subtitle><author><name>Aru</name></author><entry><title type="html"></title><link href="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html" rel="alternate" type="text/html" title="" /><published>2019-07-31T18:34:27+09:00</published><updated>2019-07-31T18:34:27+09:00</updated><id>http://localhost:4000/2019/07/31/2019-07-05-GNN-google</id><content type="html" xml:base="http://localhost:4000/2019/07/31/2019-07-05-GNN-google.html">&lt;h1 id=&quot;relational-inductive-biases-deep-learning-and-graph&quot;&gt;Relational inductive biases, deep learning, and graph&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-02T04:44:14+09:00</updated><id>http://localhost:4000/</id><title type="html">AweSome Blog</title><subtitle>Aru's Daily Page</subtitle><author><name>Aru</name></author><entry><title type="html"></title><link href="http://localhost:4000/2019/08/02/2019-07-05-GNN-google.html" rel="alternate" type="text/html" title="" /><published>2019-08-02T04:44:14+09:00</published><updated>2019-08-02T04:44:14+09:00</updated><id>http://localhost:4000/2019/08/02/2019-07-05-GNN-google</id><content type="html" xml:base="http://localhost:4000/2019/08/02/2019-07-05-GNN-google.html">&lt;h1 id=&quot;relational-inductive-biases-deep-learning-and-graph&quot;&gt;Relational inductive biases, deep learning, and graph&lt;/h1&gt;
 &lt;p&gt;arXiv:1806.01261v3 , 17 oct 2018&lt;/p&gt;
 
 &lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
@@ -34,7 +34,42 @@
 
 &lt;h1 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h1&gt;
 
-&lt;p&gt;인간의 지능의 주요 키는 ‘유한한 방법의 무한한 사용이다 ‘&lt;/p&gt;</content><author><name>Aru</name></author></entry><entry><title type="html">Jekyll 다시 시작</title><link href="http://localhost:4000/jekyll/2019/07/31/jekyll-restart.html" rel="alternate" type="text/html" title="Jekyll 다시 시작" /><published>2019-07-31T10:05:05+09:00</published><updated>2019-07-31T10:05:05+09:00</updated><id>http://localhost:4000/jekyll/2019/07/31/jekyll-restart</id><content type="html" xml:base="http://localhost:4000/jekyll/2019/07/31/jekyll-restart.html">&lt;h1 id=&quot;다시시작&quot;&gt;다시시작&lt;/h1&gt;
+&lt;p&gt;인간의 지능의 주요 키는 ‘유한한 방법의 무한한 사용이다 ‘&lt;/p&gt;</content><author><name>Aru</name></author></entry><entry><title type="html">Research and Improvement of Single Image Super Resolution Based on Generative Adversarial network</title><link href="http://localhost:4000/paper/2019/08/01/research_srgan.html" rel="alternate" type="text/html" title="Research and Improvement of Single Image Super Resolution Based on Generative Adversarial network" /><published>2019-08-01T10:05:05+09:00</published><updated>2019-08-01T10:05:05+09:00</updated><id>http://localhost:4000/paper/2019/08/01/research_srgan</id><content type="html" xml:base="http://localhost:4000/paper/2019/08/01/research_srgan.html">&lt;p&gt;SRGAN 의 점수 감소로 인해… ㅠㅠ 여러가지 테스트하긴 시간이 부족하고
+점수를 올려 줄 수있는 방법을 찾던중 새로운 논문 발견!
+일단 내용은 SRGAN의 향상에 대한 연구로 봐야겠다.
+결과를보면 PSNR 점수가 비약적으로 상승한걸로 봐서 이거다 싶어서 보기시작.
+시간상 일단 중요한 부분만 보자 ㅠㅠ&lt;/p&gt;
+
+&lt;h2 id=&quot;21-improved-model-structure&quot;&gt;2.1 Improved model structure&lt;/h2&gt;
+
+&lt;p&gt;네트워크의 깊이와 너비를 증가시키는것은 네트워크의 성능을 향상시킬수 있다. 많은 실험이 같은 상황에서 깊고 얕은 네트워크를 가지고 실험을 했는데 깊은네트워크의 퍼포먼스는 는 일반적으로 좋지 않았다. 얕은 네트워크의 파라미터는 는 뒤에 1층만 남긴채 깊은 네트워크의 앞의 몇몇층이 옮겨올 수 있다. 이런 맵핑은 얕은 네트워크의 학습 효과를 볼수 있다. 예를들면 흔한 VGG 구조는 AlexNet 네트워크의 깊이를 증가시키는 것으로 성능을 비약적으로 향상시켰다. 그러나 단순하게 네트워크의 깊이를 증가시키는 것은 기울기 소실 혹은 발산을 야기한다. 이 문제에서 네트워크의 레이어중 몇개는 정규화와 배치노말을 통해 학습될 수 있다.
+그러나, 새로운 성능저하 문제가 발생하는데, 레이어가 증가하면 training 셋의 정확도는 포화하거나 심지어 감소한다. 이것은 오버피팅으로는 이해 할 수 없는데 왜냐면 오버피팅은 학습셋에서는 더 좋은 성능을 가져오기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;He에 의해 잔차 네트워크와 뛰어넘는 연결이 제안되면서, 네트워크구조가 더 깊을때 쉽게 학습되도록 만들어지고, 인식 정확도는 레이어가 증가함에 따라 향상 될 수 있었다. residual block 기존 구조는 Figure2에 나와있다. 잔차네트워크는 기본 컨볼루션 레이어에 숏컷을 추가하고 skip connection 을 연결하여 기본 residual block을 만든다. 기존의 H(x) 는 H(x) = F(x) + x 로 표현한다. 잔차구조는 
+H(x) 학습을 F(x)학습으로 전환하고 F(x) 를 학습하는것은 H(x)를 학습하는것보다 쉽다.  잔차구조는 깊은 네트워크에서의 degradation 문제를 효과적으로 완화시키고 residusl block 을 레이어처럼 축척하는것을 통해 네트워크의 성능을 향상시킨다.&lt;/p&gt;
+
+&lt;p&gt;원래의 SRGAN 생성 모델은 몇개의 residual block 을 포함하고 있다. 다수의 배치노말 레이어가 residual 구조에 사용되고있다. 배치노말 레이어는 학습시 배치단위의 평균과 분산을 사용하여 피쳐를 normalize 하고 테스트시엔 전체 학습 데이터의 추정된 평균과 분산을 사용한다. 학습과 테스트의 통계적 지표가 매우 다를경우 배치노말은 모델의 일반화성능을 제한하는 불편한 물건이 된다. 실험들은 배치노말을 제거하는것이 복잡도와 메모리사용, 그리고 모델의 일반화 성능을 향상 시키는것을 보여준다.&lt;/p&gt;
+
+&lt;p&gt;네트워크 깊이 측면에서, literature[4-6] 은 깊은 네트워크가 높은 복잡도의 맵핑을 구축하고 엄청나게 네트워크 정확도를 향상시킬 수 있는것을 보여준다. 이 논문에서 원래 모델의 생성기의 residual block을 32개로 증가시켰다. 실험에서는 fitting 현상은 발생하지 않앗고 모델은 어느정도 향상되었다. 개선된 구조는 Figure 3에서 보여준다.&lt;/p&gt;
+
+&lt;h2 id=&quot;22-improved-loss-function&quot;&gt;2.2 Improved loss function&lt;/h2&gt;
+
+&lt;p&gt;원래 SRGAN의 손실함수는 두부분으로 나뉜다. VGG기반의 constent loss와 적대적 모델 기반의 countermeasure loss. $D_{\theta D}$ 는 실제 고해상도 이미지에 해당하고, $G_{\theta G}(I^{LR})$ 재구성된 고해상도 이미지이다. 이미지의 텍스쳐 디테일은 향상되었지만 PSNR 과 SSIM 은 좋지 않았다.&lt;/p&gt;
+
+&lt;p&gt;This improves the texture details of the image, but the PSNR and SSIM 지표는 좋지 못했다. 이 논문에서 MSE 기반의 손실함수를 추가하면서 손실함수를 향상시켰다. 그 이유는 VGG의 재구성 효과는 다른 레이어마다 다르고, 여기에 또 가중치 상수를 더했다 VGG 함수에. 
+ 향상된 손실함수는 다음과 같다.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;l^{SR} = l^{SR}_{VGG} + 10^{-3}l^{SR}_{Gen} \\
+
+ l^{SR}_{VGG(i,j)} = \frac{1}{W_{i,j}H_{i,j}} \sum\sum(\Phi_{i,j}(I^{HR})_{x,y}-\Phi_{i,j}(G_{\theta G}(I^{LR}))_{x,y})^2 \\
+
+ l^{SR}_{Gen} = \sum -\log D_{\theta D}(G_{\theta G}(I^{LR})) \\
+
+ l^{SR}_{MSE} = \frac{1}{r^2WH}\sum\sum((I^{HR})_{x,y}-(G_{\theta G}(I^{LR}))_{x,y}) \\
+
+ l^{SR} = i^{SR}_{VGG}+\alpha i^{SR}_{MSE} + \beta i^{SR}_{Gen}&lt;/script&gt;
+
+&lt;h1 id=&quot;3-experiment&quot;&gt;3. Experiment&lt;/h1&gt;</content><author><name>Aru</name></author><summary type="html">SRGAN 의 점수 감소로 인해… ㅠㅠ 여러가지 테스트하긴 시간이 부족하고 점수를 올려 줄 수있는 방법을 찾던중 새로운 논문 발견! 일단 내용은 SRGAN의 향상에 대한 연구로 봐야겠다. 결과를보면 PSNR 점수가 비약적으로 상승한걸로 봐서 이거다 싶어서 보기시작. 시간상 일단 중요한 부분만 보자 ㅠㅠ</summary></entry><entry><title type="html">Jekyll 다시 시작</title><link href="http://localhost:4000/jekyll/2019/07/31/jekyll-restart.html" rel="alternate" type="text/html" title="Jekyll 다시 시작" /><published>2019-07-31T10:05:05+09:00</published><updated>2019-07-31T10:05:05+09:00</updated><id>http://localhost:4000/jekyll/2019/07/31/jekyll-restart</id><content type="html" xml:base="http://localhost:4000/jekyll/2019/07/31/jekyll-restart.html">&lt;h1 id=&quot;다시시작&quot;&gt;다시시작&lt;/h1&gt;
 
 &lt;p&gt;전에 시도하다 포기하고 일단 포스트만 올리면서 나중에 좋은스킨 나오면 해야지 하다가
 이제 슬슬 포트폴리오겸 만들어야겠다 싶어 다시 도전….&lt;/p&gt;
@@ -89,7 +124,29 @@ $ bundle exec jekyll serve
 
 &lt;p&gt;드디어 성공했다 ㅠㅠㅠ&lt;/p&gt;
 
-&lt;p&gt;이제 꾸미기에 들어가 봅시다&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">다시시작 전에 시도하다 포기하고 일단 포스트만 올리면서 나중에 좋은스킨 나오면 해야지 하다가 이제 슬슬 포트폴리오겸 만들어야겠다 싶어 다시 도전…. 일단 설정이 문제가 있었을수도있으니 깔끔하게 우분투를 날려버리고… 다시깔았다… $ sudo apt-get update -y &amp;amp;&amp;amp; sudo apt-get upgrade -y $ sudo apt-get install -y build-essential ruby-full $ sudo gem install jekyll bundler 아니 이게왠일 여기까지 아무 에러가 없이 진행되었.. 원하던 스킨을 다운받고 드디어 대망의 $ jekyll serve 는 될리가 없지………ㅜㅜ jekyll new 로 새로 생성하면 잘만되는데 꼭 스킨을 다운받으면 안되는… 역시 또 하루종일 이거설치 저거설치 이거삭제 저거삭제 열심히 해본 결과 알아낸 해결책은 해당폴더에서 $ bundle install $ bundle exec jekyll serve 이거였다… 문제는 또 parsing 오류가 떳는데 이건 title ‘Aru’s Blog’ 여기에서 에러가.. 이래서 특문을 쓸땐 항상조심 ㅠㅠ 결국 드디어 성공했다 ㅠㅠㅠ 이제 꾸미기에 들어가 봅시다</summary></entry><entry><title type="html">(진행중)Progressive Growing of GANs for Improved Quality Stability and Variation</title><link href="http://localhost:4000/paper/2019/07/20/PGGAN.html" rel="alternate" type="text/html" title="(진행중)Progressive Growing of GANs for Improved Quality Stability and Variation" /><published>2019-07-20T10:05:05+09:00</published><updated>2019-07-20T10:05:05+09:00</updated><id>http://localhost:4000/paper/2019/07/20/PGGAN</id><content type="html" xml:base="http://localhost:4000/paper/2019/07/20/PGGAN.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
+&lt;p&gt;이제 꾸미기에 들어가 봅시다&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">다시시작 전에 시도하다 포기하고 일단 포스트만 올리면서 나중에 좋은스킨 나오면 해야지 하다가 이제 슬슬 포트폴리오겸 만들어야겠다 싶어 다시 도전…. 일단 설정이 문제가 있었을수도있으니 깔끔하게 우분투를 날려버리고… 다시깔았다… $ sudo apt-get update -y &amp;amp;&amp;amp; sudo apt-get upgrade -y $ sudo apt-get install -y build-essential ruby-full $ sudo gem install jekyll bundler 아니 이게왠일 여기까지 아무 에러가 없이 진행되었.. 원하던 스킨을 다운받고 드디어 대망의 $ jekyll serve 는 될리가 없지………ㅜㅜ jekyll new 로 새로 생성하면 잘만되는데 꼭 스킨을 다운받으면 안되는… 역시 또 하루종일 이거설치 저거설치 이거삭제 저거삭제 열심히 해본 결과 알아낸 해결책은 해당폴더에서 $ bundle install $ bundle exec jekyll serve 이거였다… 문제는 또 parsing 오류가 떳는데 이건 title ‘Aru’s Blog’ 여기에서 에러가.. 이래서 특문을 쓸땐 항상조심 ㅠㅠ 결국 드디어 성공했다 ㅠㅠㅠ 이제 꾸미기에 들어가 봅시다</summary></entry><entry><title type="html">Photo-Realistic Single image Super-Resolution Using Generative Adversarial Network</title><link href="http://localhost:4000/paper/review/2019/07/30/srgan.html" rel="alternate" type="text/html" title="Photo-Realistic Single image Super-Resolution Using Generative Adversarial Network" /><published>2019-07-30T10:05:05+09:00</published><updated>2019-07-30T10:05:05+09:00</updated><id>http://localhost:4000/paper/review/2019/07/30/srgan</id><content type="html" xml:base="http://localhost:4000/paper/review/2019/07/30/srgan.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
+
+&lt;p&gt;깊고 빠른 컨볼루션 뉴럴넷을 이용하여 싱글이미지의 super-resolution의 정확도와 속도가 발전했음에도 불구하고 하나의 큰문제는여전히 남아있다 : 
+큰 배수의 고해상도작업에서 어떻게 좋은 디테일을 복구할것인가? 
+최적화 기반의 super-resolution 방법들은 주로 목적함수를 고르는것에 좌우된다.
+현재의 작업은 MSRE 를 최소화 하는데 큰 초점을 맞추고 있다.
+결과인 추정치들은 높은 PSNR 을 가지고 있으나, 그들은 높은 확률로 
+더 높은 해상도에서는 사람의 지각적으로 기대할만한 결과를 만드는데는 실패했다
+이 논문에서는 SRGAN 이라는 super-resolution 을 위한 GAN 모델을 보여준다.
+우리가 아는 바로는 이것은 사진을 리얼하게 4배로 확대할수 있는 최초의 프레임웤이다
+이것을 하기위해, 지각적인 손실 함수를 제안한다. adversarial loss과 content loss 로 이루어진.
+adversarial loss 는 확대된 이미지와 오리지날 이미지를 구분하도록 학습된 판별기를 사용하여 우리의 해결책을 제시한다. 추가로 픽셀공간의 유사도 대신 지각적 유사도에 반응하는 content loss를 사용했다. 우리의 deep residual network 는 공공 이미지의 매우 축소된 이미지에서 사실적인 텍스쳐를 복구 할수 있다. 연장된 MOS 검사는 SRGAN을 사용한 지각적 퀄리티의 매우 중요한 이점을 보여준다. SRGAN 과 MOS 점수는 다른 어떤 최신방법보다 더 실제 이미지에 가깝게 해준다.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h1&gt;
+&lt;p&gt;저해상도 이미지로부터 고해상도 이미지를 예측하는 도전적인 작업은 super-resolution 이라 한다.
+SR 은 CV 연구에서 많은 관심을 받았으며 수 많은 어플을 보유하고 있다.&lt;/p&gt;
+
+&lt;p&gt;#####SR문제의 나쁜 본질은 특히 높은 배율에서 확연히 나타나는데, 
+#####재구성된 SR 이미지가 일반적으로 없다?&lt;/p&gt;
+
+&lt;p&gt;SR 지도 알고리즘의 최적화 대상은 실제이미지와 생성된 이미지의 MSE 가 흔하다.
+MSE를 최소화 하는것은 또한 PSNR을 최대화 하는것이기도 한데, SR알고리즘에 평가 및 비교에 사용되는 일반적인 척도이다. 
+그러나 MSE와 PSNR의 고급 텍스쳐 디테일에서 지각적인 차이를 잡아내는 능력은 매우 제한적이다&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">Abstract</summary></entry><entry><title type="html">(진행중)Progressive Growing of GANs for Improved Quality Stability and Variation</title><link href="http://localhost:4000/paper/2019/07/20/PGGAN.html" rel="alternate" type="text/html" title="(진행중)Progressive Growing of GANs for Improved Quality Stability and Variation" /><published>2019-07-20T10:05:05+09:00</published><updated>2019-07-20T10:05:05+09:00</updated><id>http://localhost:4000/paper/2019/07/20/PGGAN</id><content type="html" xml:base="http://localhost:4000/paper/2019/07/20/PGGAN.html">&lt;h1 id=&quot;abstract&quot;&gt;Abstract&lt;/h1&gt;
 
 &lt;p&gt;We describe a new training methodology for generative adversarial netwworks. The key idea isto grow both the generator and discriminator progressively : startting from a low resolution, we add new layers that model increasingly fine details as training progressses. This both speeds the training up and greatly stabilizes it, allowing us to produce images of unprecedented quality, e.g., CELEBA images at $1024^2$. We also propose a simple way to increase the variation in generated images, and achieve a record inception score of 8.80 in unsupervised CIFAR 10. Additionally, we describe several implementation details that are importtant for discouragion unhealthy competition betwnne the generator and discrimination, Finally, we suggest a new metric for evaluation GAN results, both in terms of image quality and variation. As an additional contribution, we construct a higher–quality versiong of the CELEBA dataset.&lt;/p&gt;
 
@@ -582,9 +639,296 @@ https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet.&lt;/
 &lt;p&gt;intuitively, the compound scaling method makes sense because if the input image is bigger, then the neywork needs more layers to increase the receptive field and more channels to capture more fine-grained patterns on the bigger image.
 직관적으로 이 복합조정방법은 말이된다 왜냐면 이미지가 커지면 네트워크는 증가된 필드를 수용하기위해 많은레이어를 필요로 하고 더 큰 이미지에서 좋은패턴을 얻기 위해 더 많은채널을 필요로 한다&lt;/p&gt;
 
-&lt;p&gt;In fact, precvious theoretical and empirical results both show that there exists certain relationship between network width anddepth, but to our best knowledge, we are the first to empirically quantify the relationship among all three dimensions of network width, depth, and resolution.&lt;br /&gt;
-사실상 기존 이론과 실증적인 결과는 둘다 네트워크의 너비와 깊이간의 확실한 관계가 존재하는것을 보여준다
-그러나 우리의 최고 지식은 처음으로 실제적으로 세가지 차원에 대한관계를 계량한 것이다.&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">Abstract</summary></entry><entry><title type="html">GAN 시작</title><link href="http://localhost:4000/deeplearning/2019/06/28/gan.html" rel="alternate" type="text/html" title="GAN 시작" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/deeplearning/2019/06/28/gan</id><content type="html" xml:base="http://localhost:4000/deeplearning/2019/06/28/gan.html">&lt;h1 id=&quot;gan&quot;&gt;GAN?&lt;/h1&gt;
+&lt;p&gt;In fact, previous theoretical and empirical results both show that there exists certain relationship between network width and depth, but to our best knowledge, we are the first to empirically quantify the relationship among all three dimensions of network width, depth, and resolution.&lt;br /&gt;
+사실 앞의 이론적이고 경험적인 결과 둘다 네트워크의 깊이와 너비에 어떤 관계가 존재하는걸 보여주지만 우리의 최고의 성과는 이 세가지 차원의 관계를 처음으로 정량화한 것이다.&lt;/p&gt;
+
+&lt;p&gt;we demonstrate that our scaling method work well on existing MobileNets and ResNet.&lt;br /&gt;
+우리는 우리의 스케일링 방식이 레즈넷과 모바일넷에서 잘 작동하는것을 시연한다&lt;/p&gt;
+
+&lt;p&gt;Notably, the effectiveness of model scaling heavily depends on the baseline network; to go even further, we use neural architecture search to develop a new baseline network, and scale it up to obtain a family of models, called EfficientNets.&lt;br /&gt;
+특히 모델의 확장 효과는 베이스라인에 의존한다. 더 나아가 신경망 아키텍쳐를 더 좋은 새로운 베이스모델을 만들기 위해 사용하고 그것으르 스케일하여 만든 모델의 집합을 에피션넷츠라 부른다&lt;/p&gt;
+
+&lt;p&gt;Figure 1 summarizes the ImageNet performance, where our EfficientNets significantly outperform other ConvNets.&lt;br /&gt;
+그림1은 이미지넷 퍼포먼스의 요약이고 에피션트넷이 다른 컨브넷을 훨씬 능가하는것을 보여준다&lt;/p&gt;
+
+&lt;p&gt;In particular, out EfficientNet-B7 surpasses the best existing GPipe accuracy, but using 8.4x fewer parameters and running 6.1x faster on inference.&lt;br /&gt;
+특히 B7 은 현존하는 최고의 정확도를 넘어섰지만 8.4배 적은 파라미터를 가지고 추론시 6.1배 빠른 속도가 나온다&lt;/p&gt;
+
+&lt;p&gt;Compared to the widely used ResNet-50, our EfficientNet-B4 improves the top-1 accuracy from 76.3 to 82.6 with similar FLOPS&lt;br /&gt;
+널리 사용되는 레즈넷 50과 비교하면 B4는 비슷한 연산량에서 탑1 정확도를 8프로나 올렸다&lt;/p&gt;
+
+&lt;p&gt;Besides ImageNet, Efficient Nets also transfer well and achieve state-of-the-art accuracy on 5 out of 8 widely used datasets, while reducing parameters by up to 21x than existing ConvNets&lt;br /&gt;
+이미지넷 외에 에피션넷은 또한 널리 사용되는 8개의 데이터세트중 5개에서 최고기록을 달성하면서도 파라미터는 최대 21배까지도 감소시켰다&lt;/p&gt;
+
+&lt;h1 id=&quot;2-related-work&quot;&gt;2. Related Work&lt;/h1&gt;
+
+&lt;h2 id=&quot;convnet-accuracy&quot;&gt;ConvNet Accuracy&lt;/h2&gt;
+&lt;p&gt;Since AlexNet won the 2012 ImageNet competition, ConvNets have become incresingly more accurate by going bigger: while the 2014 ImageNet winner GoogleNet achieves 74.8% top-1 accuracy with about 6.8M parameters, the 2017 ImageNet winner SENet achieves 82.7 top-1 accuracy with 145 parameters.
+알렉스넷이 2012에 우승한 이후 컨브넷은 커짐으로써 점점 높은 정확도를 달성했다. 2014이미지넷에서 우승한 구글넷은 680만개, 207에서 우승한 SENet은 1억4500백만개의 파라미터를 가졌다&lt;/p&gt;
+
+&lt;p&gt;Recently, GPipe further pushes the state-of-the-art ImageNet top-1 validation accuracy to 84.3% using 557M parameters : it is so big that it can only be trained with a specialized pipeline parallelism library by partitioning the network and spreading each part to a different accelerator&lt;br /&gt;
+현재 GPipe는 최고기록 84.3%를 위해 5억5700만개의 파라미터를 사용했다
+이것은 매우 커서 다른 가속기로 분산하는 특별한 파이프 병렬 파이프라인 라이브러리를 사용해야만 한다&lt;/p&gt;
+
+&lt;p&gt;While these models are mainly designed for ImageNet, recent studies have shown better ImageNet models also perform better across a variety of transfer learning datasets and other computer vision tasks such as object detection.&lt;br /&gt;
+이 모델들이 이미지넷에서 디자인되는 동안, 최근 연구들은 이미지넷모델이 또한 많은 종류의 전이학습이나 오브젝트 디텍션 같은 다른 컴퓨터비전 학습에서도 좋은 성능을 제공하는것을 보여주었다&lt;/p&gt;
+
+&lt;p&gt;Although higher accuracy is critical for many applications, we have already hit the hardware memory limit, and thus further accuracy gain needs better efficiency&lt;br /&gt;
+높은 정확도가 많은 어플리케이션에서 중요할지라도 우리는 이미 하드웨어 메모리 제한에 도달했고 그래서 정확성의 증가는 더 좋은 효율이 필요했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;convnet-efficiency&quot;&gt;ConvNet Efficiency&lt;/h2&gt;
+&lt;p&gt;Deep ConvNets are often overparameterized. &lt;br /&gt;
+심층컨볼넷은 종종 오버파라미터된다.&lt;/p&gt;
+
+&lt;p&gt;Model compression is a common way to reduce model size by trading accuracy for efficiency.&lt;br /&gt;
+모델 압축은 효율을 위해 정확도를 낮춰 모델의 크기를 줄이는 흔한 방법이다&lt;/p&gt;
+
+&lt;p&gt;As mobile phones become ubiquitous, it is also common to handcraft efficient mobile-size ConvNets, such as SqueezeNets, MobileNets, and ShuffleNets.&lt;br /&gt;
+모바일 폰은 어디에나있다. 그것은 수작업된 효율좋은 모바일사이즈 컨볼넷 또한 흔하다 스퀴즈넷, 모바일넷, 셔플넷같은.&lt;/p&gt;
+
+&lt;p&gt;Recently, neural archiecture search becomes increasingly popular in designing efficient mobile-size ConvNets, and achieves even better efficiency than hand-crafted mobile ConvNets by extensively tuning the network width, depth, convolution kernel types and sizes.&lt;br /&gt;
+최근 신경망 아키텍쳐는 효율적인 모바일크기 컨볼넷의 디자인이 인기가 많아지고있고 수작업으로 만들어진 모바일 컨브넷보다 광범위하게 튜닝 가능한 것이 훨씬 더 좋은 성취를 한다.&lt;/p&gt;
+
+&lt;p&gt;However, it is unclear how to apply these techniques for larger models that have much larger design space and much more expensive tuning cost.&lt;br /&gt;
+그러나 모델을 크게만드는 테크닉을 적용하는 방법은 아직 모른다.
+그래서 큰 디자인을 설계하는데는 매우 많은 튜닝 비용이 필요하다&lt;/p&gt;
+
+&lt;p&gt;In this paper, we aim to study model efficiency for super large ConvNets that surpass state-of-the-art accuracy. To achieve this goal, we resort to model scaling.&lt;br /&gt;
+이 논문에서 최고의 정확도를 능가하는 매우 큰 컨볼넷의 효율을 연구하는것에 집중했고 이 목적을 달성하러면 우린 모델 확장에 의존해야 한다&lt;/p&gt;
+
+&lt;h2 id=&quot;model-scaling&quot;&gt;Model Scaling&lt;/h2&gt;
+&lt;p&gt;There are many ways to scale a ConvNet for different resource constraints : ResNet can be scaled down or up by adjusting network depth, while WideResNet and MobileNets can be scaled by network width&lt;br /&gt;
+다양한 자원의 제약을 위해 컨볼넷을 확장하는 방법은 많이 있다
+ResNet은 깊이를 조절하여 스케일 업다운이 가능하고 모바일넷과 와이드레즈넷은 네트워크의 너비를 조정 가능하다&lt;/p&gt;
+
+&lt;p&gt;It is also well-recognized that bigger input image size will help accuracy with the overhead of more FLOPS&lt;br /&gt;
+큰 입력 이미지 사이즈가 정확도 를 돕지만 연산량이 늘어난다는것 또한 잘 알려져있다.&lt;/p&gt;
+
+&lt;p&gt;Although prior studies have shown that network deep and width are both important for ConvNets’ expressive power, it still remains an open question of how to effectively scale a ConvNet to achieve better efficiency and accuracy.&lt;br /&gt;
+비록 이전의 연구가 컨볼넷의 표현력을 위해 네트워크의 깊이와 넓이 가 모두 중요한 것임을 보여줬지만 여전히 어떻게 높은 효율과 정확도를위해 효과적으로 컨볼넷을 스케일하하는지는 의문으로 남아있다.&lt;/p&gt;
+
+&lt;p&gt;Our work systematically and empirically studies ConvNet scaling for all three dimensions of network width, depth, and resolutions&lt;br /&gt;
+우리의 작업은 3가지 기준을 이용한 컨볼넷의 확장을 체계적이고 경험적으로 연구하는것이다&lt;/p&gt;
+
+&lt;h1 id=&quot;3-compound-model-scaling&quot;&gt;3. Compound Model Scaling&lt;/h1&gt;
+&lt;p&gt;In this section, we will formulate the scaling problem, study different approaches, and propose our new scaling method&lt;br /&gt;
+이 부분에서 스케일 문제를 공식화하고, 다른접근법을 연구하고, 새로운 스케일 메소드를 제안하겠다&lt;/p&gt;
+
+&lt;h2 id=&quot;31-problem-fomulation&quot;&gt;3.1. Problem Fomulation&lt;/h2&gt;
+&lt;p&gt;A ConvNet Layer $i$ can be defined as a function : $Y_i = \mathcal{F}_i(X_i)$, where $\mathcal{F}_i$ is the operator, $Y_i$ is output tensor, $X_i$ is input tensor, with tensor shape $\left\langle H_i, W_i, C_i  \right\rangle^1$, where $H_i$ and $W_i$ are spatial dimension and $C_i$ is the channel dimension.&lt;/p&gt;
+
+&lt;p&gt;컨볼넷 레이어 i 는  $Y_i = \mathcal{F}_i(X_i)$ 로 정의된다 F는 오퍼레이터 Y는 아웃풋텐서 X는 인풋텐서로 쉐이프는  $\left\langle H_i, W_i, C_i  \right\rangle^1$ 이고 높이와 너비 , 채널을 의미한다&lt;/p&gt;
+
+&lt;p&gt;A ConvNet $\mathcal{N}$ can be represented by a list of composed layers : $\mathcal{N} = \mathcal{F}&lt;em&gt;k 
+\bigodot \cdots \bigodot \mathcal{F}_2 \bigodot \mathcal{F}_1(X_1) = \bigodot&lt;/em&gt;{j=1\cdots k}\mathcal{F}_j(X_1)$&lt;br /&gt;
+컨볼넷 N은 위와같이 레이어로 구성된 리스트로 표현가능하다&lt;/p&gt;
+
+&lt;p&gt;In pratice, ConvNet layers are often partitioned into multiple stages and all layers in each stage share the same architecture : for example, ResNet has five stages, and all layers in each stage has the same convolutional type except the first layer performs down-sampling.&lt;br /&gt;
+실제로 컨볼레이언느 종종 몇개의 스테이지로 구분되어있고 각 스테이지의 모든 레이어는 같은 아키텍쳐를 공유한다.
+예를들면 레즈넷은 5개의 스테이지를 가지고 각 스테이지의 모든 레이어가 다운샘플링을 위한 첫레이어를 제외하고는 같은 컨볼루션 타입을 가진다&lt;/p&gt;
+
+&lt;p&gt;Therefore, we can define a ConvNet as :&lt;br /&gt;
+(1)&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N} = \underset{i=1\cdots s}{\bigodot}\mathcal{F}^{L_i}_i(X_{\left\langle H_i,W_i,C_i \right\rangle})&lt;/script&gt; 
+Where $\mathcal{F}^{L_i}_i$ denotes layer $\mathcal{F}_i$ is repeated $L_i$ times in stage $i$, $\left\langle H_i,W_i,C_i \right\rangle$ denotes the shape of input tensor $X$ of layer $i$.&lt;br /&gt;
+컨볼넷을 위처럼 정의할수도 있는데 여기서 F는 스테이지 i 에서 L만큼 반복된다는 것이고 X는 인풋텐서이다)&lt;/p&gt;
+
+&lt;p&gt;Figure 2(a) illustrate a representative ConvNet, where the spatial dimension is gradually shrunk but the channel dimension is expanded over layers, for example, from initial input shape &amp;lt;224,224,3&amp;gt;, to final output shape&amp;lt;7,7,512&amp;gt;.&lt;br /&gt;
+그림 2 는 콘브넷의 표현을 그린것인데 
+차원 공간이 점차적으로 눌어들지만 채널은 레이어가갈수록 확장된다 예를들면 input은 224 224 3 이지만 아웃풋은 7 7 512 이다&lt;/p&gt;
+
+&lt;p&gt;Unlike regular ConvNet designs that mostly focus on finding the best layer architecture $\mathcal{F}_i$, model scaling tries to expand the network length $(L_i)$, width $(C_i)$, and/or resulution $(H_i, W_i)$ without changing $\mathcal{F}_i$ predefined in the baseline network. &lt;br /&gt;
+최고의 레이어 아키텍쳐를 찾는데 가장 집중된  일반적인 컨볼루션 디자인과는 다르게, 모델 스케일링은 네트워크의 길이,너비, 그리고 해상도를 미리정의된 베이스라인네트워크를 바꾸지 않고모델을 확장하려고 노력한다&lt;/p&gt;
+
+&lt;p&gt;By fixing $\mathcal{F}_i$, model scaling simplifies the design problem for new resource constraints, but it still remains a large design space to explore different $L_i,C_i,H_i,W_i$ for each layer.&lt;br /&gt;
+F를 고정하여 모델 확장의 새로운 자원 제약 디자인 문제를 간단하게 한다, 그러나 이것은 여전히 각각 레이어의 다른 변수들의 거대한 탐험 공간이 남아있다&lt;/p&gt;
+
+&lt;p&gt;In order to further reduce the design space, we restrict that all layers must be scaled uniformly with constant ratio.&lt;br /&gt;
+디자인 공간을 더 줄이는 방법으로 모든 레이어는 균일한 상수 비율로 스케일 되어야 하는 제한을 걸었다&lt;/p&gt;
+
+&lt;p&gt;Our target is to maximize the model accuracy for any given resource constraints, which can be formulated as an optimization problem
+우리의 목표는 최적화 문제를 공식화할 수있는 어떤 자원제약을 주어 모델의 정확도를 최대화 하는 것이다&lt;/p&gt;
+
+&lt;p&gt;(2)
+&lt;script type=&quot;math/tex&quot;&gt;\underset{d,w,r}{max}\ \  Accuracy(\mathcal{N}(d,w,r))&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;s.t.\ \ \mathcal{N}(d,w,r) = \underset{i=1\cdots s}{\bigodot}\hat{\mathcal{F}}^{d\cdot \hat{L}_i}_i(X\langle r\cdot \hat{H}_i,r\cdot \hat{W}_i,r\cdot \hat{C}_i \rangle)&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{Memory}(\mathcal{N}) \le \mathrm{target\_memory}&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{FLOPS}(\mathcal{N}) \le \mathrm{target\_flops}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;where w,d,r are coefficients for scaling network width, depth, and resolution; $\hat{\mathcal{F}}_i,\hat{L}_i,\hat{H}_i,\hat{W}_i,\hat{C}_i$ are predefined parameters in baseline network(see Table 1 as an example)&lt;br /&gt;
+wdr은 네트워크의 스케일 계수이고 위 다섯 변수는 베이스라인 네트워크에서 사전 정의된 파라메터이다&lt;/p&gt;
+
+&lt;h2 id=&quot;32-scaling-dimensions&quot;&gt;3.2. Scaling Dimensions&lt;/h2&gt;
+&lt;p&gt;The main difficulty of problem 2 is that the optimal $d,w,r$ depend on each other and the values change under different resource constraints. &lt;br /&gt;
+(2)번 문제의 가장 어려운점은 dwr의 최적화가 각각 의존하고있고 다른 자원 제약하에서 값이 바뀌는 것이다&lt;/p&gt;
+
+&lt;p&gt;Due to this difficulty, conventional methods mostly scale ConvNets in one of these dimensions :&lt;br /&gt;
+이 문제 때문에 관습적인 방법이 대부분 이런 차원중 하나로 확장을 한다&lt;/p&gt;
+
+&lt;h3 id=&quot;depth-d&quot;&gt;Depth ($d$)&lt;/h3&gt;
+&lt;p&gt;Scaling network depth is the most common way used by many ConvNets.&lt;br /&gt;
+깊이를 조정하는것은 많은 콘브넷에서 가장 흔하게 사용되는 방법이다.&lt;/p&gt;
+
+&lt;p&gt;The intuition is that deeper ConvNet can capture richer and more complex features, and generalize well on new tasks. &lt;br /&gt;
+직감적으로 깊은 콘브넷은 많고 더 복잡한 피쳐를 잡아낼 수 있고 새로운 작업에 대한 일반화가 잘된다&lt;/p&gt;
+
+&lt;p&gt;However, deeper networks ard also more difficult to train due to the vanishing gradient problem.&lt;br /&gt;
+하지만 깊은 네트워크는 그라디언트 소실 문제로 학습하기 더 어렵다&lt;/p&gt;
+
+&lt;p&gt;Although several techniques, such as skip connections and batch normalization, alleviate the training problem, the accuracy gain of very deep network diminishes : for example, ResNet-1000 has similar accuracy as ResNet-101 even though it has much more layers.&lt;br /&gt;
+스킵커넥션이나 배치 노말같은 이 문제를 완화시키는 몇몇 테크닉이 있지만 정확도는 매우깊은 네트워크에선 감소한다. 예를들면 레즈넷1000은 레즈넨 101과 비슷한 정확도를 가진다 매우 많은 레이어를 가졌음에도 불구하고.&lt;/p&gt;
+
+&lt;p&gt;Figure 3(middle) shows our empirical study on scaling a baseline model with different depth coefficient $d$, further suggesting the diminishing accuracy return for very deep ConvNets.&lt;br /&gt;
+그림3은 베이스모델을 d에 따른 확장한 실질적인 연구를 보여주고 매우 깊은 컨브넷에서의 정확도 감소를 잘 보여준다&lt;/p&gt;
+
+&lt;h3 id=&quot;width&quot;&gt;Width&lt;/h3&gt;
+&lt;p&gt;Scaling network width is commonly used for small size models.&lt;br /&gt;
+네트워크의 너비를 조정하는것은 작은 사이즈 모델에서 매우 흔하게 사용된다&lt;/p&gt;
+
+&lt;p&gt;As discussed in (), wider networks tend to be able to capture more fine-grained features and are easier to train. &lt;br /&gt;
+넓은 네트워크는 잘 정제된 피쳐를 캐치하는 경향이 있고 학습이 쉬워지게 한다&lt;/p&gt;
+
+&lt;p&gt;However, extremly wide but shallow networks tend to have difficulties in caputring higher level features.&lt;br /&gt;
+그러나 과하게 넓어넓지만 얕은 네트워크는 고수준 피쳐를캡쳐하기 어려운 경향이 생긴다.&lt;/p&gt;
+
+&lt;p&gt;Our empirical results in Figure 3 (left) show that the accuracy quickly saturates when networks become much wider with lager $w$&lt;br /&gt;
+우리의 실증적 결과는 그림 3에서 보여준다
+넓이가 w보다 많이 넓어질때 정확도를 빠르게 포화시키는것을&lt;/p&gt;
+
+&lt;h3 id=&quot;resolution&quot;&gt;Resolution&lt;/h3&gt;
+
+&lt;p&gt;With higher resulution input images, ConvNets can potentially capture more fine-grained patterns.
+더 높은 해상도의 이미지와 함께하면 콘브넷은 더 좋은 패턴을 잘 캡쳐할것이다.&lt;/p&gt;
+
+&lt;p&gt;Starting from 224x224 in ConvNets, modern Convnets tend to use 299x299 or 331x331 for better accuracy.&lt;br /&gt;
+224에서 시작하여 현재는 더높은정확도를 위해 299 혹은 331 도 사용하는 경향이 있다&lt;/p&gt;
+
+&lt;p&gt;Recently, GPipe achieves state-of-the-art ImageNet accuracy with 480x480 resulution.&lt;br /&gt;
+최근 GPipe는 최고기록 달성을 위해 480을 적용했다&lt;/p&gt;
+
+&lt;p&gt;Higher resulutions, such as 600x600, are also widely used in object detection ConvNets.&lt;br /&gt;
+600처럼 더높은 해상도 또한 오브젝트 디텍션에서 널리 사용된다&lt;/p&gt;
+
+&lt;p&gt;Figure 3 shows the results of scaling network resolusions, where indeed higher resolutions improve accuracy, but the accuracy gain diminishes for very high resolutions ($r=1.0$ denotes resolution 224x224 and $r=2.5$ denotes resolution 560x560)&lt;br /&gt;
+그림3은 해상도의 조절 결과를 보여준다
+실제로 높은 해상도는 정확도를 향상시켰으나 매우 높은 해상도에서는 정확도의 증가가 줄어들었다.
+(1은 224, 2.5는 560을 의미한다)&lt;/p&gt;
+
+&lt;h1&gt;#&lt;/h1&gt;
+
+&lt;p&gt;The above analyses lead us to the first observation&lt;br /&gt;
+위의 관측은 우리를 첫번째 관찰로 이끈다&lt;/p&gt;
+
+&lt;h3 id=&quot;observation-1&quot;&gt;Observation 1&lt;/h3&gt;
+&lt;p&gt;Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.
+3가지 차원을 확장하는것은 정확도를 향상시키지만
+모델이 커질수록 정확도 증가량은 감소한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;33-compound-scaling&quot;&gt;3.3. Compound Scaling&lt;/h2&gt;
+&lt;p&gt;We empirically observe that different scaling dimensions are not independent.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, for higher resolution images, we should increase network depth, such that the larger receptive fields can help capture similar features that include more pixels in bigger images.&lt;br /&gt;
+직관적으로 높은 해상도의 이미지에서 네트워크의 깊이를 증가시켜야한다 넓은 수용 공간은 큰 이미지의 많은픽셀을 가진 비슷한 피쳐들을 잘 캐치하도록 도와줄수있다&lt;/p&gt;
+
+&lt;p&gt;Correspondingly, we should also increase network width when resolution is higher, in order to capture more fine-grained patterns with more pixels in high resolution images.&lt;br /&gt;
+비슷하게, 해상도가 올라갈땐 네트워크의 너비또한  증가시켜야 하는데, 고생도 이미지에에 많은 픽셀에서 더 좋은 정제된 패턴을 캐치하기 위해서이다&lt;/p&gt;
+
+&lt;p&gt;These intuitions suggest that we need to coordinate and balance different scaling dimensions rather than conventional single-dimension scaling.&lt;br /&gt;
+이 직관은 우리가 기존의 1개차원을 스케일하는것보단 차원들의 균형있게 조정을 해야하는것을 제안한다.&lt;/p&gt;
+
+&lt;p&gt;To validate our intuitions, we compare width scaling under different network depths and resolutions, as shown in Figure 4. &lt;br /&gt;
+우리의 직관을입증하기위해 그림 4에서 보여주듯이 다양한 네트워크에서 너비를 조정하는것을 비교한다.&lt;/p&gt;
+
+&lt;p&gt;If we only scale network width $w$ without changing depth ($d=1.0$) and resolution ($r=1.0$), the accuracy saturates quickly.
+만약 w를 d와 r을 고정하고 변화시키면 정확도는 빠르게 수렴한다&lt;/p&gt;
+
+&lt;p&gt;With deeper ($d=2.0$) and higher resolution ($r=2.0$), width scaling achieves much better accuracy under the same FLOPS cost. 
+깊은모델과 고해상도와 함께하면, 같은 FLOPS 비용으로 더 높은 정확도를 달성한다.&lt;/p&gt;
+
+&lt;p&gt;These results lead us to the second observation :
+이결과는 우리를 두번째 관측으로 이끈다.&lt;/p&gt;
+
+&lt;h3 id=&quot;observation-2&quot;&gt;Observation 2&lt;/h3&gt;
+&lt;p&gt;In order to pursue better accuracy and efficiency, it is critical to balance all dimensions of network width, depth, and resolution during ConvNet scaling.&lt;br /&gt;
+더 좋은 정확도와 효율성을 추구하기 위해서는 컨브넷을 확장할때 3가지 차원의 밸런스가 매우 중요하다.&lt;/p&gt;
+
+&lt;p&gt;In fact, a few prior work have already tried to arbitrarily balance network width and depth, but they all require tedious manual tuning
+사실상 몇몇 기존의 작업들은 이미 임의로 깊이와 뎁스의 균형을 시도하였지만 지루한 정해진 튜닝이 필요하다.&lt;/p&gt;
+
+&lt;p&gt;In this paper, we propose a new compound scaling method, which use a compound coefficient $\phi$ to uniformly scales network width, depth, and resolution in a principled way :&lt;br /&gt;
+이 논문에서 새로운 복합 스케일 메소드를 제안한다
+합성계수 $phi$를 사용해 균일하게 네트워크의 차원을 조정하는. 아래 의 법칙에 의하여.&lt;/p&gt;
+
+&lt;p&gt;(3)
+&lt;script type=&quot;math/tex&quot;&gt;\mathrm{depth:} d =\alpha^\phi \\
+ \mathrm{width:} w =\beta^\phi \\
+ \mathrm{resolution:} r =\gamma^\phi \\
+ \mathrm{s.t.}\quad\alpha\ \cdot\ \beta^2\ \cdot\ \gamma^2 \approx 2\\
+\alpha\ge1,\ \beta\ge1,\ \gamma\ge1&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;where $\alpha, \beta, \gamma$ are constants that can be determined by a small grid search.&lt;br /&gt;
+세 변수는 작은 그리드 서치로 결정할수 있다.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, $phi$ is a user-specified coefficient that controls how many more resources are available for model scaling, while $\alpha, \beta, \gamma$ specify how to assign these extra resources to network width, depth, and resolution respectively.
+직관적으로 파이는 사용자지정 계수로 모델을 스케일하기위해 추가 리소스를 각각 3가지에 할당하는 방법을 명시한다&lt;/p&gt;
+
+&lt;p&gt;Notably, the FLOPS of a regular covolution ops is proportional to $d, w^2, r^2$, i.e., doubling network depth will double FLOPS, but doubling network width or resolution woll increase FLOPS by four times.
+특히 규칙적인 컨볼루션 에서의 FLOPS는 3가지 변수에 비례한다 다시말하면 두배의 깊이의 네트워크는 FLOPS를 두배로 올리고, 두배의 너비와 해상도는 FLOPS를 네배로 올린다.&lt;/p&gt;
+
+&lt;p&gt;Since convolution ops usually dominate the computation cost in ConvNets, scaling a ConvNet with equation 3 will approximately increase total FLOPS by $(\alpha\ \beta^2\ \gamma^2)^\phi$.&lt;br /&gt;
+컨볼루션 부분이 대부분의 계산비용을 지불하므로 방정식3을 사용하여 컨브넷을 확장하면 토탈 FPOPS가 약 $(\alpha\ \beta^2\ \gamma^2)^\phi$ 만큼 오른다&lt;/p&gt;
+
+&lt;p&gt;In this paper, we constraint $\alpha\ \cdot\  \beta^2\ \cdot\ \gamma^2 \approx 2$ such that for any new $\phi$, the total FLOPS will approximately incrtease by $2^\phi$.
+이 논문에서 우리는 새로운 어떤 파이에서도 위 방정식으로 제약을하면 총 FLOPS는 약 $2^\phi$ 증가한다&lt;/p&gt;
+
+&lt;h1 id=&quot;4-efficientnet-acchitecture&quot;&gt;4. EfficientNet Acchitecture&lt;/h1&gt;
+
+&lt;p&gt;Since model scaling does not change layer operations $\hat{\mathcal{F}}_i$ in baseline network, having a good baseline network is also critical. &lt;br /&gt;
+모델확장은 베이스라인 네트워크에 있는 레이어는 바꾸지 않기 때문에 좋은 베이스라인 모델을 고르는것 또한 매우 중요하다&lt;/p&gt;
+
+&lt;p&gt;We will evaluate our scaling method using existing Convnets, but in order to better demonstrate the effectiveness of our scaling method, we have also developed a new mobile-size baseline, called EfficientNet.&lt;br /&gt;
+우리의 확장 메소드를 현존하는 컨브넷을 통해 평가할 것인데 스키일링 방법의 효과를 더 잘 보여주기위해 에피션넷이라 불리는 새로운 모바일 사이즈 베이스라인을 개발하였다.&lt;/p&gt;
+
+&lt;p&gt;Inspired by (Tan et al., 2019), we develop our baseline network by leveraging a multi-objective neural architecture search that optimizes both accuracy and FLOPS. 
+()에서 영감을 받았는데, 베이스라인 네트워크는 정확도와 FLOPS 양쪽의 최적화를 찾는 다목적 신경 구조를 활용하였다&lt;/p&gt;
+
+&lt;p&gt;Specifically, we use the same search space as (Tan et al., 2019), and use $ACC(m) \times [FLOPS(m)/T]^w$ as the optimization goal, where $ACC(m)$ and $FLOPS(m)$ denote the accuracy and FLOPS of model $m$, $T$ is the target FLOPS and $w=-0.07$ is a hyperparameter for controlling the trade-off between accuracy and FLOPS.&lt;br /&gt;
+구체적으로 우린 위 논문과 같은 검색 공간을 사용하였다
+위 식에서 $ACC(m)$ 와 $FLOPS(m)$는 우리 모델의 정확도와 FLOPS, T 는 목표 FLOPS이고 $w$는 정확도와 FLOPS를 Trade-off 하는 하이퍼 파라미터이다&lt;/p&gt;
+
+&lt;p&gt;Unlike(Tan et al., 2019; Cai et al., 2019), here we optimize FLOPS rather than latency since we are not targeting any specific hardware device.&lt;br /&gt;
+위 논문과는 다르게 루린 특정한 하드웨어장치를 대상으로 하지 않기 때문에 대기시간보단 FLOPS를 최적화 하였다.&lt;/p&gt;
+
+&lt;p&gt;Our search produces an efficient network, which we name EfficientNet-B0.&lt;/p&gt;
+
+&lt;p&gt;Since we use the same search space as (Tan et al., 2019), the architecture is similar to MnasNet, except our EfficientNet-B0 is slightly bigger due to the larger FLOPS target (our FLOPS target is 400M)
+같은 검색공간을 사용했기 때문에 MnasNet과 비슷한 아키텍쳐를 가지고 있고, 에피션넷을 제외하고는 점차적으로 커지는&lt;/p&gt;
+
+&lt;p&gt;Table 1 shows the architecture of EfficientNet-B0.&lt;br /&gt;
+테이블1은 에피넷B0의 구조를 보여준다&lt;/p&gt;
+
+&lt;p&gt;Its main building block is mobile inverted bottleneck MBConv, to which we also add squeeze-and-excitation optimization.&lt;br /&gt;
+메인 블록의 구성은 인버트바틀넥을 사용한 BMConv, 그리고 Squeeze-and-excitation 최적화를 더하였다.&lt;/p&gt;
+
+&lt;p&gt;Starting from the baseline EfficientNet-B0, we apply our compound scaling method to scale it up with two steps :&lt;br /&gt;
+베이스라인 에피션넷으로 시작해 우리의 메소드를  두가지 스텝에 따라 적용하였다&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;STEP 1 : we first fix $\phi=1$, assuming twice more resources available, and do a smamll grid sarch of $\alpha,\beta,\gamma$ based of Equation 2 and 3. In particular, we fine the best values for EfficientNet-B0 are $\alpha=1.2, \beta=1.1, \gamma=1.15, under constraint of $\alpha\ \cdot\ \beta^2\ \cdot\ \gamma^2 \approx 2$.&lt;br /&gt;
+우선 파이를 1로 고정하고 두배의 자원이 더있다고 가정하였다, 그리고 방정식 2와 3을따라 작은 그리드서치를 하였다. 특히 우리는 위와같은 최고의 값을 찾았다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;STEP 2 : we then fix $\alpha, \beta,\gamma$ as constants and scale up baseline network with different $\phi$ using Equation 3, to obtain EfficientNet-B1 to B7 (Details in Table 2)&lt;br /&gt;
+다음으론 알벳감을 고정하고 방정식 3을따라 다른 파이를주면서 스케일을 확장했다. 그래서 B1부터 B7까지 얻었다(표2에 설명)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notably, it is possible to achieve even better perfomance by searching for $\alpha,\beta,\gamma$ directly around a large model, but the search cost becomes prohibitively more expensive on larger models.
+특히 더 좋은 퍼포먼스를 이루기 위해 큰모델에서 직접 알벳감을 찾는것도 가능하지만 큰 모델에서는 하면 안될정도로 큰 비용이 들어간다&lt;/p&gt;
+
+&lt;p&gt;Our method solves this issue by only doing search once on the small baseline network(step1), and then user the same scaling coefficients for all other models(step2)&lt;br /&gt;
+우리는 이 방법을 작은 베이스라인 네트워크에서 찾는것으로 이 문제를 해결했고 같은 확장계수를 이용해 다른모델을 만들었다.&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">Abstract</summary></entry><entry><title type="html">GAN 시작</title><link href="http://localhost:4000/deeplearning/2019/06/28/gan.html" rel="alternate" type="text/html" title="GAN 시작" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/deeplearning/2019/06/28/gan</id><content type="html" xml:base="http://localhost:4000/deeplearning/2019/06/28/gan.html">&lt;h1 id=&quot;gan&quot;&gt;GAN?&lt;/h1&gt;
 
 &lt;p&gt;Generative Adversarial Network&lt;/p&gt;
 
@@ -640,141 +984,4 @@ latent space 에서 움직일때 변화가 부드러워야함&lt;/p&gt;
 &lt;p&gt;Maxpooling 을 제거하여 모두 미분가능하게 변화&lt;/p&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;[http://jaejunyoo.blogspot.com/]&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">GAN?</summary></entry><entry><title type="html">새 커널 처음부터 해보기</title><link href="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html" rel="alternate" type="text/html" title="새 커널 처음부터 해보기" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel</id><content type="html" xml:base="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html">&lt;p&gt;#&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">#</summary></entry><entry><title type="html">제네레이터를 써보자</title><link href="http://localhost:4000/keras/2019/06/28/keras-generator.html" rel="alternate" type="text/html" title="제네레이터를 써보자" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/keras/2019/06/28/keras-generator</id><content type="html" xml:base="http://localhost:4000/keras/2019/06/28/keras-generator.html">&lt;h1 id=&quot;제네레이터가-뭘까&quot;&gt;제네레이터가 뭘까&lt;/h1&gt;
-
-&lt;p&gt;데이터가 필요한데 데이터가 부족하다? 흔한 현상이죠&lt;br /&gt;
-하지만 이미지에선 그 틀을 조금 부술수 있는 기법이 존재하죠&lt;br /&gt;
-바로 이미지 증식!&lt;br /&gt;
-고양이사진을 3픽셀 옆으로 민다고 강아지 사진이 되진 않는다는거죠&lt;br /&gt;
-회전 확대 이동 반전등 여러가지를 사용해도 우리 눈엔 고양이로 보인다는것.&lt;br /&gt;
-하지만 픽셀 데이터 상으로는 완전히 다른 데이터가 나오므로 이것을 이용해 데이터도 늘릴 겸 위치이동이나 회전에 대한 학습도 하게 되는거죠&lt;/p&gt;
-
-&lt;p&gt;하지만 안그래도 용량 많이먹는 이미지를 전부 다 돌리고 늘리고 한것들을 전부 저장한다면 하드든 메모리든 펑 하고 터져버리겟죠?&lt;br /&gt;
-그래서 메모리상엔 기본 이미지만 올려놓고 학습시 배치단위로 입력될 때 살짝 변조해서 데이터를 입력해주는 방식으로 큰 메모리 손실없이 많은 데이터를 학습하게 하는 생성기입니다.&lt;/p&gt;
-
-&lt;p&gt;는 사실 그냥 쓰면됩니다&lt;br /&gt;
-그럼 써봅시다&lt;/p&gt;
-
-&lt;h2 id=&quot;keraspreprocessingimageimagedatagenerator&quot;&gt;keras.preprocessing.image.ImageDataGenerator&lt;/h2&gt;
-
-&lt;p&gt;케라스에서 제공하는 이미지 제네레이터인데요&lt;br /&gt;
-이래서 케라스를 쓴다 할정도로 편합니다.. 이거 직접 구현하러면 세상귀찬…&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ImageDataGenerator(featurewise_center=False, samplewise_center=False, featurewise_std_normalization=False, samplewise_std_normalization=False, zca_whitening=False, zca_epsilon=1e-06, rotation_range=0, width_shift_range=0.0, height_shift_range=0.0, brightness_range=None, shear_range=0.0, zoom_range=0.0, channel_shift_range=0.0, fill_mode='nearest', cval=0.0, horizontal_flip=False, vertical_flip=False, rescale=None, preprocessing_function=None, data_format=None, validation_split=0.0, dtype=None)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;길죠……………………….&lt;br /&gt;
-하나씩 다 파보는건 레퍼런스가서 보시고&lt;/p&gt;
-
-&lt;p&gt;rotation_range : 회전 제한 각도  (0~180)&lt;br /&gt;
-width_shift_range, height_shift_range : 상하좌우 이동가능비율&lt;br /&gt;
-horizontal_flip, vertical_flip : 좌우상하반전여부&lt;br /&gt;
-zoom_range : 확대축소비율 (0~1)&lt;/p&gt;
-
-&lt;p&gt;이정도면 되겠네요 적당한 숫자를 넣어 줍시다&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;datagen = ImageDataGenerator(rescale =  1./255,          # 0과 1사이로 변경
-                             zoom_range = 0.2,           # 확대축소 20%
-                             width_shift_range = 0.2,    # 좌우이동 20%
-                             height_shift_range = 0.2,   # 상하이동 20%
-                             rotation_range = 30,        # 회전각도 30도 이내
-                             horizental_flip = True)     # 좌우반전 True
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이런식으로 제네레이터를 생성해 주시면 됩니다&lt;br /&gt;
-끗 이면 좋겟지만 아직 좀남았어요&lt;br /&gt;
-이제 생성규칙 하나 만들어줬을 뿐이죠&lt;/p&gt;
-
-&lt;p&gt;진짜 제네레이터를 만드는건 3가지 함수가 있습니다&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 먼저 데이터프레임에서 불러오는 함수입니다
-
-generator = datagen.flow_from_dataframe(X_train,                # 데이터프레임
-                                        directory = './image',  # 데이터 위치
-                                        x_col = 'img_file',     # 파일위치 열이름
-                                        y_col = 'class',        # 클래스 열이름
-                                        target_size = (224,224),    # 이미지 사이즈
-                                        color_mode= 'rgb',          # 이미지 채널수
-                                        class_mode= 'categorical',  # Y값 변화방법
-                                        batch_size= 32,         # 배치사이즈
-                                        Shuffle = True,         # 랜덤 여부
-                                        seed = 42,              # 랜덤엔 시드
-                                        interpolation= 'nearest')   # 이미지변경시 보완방법
-
-generator = datagen.flow_from_directory('./image'       # 파일위치
-                                        classes = []    # 리스트
-                            )
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;참고용-주로-같이-사용하는-함수&quot;&gt;참고용 주로 같이 사용하는 함수&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plt.imshow()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이미지 프린트&lt;br /&gt;
-잘잘렸는지 확인은 해봐야겟죠?&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PIL.Image.open()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이미지를 여는 함수에요 뒤엔 주소가 들어가야겠죠. jpg도 가능합니다. 사실 불러오는 파일에 따라 다른타입으로 저장되는데 그냥 img로 퉁침&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Image.crop((x1,y1,x2,y2))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;대망의 자르기 &lt;br /&gt;
-원하는 크기만큼의 박스로 사진을 잘라줍니다&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Image.resize(size=(x,y), box =(x1, y, x2, y2) )
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;대망의 사이즈 바꾸기인데 box 에 위에 crop에 해당하는 좌표를 넣어주면 두작업을 한번에 할 수 있다&lt;br /&gt;
-한마디로 크롭 무쓸모? 속도차이가 나려나&lt;/p&gt;
-
-&lt;h2 id=&quot;참고&quot;&gt;참고&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;os.path.join(path, image_name)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이미지 이름과 패스를 합치는 함수&lt;br /&gt;
-그냥 약간의 편의성 증진을 위한건데&lt;br /&gt;
-소스마다 안보이는곳이없….&lt;br /&gt;
-역시 사소한게 중요한것인듯&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">제네레이터가 뭘까</summary></entry><entry><title type="html">Tips</title><link href="http://localhost:4000/tips/2019/06/27/Tips.html" rel="alternate" type="text/html" title="Tips" /><published>2019-06-27T00:00:00+09:00</published><updated>2019-06-27T00:00:00+09:00</updated><id>http://localhost:4000/tips/2019/06/27/Tips</id><content type="html" xml:base="http://localhost:4000/tips/2019/06/27/Tips.html">&lt;p&gt;팁을 모아 봅시다&lt;/p&gt;
-
-&lt;h2 id=&quot;유니코드로-일반-텍스트에서-제곱-표시방법&quot;&gt;유니코드로 일반 텍스트에서 제곱 표시방법&lt;/h2&gt;
-
-&lt;p&gt;supscripts = {&lt;br /&gt;
-        0:u’\u2070’,&lt;br /&gt;
-        1:u’\xb9’,&lt;br /&gt;
-        2:u’\u00B2’,&lt;br /&gt;
-        3:u’\u00B3’,&lt;br /&gt;
-        4:u’\u2074’,&lt;br /&gt;
-        5:u’\u2075’,&lt;br /&gt;
-        6:u’\u2076’,&lt;br /&gt;
-        7:u’\u2077’,&lt;br /&gt;
-        8:u’\u2078’,&lt;br /&gt;
-        9:u’\u2079’,&lt;br /&gt;
-        ‘i’:u’\u2071’,&lt;br /&gt;
-        ‘+’:u’\u207A’,&lt;br /&gt;
-        ‘-‘:u’\u207B’,&lt;br /&gt;
-        ‘=’:u’\u207C’,&lt;br /&gt;
-        ‘(‘:u’\u207D’,&lt;br /&gt;
-        ‘)’:u’\u207E’,&lt;br /&gt;
-        ‘n’:u’\u207F’, }&lt;/p&gt;
-
-&lt;p&gt;subscripts = {
-        0:u’\u2080’,&lt;br /&gt;
-        1:u’\u2081’,&lt;br /&gt;
-        2:u’\u2082’,&lt;br /&gt;
-        3:u’\u2083’,&lt;br /&gt;
-        4:u’\u2084’,
-        5:u’\u2085’,&lt;br /&gt;
-        6:u’\u2086’,&lt;br /&gt;
-        7:u’\u2087’,&lt;br /&gt;
-        8:u’\u2088’,&lt;br /&gt;
-        9:u’\u2089’,
-      ‘+’:u’\u208A’,&lt;br /&gt;
-      ‘-‘:u’\u208B’,&lt;br /&gt;
-      ‘=’:u’\u208C’,&lt;br /&gt;
-      ‘(‘:u’\u208D’,&lt;br /&gt;
-      ‘)’:u’\u208E’, 
-      ‘a’:u’\u2090’,&lt;br /&gt;
-      ‘e’:u’\u2091’,&lt;br /&gt;
-      ‘o’:u’\u2092’,&lt;br /&gt;
-      ‘x’:u’\u2093’,&lt;br /&gt;
-      ‘e-‘:u’\u2094’, }&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">팁을 모아 봅시다 유니코드로 일반 텍스트에서 제곱 표시방법 supscripts = { 0:u’\u2070’, 1:u’\xb9’, 2:u’\u00B2’, 3:u’\u00B3’, 4:u’\u2074’, 5:u’\u2075’, 6:u’\u2076’, 7:u’\u2077’, 8:u’\u2078’, 9:u’\u2079’, ‘i’:u’\u2071’, ‘+’:u’\u207A’, ‘-‘:u’\u207B’, ‘=’:u’\u207C’, ‘(‘:u’\u207D’, ‘)’:u’\u207E’, ‘n’:u’\u207F’, } subscripts = { 0:u’\u2080’, 1:u’\u2081’, 2:u’\u2082’, 3:u’\u2083’, 4:u’\u2084’, 5:u’\u2085’, 6:u’\u2086’, 7:u’\u2087’, 8:u’\u2088’, 9:u’\u2089’, ‘+’:u’\u208A’, ‘-‘:u’\u208B’, ‘=’:u’\u208C’, ‘(‘:u’\u208D’, ‘)’:u’\u208E’, ‘a’:u’\u2090’, ‘e’:u’\u2091’, ‘o’:u’\u2092’, ‘x’:u’\u2093’, ‘e-‘:u’\u2094’, }</summary></entry></feed>
+&lt;p&gt;[http://jaejunyoo.blogspot.com/]&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">GAN?</summary></entry><entry><title type="html">새 커널 처음부터 해보기</title><link href="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html" rel="alternate" type="text/html" title="새 커널 처음부터 해보기" /><published>2019-06-28T10:05:05+09:00</published><updated>2019-06-28T10:05:05+09:00</updated><id>http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel</id><content type="html" xml:base="http://localhost:4000/kaggle/2019/06/28/kaggle-new-kernel.html">&lt;p&gt;#&lt;/p&gt;</content><author><name>Aru</name></author><summary type="html">#</summary></entry></feed>
