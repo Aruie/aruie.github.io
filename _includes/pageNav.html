@@ -12,10 +12,6 @@
         {% endif %}
     {% endif %}
 
-    {% if paginator.total_pages < 10  %}
-        <a href="{{ "/" | relative_url }}" class="page-link" title="Index Page">1</a>
-    {% endif %}
-
     {% if paginator.next_page %}
         <!-- {% if paginator.next_page == 1 %}
             <a href="{{ "/" | relative_url }}" class="page-link" title="Next Page">\</a>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Research and Improvement of Single Image Super Resolution Based on Generative Adversarial network"
-categories: paper
+tag : paper
 date : 2019-08-01 10:05:05 +0900
 comments: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll 블로그를 시작해 봅시다"
 date:   2019-06-11 15:37:56 +0900
-categories: [jekyll, daily]
+tag : [jekyll, daily]
 comments: true
 ---
 

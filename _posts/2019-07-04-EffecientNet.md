@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EfficientNet : Rethinking Model scaling for Convolutional Neural Networks"
-categories: paper
+tag: paper
 date : 2019-07-04 10:05:05 +0900
 comments: true
 ---

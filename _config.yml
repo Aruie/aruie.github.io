@@ -16,7 +16,7 @@ aboutyou: 'your introduction'
 portraits: '/assets/profile.jpeg' # your portraits image file path
 
 # paginate
-paginate: 3
+paginate: 5
 paginatepath: ['page:num']
 
 # since

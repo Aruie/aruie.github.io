@@ -2,7 +2,7 @@
 id : p0001
 layout: post
 title:  "윈도우에서 WSL을 이용한 VSCode 개발환경 세팅"
-categories: environment
+tag: environment
 date : 2019-06-24 10:05:05 +0900
 comments: true
 ---
