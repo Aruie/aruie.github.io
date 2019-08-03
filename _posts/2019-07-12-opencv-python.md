@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "파이썬에서 OpenCV 사용"
-tag: opencv
+tag: "Library & Framework"
 date : 2019-07-12 10:05:05 +0900
 comments: true
 ---

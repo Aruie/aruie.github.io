@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "제네레이터를 써보자"
-tag: keras
+title:  "keras 제네레이터를 써보자"
+tag: "Library & Framework"
 date : 2019-06-28 10:05:05 +0900
 comments: true
 ---

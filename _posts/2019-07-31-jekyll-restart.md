@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll 다시 시작"
 date:   2019-07-31 10:05:05 +0900
-tag: jekyll
+tag: Jekyll
 comments: true
 ---
 

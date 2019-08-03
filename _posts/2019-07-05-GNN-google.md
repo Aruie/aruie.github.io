@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Relational inductive biases, deep learning, and graph networks"
-tag: paper
+tag: Paper
 date : 2019-07-05 10:05:05 +0900
 comments: true
 ---

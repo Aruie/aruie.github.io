@@ -9,8 +9,36 @@ description: under construction
 {% include boot.html %}
 <main>
     {% include title.html %}
+
+    <ul class="ex-list">
+      <li class="fadeInUp animated">
+      {% if site.tags.size>0 %}
+          {% for tag in site.tags %}
+          <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
+          {% endfor %}
+      {% endif %}
+      </li>
+
+      
+      {% for tag in site.tags %}
+      <li>
+          <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
+         
+          {% for post in tag[1] %}
+          <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}" >
+          {{ post.title }}, {{post.date | date_to_string }}
+          </a>
+          {% endfor %}
+        
+      </li>
+      {% endfor%}
+      
+  </ul>
+
+
+
+
     <ul class="post-list">
-      <!-- 페이지 내부 부분 -->
       {% include posts_paginator.html %}
     </ul>
 </main>
