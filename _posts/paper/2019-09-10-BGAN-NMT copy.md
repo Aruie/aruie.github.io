@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Adversarial Feature Learning"
+tag : Paper
+date : 2019-09-01 10:05:05 +0900
+comments: true
+---
+
+이게 진짜 BiGAN.... SAGAN은 왜한거지 ㅠㅠ
+아 몰라 다시 공부다
+
+# Abstract
+
+GAN 의 기능은 간단한 latent 분포로 부터 경험적으로 증명된 임의의 복잡한 데이터 분포로 맵핑하는 모델을 만드는 것을 배우고, Generator의 latent space는 데이터 분포안에 의미있는 변화를 캡쳐하는 설득력있는 결과를 보여준다. 직관적으로 데이터를 통해 의미있는 latent 표현을 예측하도록 훈련된 모델은 의미와관련된 보조적인 문제에 피쳐의 표현으로 사용될 수 있다. 그러나 GAN은 데이터를 latent 에 투영하는 역방향 맵핑이 없다. 역방향 맵핑을 학습하는 수단으로 BiGAN을 제안하고 학습된 특징이 지도학습에 보조로 유용한것을 증명한다.
+
+# 1. Introduction
+패스!
+
+# 2. Preliminaries
+데이터 $x\in\Omega_x$ 의 분포를 $px(x)$ 라 하자. 생성모델의 목표는 확률론적 모델을 사용하여 이 데이터 분포를 캡쳐하는 것이다. 불행히도, 이 확률밀도함수의 정확한 모델링은 가장 불필요한 모델을 제외하고 모든 모델에 대해 계산이 힘들다.
+
+**GAN Instead model the data distribution as a transformation of a fixed latent distribution pz for z**
+**GAN 대신 데이터 분포를 고정된 latent 분포$pz(z)$로의 변환으로 모델링한다 $z\in\Omega_z$**
+
+이변환을 generator라 부르고, 결정론적 feed forward network G : $\Omega_z \to \Omega_x$, $p_G(x\|z) = \delta(x-G(z)), p_G(x) = \mathbb{E}_{z\sim p_z}[p_G(x\|z)]$. 목적은 generator가 $p_G(x) \approx p_x(x)$가 되도록 학습하는 것이다.
+
+GAN의 G를 학습시킬때는 생성된 분포와 데이터의 분포를 구분 가능한 $D:\Omega_x\mapsto [0,1]$가 없는것처럼 학습한다. D와 G 둘다 다음 목적함수로 학습된다.
+$$
+\underset{G}{\min}\underset{D}{\max} V(D,G) := \mathrm{E}_{x\sim p_x}[\log D(x)] + \mathrm{E}_{x\sim p_G}[\log(1-D(x))] \\
+\mathrm{E}_{x\sim p_G}[\log(1-D(x))] = \mathrm{E}_{z\sim p_z}[\log(1-D(G(z)))]
+$$
+
+GAN에서 이상적인 판별기는 목적함수가 $p_G$와 $p_x$의 젠슨샤논 발산과 같아지는 것이다.
+위 목적함수는 G의 스텝마다 D를 완벽하게 학습시켜야 하므로 효율적인 최적화가 되지 못한다.
+게다가 완전해진 판별기는 더이상 어떤 경사정보도 제공하지 않고, 부분이나 전역 최고점의 기울기는 0이된다. 그럼에도 불구하고 강한 경사신호를 제공하기 위해, 동일한 고정된 특성을 유지하면서 G와 D의 업데이트의 목표를 살짝 바꾼다. 그들은 또 위 목적함수를 최적하하기위해 업데이트를 교대로 최적화하는것을 제안했다. 이 최적화는 수렴이 보장되는것은 아니나 G와 D가 균형있게 되어있다면 경험적으로 잘 작동한다.
+GAN의 경험적 강점에도 불구하고, 어떻게 그것이 비지도 표현학습에 적용되는지는 분명하지 않다. 그 가능성중 하나는 생성된 G를 latent z 로 회귀하는 역맵핑을 배우는 것이다. 그러나 G가 고해상도 이미지같은 복잡한 데이터분포를 완벽히 생성하지 않는한 이 생각은 크게 의미가없다.
+
+# 3. Bidirectional Generative Adversarial networks
+
+BiGAN은 G만 훈련하지 않고 추가적으로 $E:\Omega_x \to \Omega_z$를 학습한다. 인코더는 데이터 x를 생성모델의 latent space로 변환한다 $p_E(z\|x) = \delta(z-E(x))$.
+D 또한 수정된다
+
+
+
+
