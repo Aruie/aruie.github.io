@@ -2,7 +2,7 @@
 layout: post
 title:  "CartoonGAN : Generative Adversarial Networks for Photo Catoonization"
 tag : "Paper Review"
-date : 2019-10-24 10:05:05 +0900
+date : 2019-11-14 10:05:05 +0900
 comments: true
 ---
 
