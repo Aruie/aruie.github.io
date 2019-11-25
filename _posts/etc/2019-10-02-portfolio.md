@@ -10,7 +10,9 @@ comments: true
 # 포트폴리오
 
 - 포트폴리오 정리를 할 포스팅이 필요한듯 하여 만들었다.
-- 아직 정리가 안되어 복잡하다 ㅠㅠ
+
+- 공사중!
 
 - 논문리뷰 [https://aruie.github.io/#Paper%20Review](https://aruie.github.io/#Paper%20Review)
 - 
+- Pytorch StyleGAN 구현 [https://github.com/Aruie/Aru_StyleGAN](https://github.com/Aruie/Aru_StyleGAN)

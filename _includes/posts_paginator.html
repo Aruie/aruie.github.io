@@ -1,4 +1,4 @@
-<!--
+
 {% for post in paginator.posts %}
   <a href="{{ post.url }}">
       <li class="fadeInUp animated">
@@ -11,7 +11,7 @@
               <h3 class="post-subtitle">{{ post.subtitle }}</h3>
               {% endif %}
               
-              <!-- 미리보기 -->
+              <!-- 미리보기 
               {% if post.subtitle.size==0 or post.subtitle==nil %}
               <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
               
@@ -31,4 +31,3 @@
       </li>
   </a>
 {% endfor %}
--->
