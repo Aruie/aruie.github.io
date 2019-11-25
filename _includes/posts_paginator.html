@@ -1,4 +1,4 @@
-
+<!--
 {% for post in paginator.posts %}
   <a href="{{ post.url }}">
       <li class="fadeInUp animated">
@@ -11,14 +11,14 @@
               <h3 class="post-subtitle">{{ post.subtitle }}</h3>
               {% endif %}
               
-              <!-- 미리보기
+              <!-- 미리보기 -->
               {% if post.subtitle.size==0 or post.subtitle==nil %}
               <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
-              -->
+              
               {% endif %}
           </section>
           
-          <!--
+   
           <footer class="post-tags">
                 {% if post.tags.size > 0 %}
                     {% for tag in post.tags  %}
@@ -27,7 +27,8 @@
                 {% endif %}
                 <time class="post-date" datetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
           </footer>
-          -->
+   
       </li>
   </a>
 {% endfor %}
+-->
