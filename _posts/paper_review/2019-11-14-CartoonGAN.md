@@ -15,7 +15,7 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
 참고로 조금 항마력이 필요하다  
 
 # Abstract
-- 간단히 설명하면 사진을 만화로 바꿔보자! (그래서 항마력 필요)
+- 간단히 설명하면 사진을 만화로 바꿔보자!
 - 만화의 특성덕에 일반적인 손실로는 좋은 결과물이 나오지 못함
   - 높은 수준의 추상성과 독특한 특성을 가짐
   - 선명한 외곽선과 매끄럽고 단순한 질감
@@ -36,7 +36,7 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
 
 ## Network Architectures
 - Residual Block이 매우 효과적이라고 설명 
-- Batch normalization 와 Discriminator(??)에서 LeakyRelu 사용
+- Batch normalization 을 사용하고 Discriminator에서 LeakyRelu 사용
 
 # 3. CartoonGAN
 - 만화 이미지에 특성에 맞는 판별기를 설계
@@ -49,7 +49,7 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
   - 변환모델이므로 일반 GAN과는 다르게 Input으로부터 결과를 생성
   - 두번의 컨볼루션으로 인코딩 하여 매니폴드 변환에 필요한 피쳐를 추출하게 함
   - 이후 8번의 Residual Block 을 거침
-  - 이후 스트라이드 1/2 ??? 의 컨볼루션을 사용하여 업샘플??????
+  - 이후 스트라이드 1/2의 컨볼루션을 사용하여 업샘플한다고 나왓는데 그냥 Transposed
     - upsample도아니고 Transposed Conv도아니고... 
   - 마지막으로 커널 7짜리의 컨볼루션 레이어를 사용하여 최종 이미지 생성
 - Discriminator
@@ -80,7 +80,7 @@ $$
 
 ## 3.2.1 Content Loss
 $$
-\mathcal{L}_{con}(G,D) = \mathbb{E}_{p_i\sim S_{data(p)}}[\|VGG_l(G(p_i)) - VGG_l(p_i) \|_1]
+\mathcal{L}_{con}(G,D) = \mathbb{E}_{p_i\sim S_{data(p)}}[||VGG_l(G(p_i)) - VGG_l(p_i) ||_1]
 $$
 - 만화 스타일을 유지하는 것도 중요하지만 입력과 결과의 내용이 중요한것도 매우 중요하다
 - 사전훈련된 VGG에서 깊은층의 특정 레이어의 값을 가져오는 방식의 loss를 사용해 의미 보존

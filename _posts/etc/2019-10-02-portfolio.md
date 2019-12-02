@@ -13,6 +13,7 @@ comments: true
 
 - 공사중!
 
+
 - 논문리뷰 [https://aruie.github.io/#Paper%20Review](https://aruie.github.io/#Paper%20Review)
-- 
 - Pytorch StyleGAN 구현 [https://github.com/Aruie/Aru_StyleGAN](https://github.com/Aruie/Aru_StyleGAN)
+- CartoonGAN 모바일 구현 []
