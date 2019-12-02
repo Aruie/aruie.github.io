@@ -11,7 +11,7 @@ comments: true
 원논문 주소 : https://ieeexplore.ieee.org/document/8579084
 
 OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활용할까 고민중 보게된 논문이다  
-이 U-GAT-IT을 먼저 보긴 했었는데 대충봐서.. 다시볼겸 앞에꺼부터 다시보기로 했다.  
+이 U-GAT-IT을 먼저 보긴 했었는데 대충봐서.. 다시볼겸 기초부터 다시보기로 했다.  
 참고로 조금 항마력이 필요하다  
 
 # Abstract
@@ -26,7 +26,7 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
 - 비현실적 렌더링 기법은 3D를 이용하는 등의 많은 연구가 있지만 알고리즘 기반으로 예술적인 부분을 표현하는 것은 매우 힘들다.
 
 ## Stylization with neural networks
-- 스타일 트랜스퍼 방식은 이미지와 유사한 스타일 이미지가 존재해야하고 해당 단일 스타일 이미지에 큰 영향을받는다 (CNNMRF 참고)
+- 스타일 트랜스퍼 방식은 이미지와 유사한 스타일 이미지가 존재해야하고 해당 단일 스타일 이미지에 큰 영향을받는다
 - 외곽선 및 음영 재현등 디테일 재현에 매우 약하다.
 
 ## Image synthesis with GANs
@@ -34,14 +34,12 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
 - Pixel to Pixel 방식으로는 페어링된 이미지 세트가 필요하다는 단점이 있음
 - CycleGAN의 경우 이 문제는 해결이 되었지만 만화의 독특한 특성덕에 좋은 결과가 나타나지 않음 (원본정보를 자주 주입해 주는데서 생기는 문제인듯하다)
 
-## Network Architectures
-- Residual Block이 매우 효과적이라고 설명 
-- Batch normalization 을 사용하고 Discriminator에서 LeakyRelu 사용
 
 # 3. CartoonGAN
+- 기본적으로 Pix2Pix의 구조를 따라감
+  -  Residual Blocks 부분이 굉장히 성능이 좋다고 함
 - 만화 이미지에 특성에 맞는 판별기를 설계
     - $S_{data}(p)$ : 사진 데이터, $S_{data}(c)$ : 만화 데이터
-- 기본적인 GAN에 대한 설명... GAN을 보고옵시다
 
 ## 3.1 CartoonGAN Architecture
 ![Table1](/assets/post/191114-01.png)
@@ -49,18 +47,19 @@ OpenCV를 모바일에서 사용은 하게 만들었는데 이걸 어떻게 활�
   - 변환모델이므로 일반 GAN과는 다르게 Input으로부터 결과를 생성
   - 두번의 컨볼루션으로 인코딩 하여 매니폴드 변환에 필요한 피쳐를 추출하게 함
   - 이후 8번의 Residual Block 을 거침
-  - 이후 스트라이드 1/2의 컨볼루션을 사용하여 업샘플한다고 나왓는데 그냥 Transposed
-    - upsample도아니고 Transposed Conv도아니고... 
+  - 이후 스트라이드 1/2의 컨볼루션(Transposed)을 사용하여 업샘플
   - 마지막으로 커널 7짜리의 컨볼루션 레이어를 사용하여 최종 이미지 생성
 - Discriminator
   - 입력된 이미지가 얼마나 만화같은지 구분하는 목적으로 학습
   - 그러기에 전체적인 이미지보다는 국소적인 부분을 판단하도록 네트워크를 매우 얕게 설계
   - 이후 두번의 stride가 들어간 컨볼루션으로 피쳐 사이즈를 줄이고 마지막에 간단한 블록 추가
   - 특이하게도 Discriminator에서 LeakyRelu를 사용
+
+
 ## 3.2 Loss function
-- $\mathcal{L}(G,D) = \mathcal{L}_{adv}(G,D) + \omega\mathcal{L}_{con}(G,D)$
-- 기본적인 Adversarial Loss ($\mathcal{L}_{adv}$)에 추가로 $\omega$의 가중치를 가진 Content Loss ($\mathcal{L}_{con}$) 를 더해서 사용
-  - 여기서 $\omega$rk 커지면 입력에서 더 많은 정보 유지해 되므로 더 디테일한 텍스쳐를 가지게 되고 낮아지면 스타일성이 강해짐
+- $\mathcal{L}(G,D) = \mathcal{L_{adv}}(G,D) + w \mathcal{L_{con}}(G,D)$
+- 기본적인 Adversarial Loss ($\mathcal{L_{adv}}$)에 추가로 $\omega$의 가중치를 가진 Content Loss ($\mathcal{L_{con}}$) 를 더해서 사용
+  - 여기서 $w$가 커지면 입력에서 더 많은 정보 유지해 되므로 더 디테일한 텍스쳐를 가지게 되고 낮아지면 스타일성이 강해짐
   - 균형잡힌 값을 찾기위해 여러번의 테스트를 거쳐 10으로 설정
 
 ## 3.2.1 Adversarial Loss
@@ -96,7 +95,7 @@ $$
   ![Table1](/assets/post/191114-03.png)
 
 # 4. Experiments
-- Torch 와 Lua 에서 구현, 재현가능하도록 Titan Xp 사용
+- Torch 와 Lua 를 사용하여 구현, 재현가능하도록 Titan Xp 사용
 ![Table1](/assets/post/191114-04.png)
 - paired 데이터가 필요 없으므로 쉽게 얻을수 있는 아티스트의 데이터만을 이용해 스타일 훈련이 가능
 - 아티스트의 스타일을 효과적으로 학습 가능하다
@@ -138,4 +137,4 @@ $$
 # 5. Conclusion and Future
 - 만화 스타일 재현을 위해 엣지 손실, l1정규화 등을 사용하여 좋은 결과물을 만들었다
 - 앞으로는 만화에서 중요한 얼굴의 개선을 위해 얼굴의 피쳐들을 어떻게 활용할 것인가 연구 할 것이라 한다.
-- 새로운 손실도 더 찾고...
+- 새로운 손실도 더 연구 예정이라 함
