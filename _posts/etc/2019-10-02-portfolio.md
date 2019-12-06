@@ -7,13 +7,10 @@ comments: true
 ---
 
 
-# 포트폴리오
-
-- 포트폴리오 정리를 할 포스팅이 필요한듯 하여 만들었다.
-
-- 공사중!
 
 
-- 논문리뷰 [https://aruie.github.io/#Paper%20Review](https://aruie.github.io/#Paper%20Review)
-- Pytorch StyleGAN 구현 [https://github.com/Aruie/Aru_StyleGAN](https://github.com/Aruie/Aru_StyleGAN)
-- CartoonGAN 모바일 구현 [https://youtu.be/N3YzBYvvNt4](https://youtu.be/N3YzBYvvNt4)
+- 정리중입니다 ㅠ 하도 여러군데 이거저거 해놔서 ㅠ
+
+  - 논문리뷰 [https://aruie.github.io/#Paper%20Review](https://aruie.github.io/#Paper%20Review)
+  - CartoonGAN 모바일 구현 [https://youtu.be/N3YzBYvvNt4](https://youtu.be/N3YzBYvvNt4)
+  - StyleGAN 구현 (Pytorch) [https://github.com/Aruie/Aru_StyleGAN](https://github.com/Aruie/Aru_StyleGAN)
