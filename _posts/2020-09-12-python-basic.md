@@ -2,7 +2,7 @@
 layout: post
 title:  "파이썬 기초 정리"
 tag : tip
-date : 2019-09-03 10:05:05 +0900
+date : 2020-09-12 10:05:05 +0900
 comments: true
 ---
 
