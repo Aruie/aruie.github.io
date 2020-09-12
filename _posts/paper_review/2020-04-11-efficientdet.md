@@ -106,8 +106,10 @@ comments: true
   - 위 방법을 사용하여 모델을 제작하고 7이상은 메모리상 문제가 있어 7이상은 이공식으로 사용불가능해 6에서 인풋크기만 바꾼 7을 생성
 
 # Experiments
+![Table1](/assets/post/200411/1-5.png)
  - COCO 2017 데이터셋 사용
  - 비교는 RetinaNet 및 AmoebaNet과 동일한 전처리를 사용
  - 전체적으로 정확도나 Flops에서 기존 모델보다 좋은 효율을 보임 ( 테이블 참조 )
  - 특히 특수설정이 필요한 amoabanet 기반 모델과 달리 병렬처리업이 동일한 3x3 컨볼루션만 사용하여 학습
  - CPU와 GPU 기반의 비교
+![Table1](/assets/post/200411/1-6.png)
