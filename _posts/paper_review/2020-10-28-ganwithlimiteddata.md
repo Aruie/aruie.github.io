@@ -160,6 +160,7 @@ comments: true
 
 
 ## 4.2 Transfer learning
+![Table1](/assets/post/201028/9.png)
 - GAN에도 Transfer leaning이 적용되는 연구가 많은데 특히 Freesze-D 방식이 좋은 결과를 보였음
 - Transfer leaning 의 결과는 데이터셋의 유사성보단 다양성에 달려있는 것을 보임
 - baseline의 경우 급격한 FID 감소를 보이나 과적합으로 다시 발산
@@ -167,6 +168,7 @@ comments: true
   - Freeze-D 도 같이 사용시 약간 개선이 보이지만 단독으로는 과적합을 막지 못함
 
 ## 4.3 Small datasets 
+![Table1](/assets/post/201028/10.png)
 - 작은 데이터셋에서는 FID가 편향으로 인해 좋은 지표가 되지 못하다고 함
 
 
