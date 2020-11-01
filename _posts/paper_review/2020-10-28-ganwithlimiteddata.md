@@ -155,7 +155,7 @@ comments: true
 ![Table1](/assets/post/201028/88.png)
 - shallow mapping에 적용? 이부분은 모르겠네요
 - 증강을 Multiplicative Dropout 으로 대체하려 하였으나 별로안좋음
- - p 값은 adaptive algorithm 적용
+  - p 값은 adaptive algorithm 적용
 - 결론은 ADA가 좋음
 
 
@@ -169,7 +169,9 @@ comments: true
 
 ## 4.3 Small datasets 
 ![Table1](/assets/post/201028/10.png)
+- 1000개 단위의 작은 데이터셋에 적용한 결과들
 - 작은 데이터셋에서는 FID가 편향으로 인해 좋은 지표가 되지 못하다고 함
+  -  KID 가 더 좋다고하는데 아직 이거까진..
 
 
 
