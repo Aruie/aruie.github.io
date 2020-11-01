@@ -133,9 +133,9 @@ comments: true
 
 - 적용후 여러 데이터에 적용한 결과
   - 오버피팅이 전혀 보이지 않음
-- augmentation 이 없을 시 학습이 길어지면 discriminator 가 overfitting되어 몇가지 특징만으로 구분하게되어 gradient가 전체적으로 단순화 되는것이 보인다
+- augmentation 이 없을 시 학습이 길어지면 discriminator 가 overfitting되어 몇가지 특징만으로 구분하게되어 gradient가 전체적으로 단순화 됨
   - 이상황이 되면 Generator가 너무 자유롭게 생성을 하게됨
-  - ADA가 적용될시 gradient 가 훨씬 더 잘 유지됨
+  - ADA가 적용될시 gradient 가 훨씬 더 잘 유지 되는것이 보임
 
   
 
@@ -144,6 +144,7 @@ comments: true
 - From Scratch 와 transfer learning 두 방식으로 FFHQ와 LSUN Cat을 사용해 적용
 
 ## 4.1 Training from scratch
+![Table1](/assets/post/201028/7.png)
 - 소규모 데이터에서 ADA가 매우 효과적인 것이 보임
 - bCR도 데이터가 어느정도 충분할 때는 효과적이나 leak이 발생되는것이 보임
   - x-y translation만을 사용하였으나 이미지가 blurring 되는것을 보임
@@ -151,7 +152,7 @@ comments: true
 - 두가지를 더해서 사용하였을때 큰 효과를 보임
   - ADA를 먼저 적용 후 bCR은 독립적으로 자체 증강 방식 사용
 
-![Table1](/assets/post/201028/8.png)
+![Table1](/assets/post/201028/88.png)
 - shallow mapping에 적용? 이부분은 모르겠네요
 - 증강을 Multiplicative Dropout 으로 대체하려 하였으나 별로안좋음
  - p 값은 adaptive algorithm 적용
