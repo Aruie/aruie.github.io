@@ -21,14 +21,14 @@ comments: true
      - 덕분에 의학쪽에서 잘 이용이 되지 못하고 있다고 함
    - 만약 필요 이미지의 수를 줄인다면 다양한 응용프로그램에 도움이 될 수 있을 것
  - 핵심적인 문제는 Discriminator가 학습데이터에 overfit 되는것
-   - Discriminator가 의미없는 정보만 주게되어 학습이 diverge 해짐
+   - Discriminator가 의미없는 정보만 주게되어 학습이 발산해버림
    - 이미지 분류에서 Data Augmentation 은 이것을 해결하는 표준 솔루션으로 사용됨
    - 하지만 Generator의 경우 이것이 Augmentation에 대한 분포를 학습할 수 있음
      - 예를 들면 노이즈가 추가될 경우 원래 데이터엔 없던 노이즈도 생성함 
-     - _leak의 의미 가 조금 알쏭한데 아마도 증강에 대한 정보가 Generator로 흘러간다는 것을의미하는 듯함??_
- - Discriminator가 overfit 되지 않는 새로운 증강방식을 적용
-   - leak을 방지한다고 하면서 이것에 대한 조건을 분석
-   - 최종적으로 데이터와 훈련설정에 관계없이 사용가능한 방식 설계
+     - 여기서 leak이라는 용어가 사용되는데 augmentation 된 정보가 Generator에 흘러가는 것을 뜻함
+ - Discriminator가 overfit 되지 않는 새로운 augmentation방식을 적용
+   - leak을 방지하기 위해 이것이 발생하는 조건을 분석
+   - 최종적으로 데이터와 훈련설정에 의존하지 않는 General 한 방식을 설계
 
 # 2. Overfitting in GANs
   - 데이터의 양이 GAN 에 미치는 영향 연구
@@ -45,7 +45,6 @@ comments: true
 
 ## 2.1 Stochastic Discriminator Augmentation
 ![Table1](/assets/post/201028/2.png)
-  - Data augmentation의 정의에 의하면 어떤 증강도 생성된 이미지에 포함됨
   - balanced consistency regularization (bCR)
     - Discriminator 학습시 동일한 증강을 부여하고 동일한 출력이 나오게 하는 방식 (CR손실 추가)
     - Generator 학습시엔 panalty가 적용되지 않아 자유롭게 생성 가능해 leak이 발생해 그냥 augmentation을 사용하는것과 유사한 결과가 나옴
@@ -58,28 +57,23 @@ comments: true
 ## 2.2 designing augmentations that do not leak
   - DA 방식의 문제
     - DA 방식은 왜곡시킨 제품을 보여주고 원래 제품을 가져와라 라고 하는 것
-    - AmbientGAN: Generative models from lossy measurements(Bora et al.) 에서는 corruption 과정이 invertibel transformation 이라면 훈련이 암묵적으로 왜곡을 해결하고 원래의 분포를 찾는다는것을 발견 
-    - 우리는 이런 augmentation 기법을 non-leaking 이라 부르고 이 기법들은 augment 된 데이터만으로 기존 데이터와의 일치하는지를 알수 있는 능력을 가짐
-
-    - ??? 이미지를 90프로확률로 0으로 만드는것은 반전이 됨, 사람도 10프로의 이미지만으로도 90프로의 검은부분을 무시하고 추론할 수 있다
-    - ??? 90도 단위 랜덤 회전변환의 경우 얼마나 회전 했는지 알수없기에 증강 후 원복이 불가능
-      - ???모르겟음
-    
-    - 이회전이 확률 이 1보다 작다면 올바르게 학습했을때만 증강분포가 일치할 수 있음
-
+    - AmbientGAN: Generative models from lossy measurements(Bora et al.) 에서는 corruption 과정이 invertible transformation 이라면 훈련이 암묵적으로 왜곡을 해결하고 원래의 분포를 찾는다는것을 발견 
+    - 우리는 이런 augmentation 기법을 non-leaking 이라 부르고 이 기법들은 적용된 데이터만으로 기존 데이터와의 일치여부르 구분 할 수 있는 능력을 가짐
+      - 이미지픽셀을 90프로확률로 0으로 만드는것은 invertible 함, 사람도 10프로의 이미지만으로도 90프로의 검은부분을 무시하고 추론할 수 있다
+      - 하지만 90도 단위 랜덤 회전변환의 경우 실제이미지의 위치가 어디였는지 알수없기에 원복이 불가능하지만 확률 이 1보다 작아진 다면 올바른 형태의 확률이 높아지기에 원래 모양을 예측할 수있음
+    - 여러가지 augmentation이 확률이 1미만인 조건에서 non-leaking 해질 수 있음
 
     - 고정된 순서로 non-leaking 증강을 구성하면 전체적인 non-leaking 이 가능해짐
 
 
 ![Table1](/assets/post/201028/3.png)
   - Isotropic image scaling 의 경우 확률에 상관없이 결과가 균일 (non-leaking)
-  - Random
-  - 확률이 높으면 generator는 랜덤한 하나를 선택하게됨 (확률이 1일때만 발생하는것은 아님) 
-  - 이것은 여러가지 조건에 의해 바뀔수 있으나 확률이 낮아질수록 처음엔 잘못 선택하더라도 높은확률로 올바른 분포를 찾아감
+  - 하지만 Random Rotation의 경우 확률이 높으면 generator는 랜덤한 하나를 선택하게됨 (확률이 1일때만 발생하는것은 아님)
+  - 이 확률이 낮아질수록 처음엔 잘못 선택하더라도 높은 확률로 올바른 분포를 찾아감
   - Color transformations 도 0.8이전엔 균일한 분포를 보임
 
 ## 2.3 Out augmentation pipeline
-  - RandAugment 에서 봤듯이 다양한 augmentation이 좋다는 가정에서 시작
+  - RandAugment 에서 봤듯이 다양한 augmentation을 적용하는 것이 좋다는 가정에서 시작
   - augmentation을 6개의 카테고리로 나눔
     - pixel blitting (x-flips, rotation, integer translation)
     - more general geometric transformations
@@ -87,47 +81,44 @@ comments: true
     - image space filtering
     - additive noise
     - cutout
-  - augmentation을 구분할 수 있도록 Generator에도 augmentation 적용
+  - augmentation을 구분할 수 있도록 Generate된 이미지에도 augmentation 적용
     - 제공되지 않는것은 딥러닝 프레임웍에서 제공되는 미분이 가능한 primitives로 구현
 
   - 훈련중 모든 변환에 대해 항상 동일한 p 값을 사용하는 사전 정의 세트를 사용
-    - 모든 변환에 대해 별도록 확률 적용
+    - 변환에 대해 확률은 독립적으로  적용
   - 고정된 순서 사용
+  
   - p값은 augmentation와 미니배치 내 이미지에 의해 조절
   - pipeline에 매우많은 증강이 있어 p가 상당히 작아도 discriminator가 원래 이미지를 볼 가능성은 매우 낮지만(Figure 2 참조) Generator는 p값의 경계가 지켜지는 한 깨끗한 이미지만을 생성 
-
-
-
 
 
 ![Table1](/assets/post/201028/4.png)
 
  - 여러가지 DA들은 결과를 크게 개선하는것을 보이지만 적절한 p값은 데이터양에 크게 의존함
- - 소규모 데이터 (2k, 10k)
-   - 2k 에서는 Bliting과 Geometric 계열에서 우세 색상변환도 약간 괜찮지만 나머진 별로
-   - 높은 확률에서 최적의 결과가 나옴
- - 대규모 데이터 (140k)
-   - 모든 증강효과가 전부 역효과
-   - 확률이 1일때를 보면 leaking 효과를볼 수 있음
- - 3가지 augmentation만 사용하여 10k의 데이터로 수렴결과를 보면 수렴도 늦추고 과적합도 방지하는것을 보여줌
- - 데이터 세트에 민감하다는것은 grid search가 필요하다는 것이기에 적절한 고정된 p값을 찾는것은 매우중요하기에 adaptive한 프로세스를 만들어 이것을 해결
+ - (a, b) : 소규모 데이터 (2k, 10k)
+   - 높은 확률에서 최적의 결과가 나오고 geom 계열이 좋은 성능을 보임
+ - (c) : 대규모 데이터 (140k)
+   - 모든 증강효과가 전부 역효과이며 leaking 효과가 관찰됨
+ - (d) : 10k의 데이터로 수렴결과를 보면 수렴도 늦추고 과적합도 방지하는것을 보여줌
+ - 데이터 세트에 민감하다는것은 적절한 p값을 찾기 위해 비용이 큰 grid search가 필요하다는 것이기에 adaptive한 프로세스를 만들어 이것을 해결
 
-## 3. Adaptive disvriminator augmentation
+## 3. Adaptive discriminator augmentation
 - 수동튜닝을 안하고 과정합정도에 따라 동적으로 제어해보자는 아이디어
-- 일반적으로 과적합을 확인하는 방법은 validation을 따로 나누어 훈련셋을 관찰하는것
-- 하지만 우리가 사용한 방법은 StyleGAN2에서 사용되는 non-saturating loss로 판별기는 실제 이미지에 대해 출력하고 상황이 악화될수록 0을 중심으로 나눠지는 것을 볼 수 있음
-- 
-- 연속된 4개의 미니배치를 한번에 봄 (256개의 이미지)
-- 두개의식 모두 r이 0이면 과적합없음, 1이면 완벽한 과적합을 의미
-- 목표는 두개가 적절한 목표를 달성하도록 p 를 조절하는것
-- 첫번째식은 validation 이 있을때 그것에 대한 출력
-- 두번째식은 Discriminator 출력에 양성이 나오는 훈련세트부분을 추정
-  - 첫번째 식보다 하이퍼파라미터에 덜 민감함 
+  - 첫번째로 일반적으로 과적합을 확인하는 방법인 validation을 따로 나누어 훈련셋을 관찰하는것
+  - 두번쨰는 StyleGAN2에서 사용되는 non-saturating loss를 관찰하는 방법
+- 세부 설정
+  - 연속된 4개의 미니배치를 한번에 봄 (256개의 이미지)
+  ![Table1](/assets/post/201028/f1.png)
+  - 두개 식 모두 r이 0이면 과적합없음, 1이면 완벽한 과적합을 의미
+- 목표는 값이 적절한 목표를 달성하도록 p 를 조절하는것
+  - 첫번째식은 validation set이 있을때 validation 과 generate에 대한 차이
+  - 두번째식은 Discriminator 출력에 양성이 나오는 훈련세트부분을 추정
+    - 첫번째 식보다 하이퍼파라미터에 덜 민감함 
 
 - p를 0으로 설정하고 4개의 미니배치마다 한번씩 조정
   - p값이 충분히 빠르게 변할수 있도록 조정
-  - 최소가 0이 되도록 clamp 
-  - 이것을 Adaptive discriminator augmentation 이라고함
+  - 최소는 0이 되도록 제한
+- 이것을 Adaptive discriminator augmentation 이라고함
 
 
 ![Table1](/assets/post/201028/5.png)
@@ -136,8 +127,7 @@ comments: true
 - rv와 rt에 다양한 목표를 주고 학습
   - grid search를 사용한것 보다 훨씬 효과가 좋았음
   - 둘다 성능은 괜찮지만 좀더 현실적인 rt를 사용 (목표값 0.6)
-  - 
-- 
+
 
 ![Table1](/assets/post/201028/6.png)
 
@@ -162,7 +152,6 @@ comments: true
   - ADA를 먼저 적용 후 bCR은 독립적으로 자체 증강 방식 사용
 
 ![Table1](/assets/post/201028/8.png)
-- 여러가지 모델에 적용
 - shallow mapping에 적용? 이부분은 모르겠네요
 - 증강을 Multiplicative Dropout 으로 대체하려 하였으나 별로안좋음
  - p 값은 adaptive algorithm 적용
@@ -189,22 +178,6 @@ comments: true
 
 
 
-
-
-# Appendix C
-  - 부록 C는 
-    - g(x) 와 y 의 분포는 동일해야하고 g(x)와 y 가 다르면 그 증강도 달라야함
-    - 이것이 위반될 경우 Generator 가 자유롭게 학습을 해버림 증강된 분포도 같다고 생각하기 때문에
-    - 하지만 위반하지 않을경우 Generator는 기본분포를 배울 수 밖에 없음
-    - augmentation의 안정성과 주의사항을 제시하고 파이프라인 조건을 연구
-
-
-  - 확률분포를 bold 소문자, 연산과정을 calligraphic, 확률분포로부터 추출된 샘플을 대문자
-  - 
-
-
-
-  -  
 
 
 
