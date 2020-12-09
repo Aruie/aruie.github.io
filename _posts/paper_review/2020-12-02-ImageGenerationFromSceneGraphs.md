@@ -50,7 +50,35 @@ comments: true
 - GCN에서 나온 object embedding vector를 사용해 각 object의 박스와 segmentation mask를 예측하고 이것을 합쳐 Scene layout을 구성, 스케일을 확대하는 CRN을 통해 최종적으로 이미지를 생성한다
 - 한쌍의 Discriminator $D_{img}, D_{obj}$를 통해 적대적학습을 하여 현실적인 그림인지와, 현실적인 오브젝트를 담고있는지를 판단하게한다
 - 이게 전체적인 그림
-- $(O,E)$ : Scene Graph
-  - $O = \{o_1, o_2,...,o_n\}$ : object
-    - $o_i$ : i번째 object class
+- Scene Graph
+  - $(O,E)$
+    - $O = \{o_1, o_2,...,o_n\}$ : object ($o_i \in C$)
+    - $E \in O \times R \times O$
+      - $(o_i, r, o_j)$ 의 형태를 가짐
+  - 우선 학습된 Embedding Layer를 사용해 각 노드와 엣지를 $D_{in}$의 shape를 가진 dense vector로 변환 시킴
+- Graph Convolution Network
+  - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
+  - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
+  - $g_s, g_p, g_o$ 모든 입력에 대해 3개의 함수를 사용
+    - $g_p$ : Predicate (엣지 벡터 변환)
+    - $g_s$ : Subject 
+    - $g_o$ : Object
+    - ![Table1](/assets/post/201202/table4.png)
+  - $v_r' = g_p(v_i, v_r, v_j)$
+    - 출력 엣지를 구함 (연산이 매우 간단)
+  - $v_r' = h(V_i^s \cup V_i^o)$
+    - $V_i^s = \{g_s(v_i,v_r,v_j) : (o_i,r,o_j) \in E \}$
+    - $V_i^o = \{g_o(v_j,v_r,v_o) : (o_j,r,o_i) \in E \}$
+    - 해당 오브젝트가 subject에 사용된 관계는 $g_s$, object로 사용된 관계는 $g_o$를 사용하여 연결
+
+    - ![Table1](/assets/post/201202/table4.png)
+    - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용
     - 
+
+  - 
+  - 
+  - 
+    - 
+  
+
+  - 
