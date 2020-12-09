@@ -43,7 +43,7 @@ comments: true
 - 전체적인 구조
 ![Table1](/assets/post/201202/figure2.png)
   - $\hat{I} = f(G,z)$
-    - 그래프에서 이미지를 생성하는 네트워크$f$
+    - 그래프에서 이미지를 생성하는 네트워크$f$ (CRN)
     - 생성된 이미지 $I$, Scene Graph $G$
     - $G$는 GCN에 의해 오브젝트마다 임베딩이 되는데 이과정에서 엣지 정보가 섞인다
   - GCN에서 나온 object embedding vector를 사용해 각 object의 박스와 segmentation mask를 예측하고 이것을 합쳐 Scene layout을 구성, 그리고 CRN을 통해 최종적으로 이미지를 생성
@@ -60,10 +60,10 @@ comments: true
   - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
   - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
   - $g_s, g_p, g_o$ 모든 입력에 대해 3개의 함수를 사용
+    ![Table1](/assets/post/201202/table4.png)
     - $g_p$ : Predicate (엣지 벡터 변환)
     - $g_s$ : Subject 
     - $g_o$ : Object
-    - ![Table1](/assets/post/201202/table4.png)
   - $v_r' = g_p(v_i, v_r, v_j)$
     - 출력 엣지를 구함 (연산이 매우 간단)
   - $v_r' = h(V_i^s \cup V_i^o)$
@@ -71,7 +71,7 @@ comments: true
     - $V_i^o = \{g_o(v_j,v_r,v_o) : (o_j,r,o_i) \in E \}$
     - 해당 오브젝트가 subject에 사용된 관계는 $g_s$, object로 사용된 관계는 $g_o$를 사용하여 연결
 
-    - ![Table1](/assets/post/201202/table4.png)
+    ![Table1](/assets/post/201202/table4.png)
     - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용 후 FCL 두개 통과
     - 
 - Scene Layout
@@ -80,12 +80,12 @@ comments: true
   - Object Layout Network
     - 2D 에서의 대략적인 Layout을 생성하기 위한 네트워크
     - Box Regrresion Network
-      - ![Table1](/assets/post/201202/table6.png)
+      ![Table1](/assets/post/201202/table6.png)
       - 이미지의 위치를 박스로 나타낼 네트워크로 object embedding 정보를 사용해 꼭지점의 위치를 예측
         - $(x_0,y_0,x_1,y_1)$, [0,1]로 Normalize된 상태로 좌상우하 위치
     - Mask Regression network
       - 해당 사각형에 이미지를 그려버리면 배경과의 조화가 이루어 질수 없으므로 투명도를 위한 마스킹 정보 생성 (조금 의문?)
-      - ![Table1](/assets/post/201202/table7.png)
+      ![Table1](/assets/post/201202/table7.png)
     - 생성된 마스크 $(1 \times M \times M)$ 을 embedding$(D)$ 에 곱해 $(D \times M \times M)$ 의 텐서를 생성 후 BoxRegression 정보와 결합하여 $(D \times M \times M)$ 의 최종 Scene Layout 생성
 - Cascaded Refinement network (Generator)
   - 앞에서 생성된 Scene Layout에 의존한 의미지를 생성해야하는데 이것을 위해 CRN을 사용
@@ -119,14 +119,17 @@ comments: true
     - GCN에선 ReLU, CRN과 discriminator는 LeakyReLU 및 batch normalization 사용
 
 # 4. Experiments
-  - ![Table1](/assets/post/201202/figure5.png)
+  - 다양한 생성 이미지
+  ![Table1](/assets/post/201202/figure5.png)
     - 솔직히 해상도가 워낙구려서 좀 못알아보겠다
     - 일단 단순히 Scene 그래프만으로 같은 유형의 오브젝트가 여러개 있는것도 표현 가능한 것을 보임
     - 생성된 이미지가 Scene Graph에 매우 의존적인것도 보임
     - 맨 아래 GT Layout은 예측된 Layout이 아닌 Ground-Truth의 Layout을 사용한것
-  - ![Table1](/assets/post/201202/figure6.png)
+  - 그래프 변화에 따른 결과
+  ![Table1](/assets/post/201202/figure6.png)
     - 점차적으로 그래프의 복잡도를 올리며 생성한 결과인데 그래프에 따라 object의 위치가 결정되는 것을 명확히 보여준다
-  - ![Table1](/assets/post/201202/table1.png)
+  - Automatic metrics
+  ![Table1](/assets/post/201202/table1.png)
     - 여러가지 설정별 Inception Score 비교표
 
   - 사소한 실험이 몇개더있는 데 별 의미가 없어보여 빼버렸...
