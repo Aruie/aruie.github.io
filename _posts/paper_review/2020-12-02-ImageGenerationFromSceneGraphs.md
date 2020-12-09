@@ -41,19 +41,21 @@ comments: true
   - 두번째는 생성된 이미지가 얼마나 그래프를 잘 설명하는지 확인해야하고
   - 세번째는 생성된 이미지가 얼마나 사실적인지 확인해야한다
 - 전체적인 구조
+  - ![Table1](/assets/post/201202/figure2.png)
   - $\hat{I} = f(G,z)$
     - 그래프에서 이미지를 생성하는 네트워크$f$
     - 생성된 이미지 $I$, Scene Graph $G$
     - $G$는 GCN에 의해 오브젝트마다 임베딩이 되는데 이과정에서 엣지 정보가 섞인다
-- GCN에서 나온 object embedding vector를 사용해 각 object의 박스와 segmentation mask를 예측하고 이것을 합쳐 Scene layout을 구성, 스케일을 확대하는 CRN을 통해 최종적으로 이미지를 생성한다
-- 한쌍의 Discriminator $D_{img}, D_{obj}$를 통해 적대적학습을 하여 현실적인 그림인지와, 현실적인 오브젝트를 담고있는지를 판단하게한다
-- 이게 전체적인 그림
+  - GCN에서 나온 object embedding vector를 사용해 각 object의 박스와 segmentation mask를 예측하고 이것을 합쳐 Scene layout을 구성, 그리고 CRN을 통해 최종적으로 이미지를 생성
+  - 한쌍의 Discriminator $D_{img}, D_{obj}$를 통해 적대적학습을 하여 현실적인 그림인지와, 현실적인 오브젝트를 담고있는지를 판단하게 함
+
+
 - Scene Graph 의 구조
-  - $(O,E)$
+  - 기본적으로 $(O,E)$
     - $O = \{o_1, o_2,...,o_n\}$ : object ($o_i \in C$)
     - $E \in O \times R \times O$
-      - $(o_i, r, o_j)$ 의 형태를 가짐
-  - 우선 학습된 Embedding Layer를 사용해 각 노드와 엣지를 $D_{in}$의 shape를 가진 dense vector로 변환 시킴
+      - $(o_i, r, o_j)$ 의 형태를 가짐 ($r \in R$)
+  - 사전 학습된 Embedding Layer를 사용해 각 노드와 엣지를 $D_{in}$의 shape를 가진 dense vector로 변환 시킴(NLP에서의 Embedding과 비슷)
 - Graph Convolution Network (일반적인 GCN과 매우다름)
   - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
   - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
