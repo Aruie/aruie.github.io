@@ -120,11 +120,18 @@ comments: true
 
 # 4. Experiments
   - ![Table1](/assets/post/201202/figure5.png)
-    - 
+    - 솔직히 해상도가 워낙구려서 좀 못알아보겠다
+    - 일단 단순히 Scene 그래프만으로 같은 유형의 오브젝트가 여러개 있는것도 표현 가능한 것을 보임
+    - 생성된 이미지가 Scene Graph에 매우 의존적인것도 보임
+    - 맨 아래 GT Layout은 예측된 Layout이 아닌 Ground-Truth의 Layout을 사용한것
+  - ![Table1](/assets/post/201202/figure6.png)
+    - 점차적으로 그래프의 복잡도를 올리며 생성한 결과인데 그래프에 따라 object의 위치가 결정되는 것을 명확히 보여준다
+  - ![Table1](/assets/post/201202/table1.png)
+    - 여러가지 설정별 Inception Score 비교표
+
+  - 사소한 실험이 몇개더있는 데 별 의미가 없어보여 빼버렸...
+
   - 
-    - 
-    - 
-  - 
-      
-  - 
-  - 
+# 5. Conclusion
+  - 결론은 Scene Graph에서 이미지로의 End-to-End 모델을 만들었 다는것.
+  - 텍스트가 아닌 구조화된 그래프에서 생성시 명시적인 관계에 의한 객체들을 생성 할 수 있고 객체가 많은 복잡한 구조도 표현이 가능하다
