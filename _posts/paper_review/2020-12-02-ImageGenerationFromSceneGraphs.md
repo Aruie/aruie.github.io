@@ -41,7 +41,7 @@ comments: true
   - 두번째는 생성된 이미지가 얼마나 그래프를 잘 설명하는지 확인해야하고
   - 세번째는 생성된 이미지가 얼마나 사실적인지 확인해야한다
 - 전체적인 구조
-  - ![Table1](/assets/post/201202/figure2.png)
+![Table1](/assets/post/201202/figure2.png)
   - $\hat{I} = f(G,z)$
     - 그래프에서 이미지를 생성하는 네트워크$f$
     - 생성된 이미지 $I$, Scene Graph $G$
@@ -98,7 +98,7 @@ comments: true
 - Discriminator
   - 두쌍의 Discriminator 사용 $(D_{img}, D_{obj})$
   - 둘 모두 기본적으로 Advasarial Loss를 사용
-    - ${L}_{GAN} = \underset{x\sim p_{real}}\mathbb{E}logD(x) +  \underset{x\sim p_{fake}}\mathbb{E}log(1-D(x))$
+    - ${L}_{GAN} = \underset{x\sim p_{real}} \mathbb{E}[logD(x)] +  \underset{x\sim p_{fake}}\mathbb{E}[log(1-D(x))]$
   - $D_{img}$의 경우 Patch-based discriminator를 사용하여 이미지의 품질에 대해 보장
   - $D_{obj}$의 경우 각 객체가 해당 객체를 제대로 식별하였는지를 보장
     - 고정크기로 crop 및 rescaled된 이미지를 입력으로 사용
