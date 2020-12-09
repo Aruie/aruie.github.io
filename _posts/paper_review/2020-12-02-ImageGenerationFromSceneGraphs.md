@@ -60,7 +60,7 @@ comments: true
   - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
   - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
   - $g_s, g_p, g_o$ 모든 입력에 대해 3개의 함수를 사용
-    ![Table1](/assets/post/201202/table4.png)
+    ![Table1](/assets/post/201202/table3.png)
     - $g_p$ : Predicate (엣지 벡터 변환)
     - $g_s$ : Subject 
     - $g_o$ : Object
@@ -70,32 +70,31 @@ comments: true
     - $V_i^s = \{g_s(v_i,v_r,v_j) : (o_i,r,o_j) \in E \}$
     - $V_i^o = \{g_o(v_j,v_r,v_o) : (o_j,r,o_i) \in E \}$
     - 해당 오브젝트가 subject에 사용된 관계는 $g_s$, object로 사용된 관계는 $g_o$를 사용하여 연결
-
     ![Table1](/assets/post/201202/table4.png)
     - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용 후 FCL 두개 통과
-    - 
 - Scene Layout
   - GRAPH를 이미지로 만들기 위해서는 이미지 도메인으로의 변환이 필요
   
   - Object Layout Network
     - 2D 에서의 대략적인 Layout을 생성하기 위한 네트워크
     - Box Regrresion Network
-      ![Table1](/assets/post/201202/table6.png)
+    ![Table1](/assets/post/201202/table6.png)
       - 이미지의 위치를 박스로 나타낼 네트워크로 object embedding 정보를 사용해 꼭지점의 위치를 예측
         - $(x_0,y_0,x_1,y_1)$, [0,1]로 Normalize된 상태로 좌상우하 위치
     - Mask Regression network
-      - 해당 사각형에 이미지를 그려버리면 배경과의 조화가 이루어 질수 없으므로 투명도를 위한 마스킹 정보 생성 (조금 의문?)
-      ![Table1](/assets/post/201202/table7.png)
-    - 생성된 마스크 $(1 \times M \times M)$ 을 embedding$(D)$ 에 곱해 $(D \times M \times M)$ 의 텐서를 생성 후 BoxRegression 정보와 결합하여 $(D \times M \times M)$ 의 최종 Scene Layout 생성
+    ![Table1](/assets/post/201202/table7.png)
+      - 생성된 마스크 $(1 \times M \times M)$ 을 embedding$(D)$ 에 곱해 $(D \times M \times M)$ 의 텐서를 생성 후 BoxRegression 정보와 결합하여 $(D \times H \times W)$ 의 최종 Scene Layout 생성
 - Cascaded Refinement network (Generator)
+![Table1](/assets/post/201202/table8.png)
+![Table1](/assets/post/201202/table9.png)
   - 앞에서 생성된 Scene Layout에 의존한 의미지를 생성해야하는데 이것을 위해 CRN을 사용
-  - 각 모듈마다 해상도가 두배씩 점차적으로 증가시키며 Scene Layout 정보(down sampling)와 이전 모듈에서의 출력을 channel wise 방식으로 연결
-    - (여기서의 문제는 채널이 고정?)
+  - 각 모듈마다 해상도가 두배씩 점차적으로 증가시키며 Scene Layout 정보(down sampling)와 이전 모듈에서의 출력을 concatenate 해서 사용
     - Scene layout 정보는 모듈마다 맞는 사이즈로 downsampling 해서 사용
     - 각 모듈에서의 출력은 다음 입력으로 들어가기전 upsampling됨
-    - 첫번째 모듈에서는 입력으로 Gaussian noise 사용
-    - 최종 모듈 출력 이후 2의 마지막 컨볼루션 레이어 통과
+    - 첫번째 모듈에서는 입력으로 Gaussian noise (latent $z$) 사용
+    - 최종 모듈 출력 이후 마지막 2개의 컨볼루션 레이어 통과
 - Discriminator
+![Table1](/assets/post/201202/table10.png)
   - 두쌍의 Discriminator 사용 $(D_{img}, D_{obj})$
   - 둘 모두 기본적으로 Advasarial Loss를 사용
     - ${L}_{GAN} = \underset{x\sim p_{real}} \mathbb{E}[logD(x)] +  \underset{x\sim p_{fake}}\mathbb{E}[log(1-D(x))]$
@@ -117,6 +116,7 @@ comments: true
     - P100을 사용하여 3일정도 소요
     - 각 미니배치에 대해 CRN부터 학습 후 Discriminator 업데이트
     - GCN에선 ReLU, CRN과 discriminator는 LeakyReLU 및 batch normalization 사용
+      - Batchnormalization에 의한 artifact가 확연히 발견되어 처음 100k까진 train 모드로, 이후 900k는 eval모드로 진행함
 
 # 4. Experiments
   - 다양한 생성 이미지
@@ -134,7 +134,7 @@ comments: true
 
   - 사소한 실험이 몇개더있는 데 별 의미가 없어보여 빼버렸...
 
-  - 
 # 5. Conclusion
   - 결론은 Scene Graph에서 이미지로의 End-to-End 모델을 만들었 다는것.
   - 텍스트가 아닌 구조화된 그래프에서 생성시 명시적인 관계에 의한 객체들을 생성 할 수 있고 객체가 많은 복잡한 구조도 표현이 가능하다
+  
