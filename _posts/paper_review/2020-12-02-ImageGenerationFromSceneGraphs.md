@@ -50,13 +50,13 @@ comments: true
 - GCN에서 나온 object embedding vector를 사용해 각 object의 박스와 segmentation mask를 예측하고 이것을 합쳐 Scene layout을 구성, 스케일을 확대하는 CRN을 통해 최종적으로 이미지를 생성한다
 - 한쌍의 Discriminator $D_{img}, D_{obj}$를 통해 적대적학습을 하여 현실적인 그림인지와, 현실적인 오브젝트를 담고있는지를 판단하게한다
 - 이게 전체적인 그림
-- Scene Graph
+- Scene Graph 의 구조
   - $(O,E)$
     - $O = \{o_1, o_2,...,o_n\}$ : object ($o_i \in C$)
     - $E \in O \times R \times O$
       - $(o_i, r, o_j)$ 의 형태를 가짐
   - 우선 학습된 Embedding Layer를 사용해 각 노드와 엣지를 $D_{in}$의 shape를 가진 dense vector로 변환 시킴
-- Graph Convolution Network
+- Graph Convolution Network (일반적인 GCN과 매우다름)
   - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
   - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
   - $g_s, g_p, g_o$ 모든 입력에 대해 3개의 함수를 사용
@@ -72,13 +72,59 @@ comments: true
     - 해당 오브젝트가 subject에 사용된 관계는 $g_s$, object로 사용된 관계는 $g_o$를 사용하여 연결
 
     - ![Table1](/assets/post/201202/table4.png)
-    - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용
+    - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용 후 FCL 두개 통과
     - 
-
-  - 
-  - 
-  - 
-    - 
+- Scene Layout
+  - GRAPH를 이미지로 만들기 위해서는 이미지 도메인으로의 변환이 필요
   
+  - Object Layout Network
+    - 2D 에서의 대략적인 Layout을 생성하기 위한 네트워크
+    - Box Regrresion Network
+      - ![Table1](/assets/post/201202/table6.png)
+      - 이미지의 위치를 박스로 나타낼 네트워크로 object embedding 정보를 사용해 꼭지점의 위치를 예측
+        - $(x_0,y_0,x_1,y_1)$, [0,1]로 Normalize된 상태로 좌상우하 위치
+    - Mask Regression network
+      - 해당 사각형에 이미지를 그려버리면 배경과의 조화가 이루어 질수 없으므로 투명도를 위한 마스킹 정보 생성 (조금 의문?)
+      - ![Table1](/assets/post/201202/table7.png)
+    - 생성된 마스크 $(1 \times M \times M)$ 을 embedding$(D)$ 에 곱해 $(D \times M \times M)$ 의 텐서를 생성 후 BoxRegression 정보와 결합하여 $(D \times M \times M)$ 의 최종 Scene Layout 생성
+- Cascaded Refinement network (Generator)
+  - 앞에서 생성된 Scene Layout에 의존한 의미지를 생성해야하는데 이것을 위해 CRN을 사용
+  - 각 모듈마다 해상도가 두배씩 점차적으로 증가시키며 Scene Layout 정보(down sampling)와 이전 모듈에서의 출력을 channel wise 방식으로 연결
+    - (여기서의 문제는 채널이 고정?)
+    - Scene layout 정보는 모듈마다 맞는 사이즈로 downsampling 해서 사용
+    - 각 모듈에서의 출력은 다음 입력으로 들어가기전 upsampling됨
+    - 첫번째 모듈에서는 입력으로 Gaussian noise 사용
+    - 최종 모듈 출력 이후 2의 마지막 컨볼루션 레이어 통과
+- Discriminator
+  - 두쌍의 Discriminator 사용 $(D_{img}, D_{obj})$
+  - 둘 모두 기본적으로 Advasarial Loss를 사용
+    - $\mathcal{L}_{GAN} = \underset{x\sim p_{real}}\mathbb{E}logD(x) +  \underset{x\sim p_{fake}}\mathbb{E}log(1-D(x))$
+  - $D_{img}$의 경우 Patch-based discriminator를 사용하여 이미지의 품질에 대해 보장
+  - $D_{obj}$의 경우 각 객체가 해당 객체를 제대로 식별하였는지를 보장
+    - 고정크기로 crop 및 rescaled된 이미지를 입력으로 사용
+    - Auxiliary Classifier를 사용해 오브젝트의 카테고리까지 확인
+- Training
+  - 학습간에 6가지 loss에 대해 weighted sum을 사용하여 최종 loss를 계산
+    - $L_{box} = \sum_{i=1}^n||b_i - \hat{b_i}||_1$ : 박스간 L1 loss
+    - $L_{mask}$ : predict mask에 대한 pixelwise cross-entropy loss
+    - $L_{pix} = ||I-\hat{I}||_1$ : pixelwise L1 loss
+    - $L_{GAN}^{img}$ : Patch based Discriminator loss
+    - $L_{GAN}^{obj}$ : Object Discriminator loss
+    - $L_{AC}^{obj}$ : Classification loss
+  - 세부설정
+    - Adam 사용(lr : 0.0001)
+    - 1M epochs, 32 batch size
+    - P100을 사용하여 3일정도 소요
+    - 각 미니배치에 대해 CRN부터 학습 후 Discriminator 업데이트
+    - GCN에선 ReLU, CRN과 discriminator는 LeakyReLU 및 batch normalization 사용
 
+# 4. Experiments
+  - ![Table1](/assets/post/201202/figure5.png)
+    - 
+  - 
+    - 
+    - 
+  - 
+      
+  - 
   - 
