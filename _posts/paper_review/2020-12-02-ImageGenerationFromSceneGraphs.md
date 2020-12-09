@@ -94,14 +94,19 @@ comments: true
     - 첫번째 모듈에서는 입력으로 Gaussian noise (latent $z$) 사용
     - 최종 모듈 출력 이후 마지막 2개의 컨볼루션 레이어 통과
 - Discriminator
-![Table1](/assets/post/201202/table10.png)
   - 두쌍의 Discriminator 사용 $(D_{img}, D_{obj})$
   - 둘 모두 기본적으로 Advasarial Loss를 사용
     - ${L}_{GAN} = \underset{x\sim p_{real}} E[logD(x)] +  \underset{x\sim p_{fake}} E[log(1-D(x))]$
-  - $D_{img}$의 경우 Patch-based discriminator를 사용하여 이미지의 품질에 대해 보장
-  - $D_{obj}$의 경우 각 객체가 해당 객체를 제대로 식별하였는지를 보장
-    - 고정크기로 crop 및 rescaled된 이미지를 입력으로 사용
+  - $D_{img}$ : Patch-based discriminator를 사용
+    ![Table1](/assets/post/201202/table11.png)
+    - 이미지의 품질에 대해 보장
+    
+  - $D_{obj}$ : Auxiliary Classfier
+    ![Table1](/assets/post/201202/table10.png)
+    - 각 객체가 진짜같은지와 제대로 식별이 되는지를 보장
+    - 해당 오브젝트 위치를 crop 및 고정크기로 rescaled된 이미지를 입력으로 사용
     - Auxiliary Classifier를 사용해 오브젝트의 카테고리까지 확인
+  
 - Training
   - 학습간에 6가지 loss에 대해 weighted sum을 사용하여 최종 loss를 계산
     - $L_{box} = \sum_{i=1}^n\|\|b_i - \hat{b_i}\|\|_1$ : 박스간 L1 loss
