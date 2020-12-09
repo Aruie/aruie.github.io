@@ -98,16 +98,16 @@ comments: true
 - Discriminator
   - 두쌍의 Discriminator 사용 $(D_{img}, D_{obj})$
   - 둘 모두 기본적으로 Advasarial Loss를 사용
-    - $\mathcal{L}_{GAN} = \underset{x\sim p_{real}}\mathbb{E}logD(x) +  \underset{x\sim p_{fake}}\mathbb{E}log(1-D(x))$
+    - ${L}_{GAN} = \underset{x\sim p_{real}}\mathbb{E}logD(x) +  \underset{x\sim p_{fake}}\mathbb{E}log(1-D(x))$
   - $D_{img}$의 경우 Patch-based discriminator를 사용하여 이미지의 품질에 대해 보장
   - $D_{obj}$의 경우 각 객체가 해당 객체를 제대로 식별하였는지를 보장
     - 고정크기로 crop 및 rescaled된 이미지를 입력으로 사용
     - Auxiliary Classifier를 사용해 오브젝트의 카테고리까지 확인
 - Training
   - 학습간에 6가지 loss에 대해 weighted sum을 사용하여 최종 loss를 계산
-    - $L_{box} = \sum_{i=1}^n||b_i - \hat{b_i}||_1$ : 박스간 L1 loss
+    - $L_{box} = \sum_{i=1}^n\|\|b_i - \hat{b_i}\|\|_1$ : 박스간 L1 loss
     - $L_{mask}$ : predict mask에 대한 pixelwise cross-entropy loss
-    - $L_{pix} = ||I-\hat{I}||_1$ : pixelwise L1 loss
+    - $L_{pix} = \|\|I-\hat{I}\|\|_1$ : pixelwise L1 loss
     - $L_{GAN}^{img}$ : Patch based Discriminator loss
     - $L_{GAN}^{obj}$ : Object Discriminator loss
     - $L_{AC}^{obj}$ : Classification loss
