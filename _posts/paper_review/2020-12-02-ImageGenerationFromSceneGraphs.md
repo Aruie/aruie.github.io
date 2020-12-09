@@ -59,6 +59,7 @@ comments: true
 - Graph Convolution Network (일반적인 GCN과 매우다름)
   - $(v_i, v_r) \in D_{in}$ : 입력 shape, $(v_i', v_r') \in D_{out}$ : 출력 shape
   - $(v_i, v_r, v_j)$ : 실제 입력되는 형상
+  ![Table1](/assets/post/201202/figure3.png)
   - $g_s, g_p, g_o$ 모든 입력에 대해 3개의 함수를 사용
     ![Table1](/assets/post/201202/table3.png)
     - $g_p$ : Predicate (엣지 벡터 변환)
@@ -73,6 +74,7 @@ comments: true
     ![Table1](/assets/post/201202/table4.png)
     - $h$ 함수는 간단히 각 벡터의 위치별평균을 사용 후 FCL 두개 통과
 - Scene Layout
+  ![Table1](/assets/post/201202/figure4.png)
   - GRAPH를 이미지로 만들기 위해서는 이미지 도메인으로의 변환이 필요
   
   - Object Layout Network
