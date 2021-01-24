@@ -48,7 +48,7 @@ comments: true
 - LOTClass : Label-Name-Only Text Classification
   - BERT 를 기반으로 한 모델을 사용하였으나 다른 모델에도 쉽게 적용가능
 
-  ![](/assets/post/210124/figure_1.png) 
+
 
 
   - Category Understanding via label name Replacement
@@ -62,6 +62,10 @@ comments: true
       - 모든 문서에 대해 각 클래스별로 많이 대체한 순으로 100개의 워드를 선정하여 category vocaburaly로 사용
         - stopword나 여러 카테고리에 중복으로 등장한 단어는 제거함
 
+    ![1](/assets/post/210124/table_1.png) 
+    ![1](/assets/post/210124/table_2.png) 
+
+
   - Masked Category Prediction
     - 모델이 category를 표현하는 단어(category-indicative word)에 초점을 맞추는 것을 원함
     - 직접적인 방법으로는 모든 category vocabulary에 직접 표현하는것 이나 문제가 있음
@@ -74,6 +78,11 @@ comments: true
          - 이후 각 category-indicative word $w$ 에 대해 이것을 [MASK]로 바꾸고 모델을 통과하여 contextualized embedding $h$를 구한 뒤 이것을 FCL을 통과시켜 softmax를 사용해 범주를 예측하게 학습함 (fine-tuning)
       - 이 범주를 예측하기위한 단어를 가려내는것은 단순히 키워드 암기 대신 단어 문맥 기반으로 범주를 예측하게 되기 때문에 매우 중요하다
       - 이 방식으로 BERT Encoder는 범주를 예측하는데 도움을 주도록 contextualized embedding 하는것을 배운다
+
+  ![1](/assets/post/210124/figure_1.png) 
+
+
+
   - Self-Training
     - MCP task 이후 추가적인 훈련이 필요한 이유가 두가지 있다
       1. MCP작업에서 보지 못한 label없는 문서가 아직 많이 있어(카테고리 키워드로 검출되지 않은것) 더 좋은 일반화를 위해 필요
@@ -107,7 +116,7 @@ comments: true
      - 다른건 생략하고 Adam 2e-5를 사용했고 self-training 에는 1e-6 사용
      - 4개의 1080 Ti GPU 사용
   5. Result
-  ![](/assets/post/210124/figure_7.png) 
+  ![1](/assets/post/210124/figure_7.png) 
     
 
 
