@@ -68,7 +68,7 @@ comments: true
          - 50개의 대체가능 단어를 찾고 이중 20개 이상이 category vocaburaly에 포함된다면 이것을 category-indicative word 로 지정하고 이 label 과함께 단어기반 supervision 이 가능한 데이터셋이 생김($S_{ind}$)
          - 이후 각 category-indicative word $w$ 에 대해 이것을 [MASK]로 바꾸고 모델을 통과하여 contextualized embedding $h$를 구한 뒤 이것을 FCL을 통과시켜 softmax를 사용해 범주를 예측하게 학습함 (fine-tuning)
          ![1](/assets/post/210124/formula_2.png) 
-      - 이 범주를 예측하기위한 단어를 가려내는것은 단순히 키워드 암기 대신 단어 문맥 기반으로 범주를 예측하게 되기 때문에 매우 중요하다
+      - 이 범주를 예측하기 위한 단어를 가려내는것은 단순히 키워드 암기 대신 word's context 기반으로 범주를 예측하게 되기 때문에 매우 중요하다
       - 이 방식으로 BERT Encoder는 범주를 예측하는데 도움을 주도록 contextualized embedding 하는것을 배운다
 
   ![1](/assets/post/210124/figure_1.png) 
@@ -81,9 +81,9 @@ comments: true
       2. masked 된 상태로 범주를 예측하는 훈련을 받았지만 모델이 전체 시퀸스를 볼수있는 [CLS] 토큰에는 적용되지 않았음
     - 핵심 아이디어는 현재 예측$P$을 반복해 모델을 더 나아지게하는 타겟 분포 $Q$를 생성하고 이 두 분포간의 KL-divergnece 최소화 시키는 방향으로 학습
       - [CLS] 토큰에 위에 학습된 MCP를 적용하여 나온 값을 사용하여 target 분포를 업데이트
-        - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
-      ![](/assets/post/210124/foumula_4.png) 
-      ![](/assets/post/210124/foumula_5.png) 
+      - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
+      ![1](/assets/post/210124/foumula_4.png) 
+      ![1](/assets/post/210124/foumula_5.png) 
     - $Q$는 Hard 혹은 Soft label을 사용할수 있는데 실제로 soft label이 일관적으로 더 안정적인 결과를 제공하는것을 발견하였고 추가로 target 분포가 모든 객체에 대해 계산되고 threshold를 설정할 필요가 없다는 장점이 있음
     
 
@@ -109,8 +109,8 @@ comments: true
      - 다른건 생략하고 Adam 2e-5를 사용했고 self-training 에는 1e-6 사용
      - 4개의 1080 Ti GPU 사용
   5. Result
-  ![1](/assets/post/210124/figure_7.png) 
-    
+  ![1](/assets/post/210124/table_6.png)  
+     
 
 
 # 5. Discussions
