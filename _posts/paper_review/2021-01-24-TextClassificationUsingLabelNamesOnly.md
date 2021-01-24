@@ -47,18 +47,22 @@ comments: true
 # 3. Method
 - LOTClass : Label-Name-Only Text Classification
   - BERT 를 기반으로 한 모델을 사용하였으나 다른 모델에도 쉽게 적용가능
-  1. Category Understanding via label name Replacement
+
+  ![](/assets/post/210124/figure_1.png) 
+
+
+  - Category Understanding via label name Replacement
     - 사람은 label의 이름만 들어도 이해를 할수 있음
     - 사전학습된 모델을 사용해 레이블 이름에서 category vocabulary를 배우는 방법을 고안
       - 교환이 가능한 단어는 의미가 비슷할것이다 라는 가설 설정
         - Corpus에서 Label 이름이 발생할때마다 BERT encoder를 사용하여 전체 문장 V를 입력해 해당 위치에 임베딩된 벡터 $h$를 구하고 MLM모델에 입력하여 모든 단어에 대해 출현할 확률을 계산
-      - $p(w|h) = Softmax(W_2\sigma(W_1h+b))$
-      - $W_1, W_2, b$ 는 pre-trained된 MLM
+      - $p(w\|h) = Softmax(W_2\sigma(W_1h+b))$
+        - $W_1, W_2, b$ 는 pre-trained된 MLM
       - 단어 출현확률을 내림차순으로 정렬하여 50개를 대체 유효한 단어로 설정
       - 모든 문서에 대해 각 클래스별로 많이 대체한 순으로 100개의 워드를 선정하여 category vocaburaly로 사용
         - stopword나 여러 카테고리에 중복으로 등장한 단어는 제거함
 
-  2. Masked Category Prediction
+  - Masked Category Prediction
     - 모델이 category를 표현하는 단어(category-indicative word)에 초점을 맞추는 것을 원함
     - 직접적인 방법으로는 모든 category vocabulary에 직접 표현하는것 이나 문제가 있음
       1. 단어의 의미는 문맥화 되어있기에 이 키워드가 반드시 범주를 나타내는것은 아님
@@ -70,17 +74,16 @@ comments: true
          - 이후 각 category-indicative word $w$ 에 대해 이것을 [MASK]로 바꾸고 모델을 통과하여 contextualized embedding $h$를 구한 뒤 이것을 FCL을 통과시켜 softmax를 사용해 범주를 예측하게 학습함 (fine-tuning)
       - 이 범주를 예측하기위한 단어를 가려내는것은 단순히 키워드 암기 대신 단어 문맥 기반으로 범주를 예측하게 되기 때문에 매우 중요하다
       - 이 방식으로 BERT Encoder는 범주를 예측하는데 도움을 주도록 contextualized embedding 하는것을 배운다
-  3. Self-Training
-      - MCP task 이후 추가적인 훈련이 필요한 이유가 두가지 있다
-        1. MCP작업에서 보지 못한 label없는 문서가 아직 많이 있어(카테고리 키워드로 검출되지 않은것) 더 좋은 일반화를 위해 필요
-        2. masked 된 상태로 범주를 예측하는 훈련을 받았지만 모델이 전체 시퀸스를 볼수있는 [CLS] 토큰에는 적용되지 않았음
-      - 핵심 아이디어는 현재 예측$P$을 반복해 모델을 나아지게하는 타겟 분포 $Q$를 계산하는것이고 KL-divergnece loss를 사용함
-        - [CLS] 토큰에 위에 학습된 MCP를 적용하여 나온 값을 사용하여 target 분포를 업데이트
-          - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
-        ![](/assets/post/210124/foumula_5.png) 
-      - $Q$는 Hard 혹은 Soft label을 사용할수 있는데 MCP를 통해 훈련된 분류기를 사용하여 이루어진다
-      - 실제로 soft label이 일관적으로 더 안정적인 결과를 제공하는것을 발견하였고 추가로 target 분포가 모든 객체에 대해 계산되고 threshold를 설정할 필요가 없다는 장점이 있다
-      
+  - Self-Training
+    - MCP task 이후 추가적인 훈련이 필요한 이유가 두가지 있다
+      1. MCP작업에서 보지 못한 label없는 문서가 아직 많이 있어(카테고리 키워드로 검출되지 않은것) 더 좋은 일반화를 위해 필요
+      2. masked 된 상태로 범주를 예측하는 훈련을 받았지만 모델이 전체 시퀸스를 볼수있는 [CLS] 토큰에는 적용되지 않았음
+    - 핵심 아이디어는 현재 예측$P$을 반복해 모델을 더 나아지게하는 타겟 분포 $Q$를 생성하고 이 두 분포간의 KL-divergnece 최소화 시키는 방향으로 학습
+      - [CLS] 토큰에 위에 학습된 MCP를 적용하여 나온 값을 사용하여 target 분포를 업데이트
+        - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
+      ![](/assets/post/210124/foumula_5.png) 
+    - $Q$는 Hard 혹은 Soft label을 사용할수 있는데 실제로 soft label이 일관적으로 더 안정적인 결과를 제공하는것을 발견하였고 추가로 target 분포가 모든 객체에 대해 계산되고 threshold를 설정할 필요가 없다는 장점이 있음
+    
 
 
 # 4. Experiments
