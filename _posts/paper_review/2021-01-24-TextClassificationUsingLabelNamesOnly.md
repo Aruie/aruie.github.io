@@ -82,8 +82,8 @@ comments: true
     - 핵심 아이디어는 현재 예측$P$을 반복해 모델을 더 나아지게하는 타겟 분포 $Q$를 생성하고 이 두 분포간의 KL-divergnece 최소화 시키는 방향으로 학습
       - [CLS] 토큰에 위에 학습된 MCP를 적용하여 나온 값을 사용하여 target 분포를 업데이트
       - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
-      ![1](/assets/post/210124/foumula_4.png) 
-      ![1](/assets/post/210124/foumula_5.png) 
+      ![1](/assets/post/210124/formula_4.png) 
+      ![1](/assets/post/210124/formula_5.png) 
     - $Q$는 Hard 혹은 Soft label을 사용할수 있는데 실제로 soft label이 일관적으로 더 안정적인 결과를 제공하는것을 발견하였고 추가로 target 분포가 모든 객체에 대해 계산되고 threshold를 설정할 필요가 없다는 장점이 있음
     
 
