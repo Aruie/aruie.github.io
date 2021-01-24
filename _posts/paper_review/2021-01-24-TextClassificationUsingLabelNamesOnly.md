@@ -7,11 +7,6 @@ comments: true
 ---
 
 
-    - labe name replacement 를 통한 카테고리의 이해
-    - Masked된 범주 예측을 통한 단어 분류
-    - 일반화를위한 self training
-
-
 
 # Abstract
 - 텍스트 분류 방법들은 대부분 사람이 라벨링한 데이터를 가지고 학습하는 경우가 많다
@@ -20,10 +15,9 @@ comments: true
 - 그래서 label의 이름만을 가지고 모델을 훈련 시킬 방법을 연구했다
 - pretrained 된 모델(BERT)을 사용하여 다음 세단계로 구성
   1. 의미적으로 비슷한 단어로 label을 대체시킴
-  2. 카테고리를 의미하는 단어를 찾고 category를 예측하도록 훈련
-  3. self training을 통해 모델을 일반화시킴
+  2. 카테고리를 의미하는 단어를 찾고 해당 단어를 masking하고 category를 예측하는 모델을 훈련
+  3. self training을 통해 모델을 일반화
 - 학습에 label을 사용하지 않고 4개의 데이터셋에 대해 약 90%의 정확도를 달성
-- 최대 3개의 단어를 사용한 ?????????????????
 
 
 # 2. Related Work
@@ -48,15 +42,12 @@ comments: true
 - LOTClass : Label-Name-Only Text Classification
   - BERT 를 기반으로 한 모델을 사용하였으나 다른 모델에도 쉽게 적용가능
 
-
-
-
   - Category Understanding via label name Replacement
     - 사람은 label의 이름만 들어도 이해를 할수 있음
     - 사전학습된 모델을 사용해 레이블 이름에서 category vocabulary를 배우는 방법을 고안
       - 교환이 가능한 단어는 의미가 비슷할것이다 라는 가설 설정
         - Corpus에서 Label 이름이 발생할때마다 BERT encoder를 사용하여 전체 문장 V를 입력해 해당 위치에 임베딩된 벡터 $h$를 구하고 MLM모델에 입력하여 모든 단어에 대해 출현할 확률을 계산
-      - $p(w\|h) = Softmax(W_2\sigma(W_1h+b))$
+    ![1](/assets/post/210124/formula_1.png) 
         - $W_1, W_2, b$ 는 pre-trained된 MLM
       - 단어 출현확률을 내림차순으로 정렬하여 50개를 대체 유효한 단어로 설정
       - 모든 문서에 대해 각 클래스별로 많이 대체한 순으로 100개의 워드를 선정하여 category vocaburaly로 사용
@@ -76,6 +67,7 @@ comments: true
       - 앞절에서 사용한 방식과 비슷하게 대체 단어들의 contextualized meaning을 파악
          - 50개의 대체가능 단어를 찾고 이중 20개 이상이 category vocaburaly에 포함된다면 이것을 category-indicative word 로 지정하고 이 label 과함께 단어기반 supervision 이 가능한 데이터셋이 생김($S_{ind}$)
          - 이후 각 category-indicative word $w$ 에 대해 이것을 [MASK]로 바꾸고 모델을 통과하여 contextualized embedding $h$를 구한 뒤 이것을 FCL을 통과시켜 softmax를 사용해 범주를 예측하게 학습함 (fine-tuning)
+         ![1](/assets/post/210124/formula_2.png) 
       - 이 범주를 예측하기위한 단어를 가려내는것은 단순히 키워드 암기 대신 단어 문맥 기반으로 범주를 예측하게 되기 때문에 매우 중요하다
       - 이 방식으로 BERT Encoder는 범주를 예측하는데 도움을 주도록 contextualized embedding 하는것을 배운다
 
@@ -90,6 +82,7 @@ comments: true
     - 핵심 아이디어는 현재 예측$P$을 반복해 모델을 더 나아지게하는 타겟 분포 $Q$를 생성하고 이 두 분포간의 KL-divergnece 최소화 시키는 방향으로 학습
       - [CLS] 토큰에 위에 학습된 MCP를 적용하여 나온 값을 사용하여 target 분포를 업데이트
         - 50개의 배치마다 5번수식을 통해 Q를 업데이트하고 4번식을 통해 모델을 학습한다
+      ![](/assets/post/210124/foumula_4.png) 
       ![](/assets/post/210124/foumula_5.png) 
     - $Q$는 Hard 혹은 Soft label을 사용할수 있는데 실제로 soft label이 일관적으로 더 안정적인 결과를 제공하는것을 발견하였고 추가로 target 분포가 모든 객체에 대해 계산되고 threshold를 설정할 필요가 없다는 장점이 있음
     
